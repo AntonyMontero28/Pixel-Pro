@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    color: #171B26;
+    overflow-x: hidden;
+}
+
+/* FORMAS ANIMADAS */
+.bg-shape {
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0.15;
+    animation: float 10s infinite ease-in-out;
+}
+
+.cyan {
+    background: #3AB2E6;
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 5%;
+}
+
+.magenta {
+    background: #E93A78;
+    width: 250px;
+    height: 250px;
+    bottom: 10%;
+    right: 5%;
+}
+
+.yellow {
+    background: #FDD51D;
+    width: 180px;
+    height: 180px;
+    top: 50%;
+    left: 40%;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0px); }
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 30px;
+    border-bottom: 2px solid #eee;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #171B26;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #3AB2E6;
+}
+
+/* SECCIONES */
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+/* SERVICIOS */
+.servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 260px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #3AB2E6;
+}
+
+/* TABLA */
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background: #171B26;
+    color: white;
+}
+
+/* BOTÓN */
+.btn {
+    background: #3AB2E6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #E93A78;
+}
+
+/* CONTACTO */
+.contacto p {
+    margin: 5px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background: #171B26;
+    color: white;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pixel Pro Impresiones Digitales</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/controlGeneral">
+
+</head>
+
+<body>
+
+<!-- FORMAS -->
+<div class="bg-shape cyan"></div>
+<div class="bg-shape magenta"></div>
+<div class="bg-shape yellow"></div>
+
+<header>
+    <h1>Pixel Pro Impresiones Digitales</h1>
+    <p>Calidad, rapidez y tecnología en cada impresión</p>
+</header>
+
+<nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#precios">Precios</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section class="section" id="servicios">
+    <h2>Servicios de Impresión</h2>
+
+    <div class="servicios">
+        <div class="card">
+            <h3>Papel Fotográfico</h3>
+            <p>Alta calidad y acabado profesional</p>
+        </div>
+
+        <div class="card">
+            <h3>Hoja de Maquinilla</h3>
+            <p>Ideal para documentos y trabajos</p>
+        </div>
+
+        <div class="card">
+            <h3>Blanco y Negro / Color</h3>
+            <p>Opciones según tu necesidad</p>
+        </div>
+
+        <div class="card">
+            <h3>Tamaños</h3>
+            <p>Carta, A4 y Oficio</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="precios">
+    <h2>Precios</h2>
+
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Blanco y Negro</th>
+            <th>Color</th>
+        </tr>
+        <tr>
+            <td>Carta</td>
+            <td>$5</td>
+            <td>$15</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>$5</td>
+            <td>$15</td>
+        </tr>
+        <tr>
+            <td>Oficio</td>
+            <td>$10</td>
+            <td>$20</td>
+        </tr>
+        <tr>
+            <td>Fotográfico</td>
+            <td>-</td>
+            <td>$50</td>
+        </tr>
+    </table>
+
+    <button class="btn">Solicitar Impresión</button>
+</section>
+
+<section class="section contacto" id="contacto">
+    <h2>Contacto / Control General</h2>
+    <p>WhatsApp: 809-000-0000</p>
+    <p>Email: pixelpro@gmail.com</p>
+    <p>Ubicación: Villa Luisa</p>
+</section>
+
+<footer>
+    <p>© 2026 Pixel Pro Impresiones Digitales</p>
+</footer>
+
+</body>
+</html>

@@ -11,8 +11,47 @@ header{
 #bien{
     width: 100%;
     height: 450px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.452),rgba(0, 0, 0, 0.452)), url(../img/servicio.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.541),rgba(0, 0, 0, 0.541)), url(../img/servicio.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#bienser{
+    color: white;
+    font-size: 55px;
+}
+#tser{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+#sect2{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.cajonpri{
+    width: 250px;
+    height: 350px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+}
+#imgcirc{
+    width: 80%;
+    height: 200px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+}
+#copia{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }

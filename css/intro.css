@@ -93,8 +93,7 @@
 
 .slides{
   display:flex;
-  width:400%;
-  animation:slide 30s infinite;
+  animation:slide 50s infinite;
 }
 
 .slides img{

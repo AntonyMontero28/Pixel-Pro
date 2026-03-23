@@ -169,14 +169,14 @@ footer{
   animation: float 15s infinite ease-in-out alternate;
   z-index: -1;
 }
-.shape.cyan { background: #00BCD4; width: 300px; height: 300px; top: 10%; left: 5%; }
-.shape.magenta { background: #E91E63; width: 350px; height: 350px; bottom: 5%; right: 15%; }
-.shape.yellow { background: #FFEB3B; width: 250px; height: 250px; top: 50%; left: 60%; }
+.shape.cyan { background: #00bbd48a; width: 300px; height: 300px; top: 10%; left: 5%; }
+.shape.magenta { background: #e91e626f; width: 350px; height: 350px; bottom: 5%; right: 15%; }
+.shape.yellow { background: #ffeb3b7e; width: 250px; height: 250px; top: 50%; left: 60%; }
 .shape.small { width: 100px; height: 100px; opacity: 0.1; animation-duration: 20s; }
 .shape.small.cyan { top: 80%; left: 10%; }
 .shape.small.magenta { top: 20%; left: 80%; }
 .shape.small.yellow { top: 70%; left: 50%; }
-.shape.small.blue { top: 40%; left: 30%; background: #2196F3; }
+.shape.small.blue { top: 40%; left: 30%; background: #2195f372; }
 
 @keyframes float {
   0% { transform: translateY(0) translateX(0) rotate(0deg);}

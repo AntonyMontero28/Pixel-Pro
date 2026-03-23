@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
 *{
-    margin: 0;
-    padding: 0;
-    border: 0;
+    margin: 0%;
+    padding: 0%;
+    border: 0px;
 }
-/* Ambar inicio */
 #vp{
-    position: relative;      
+    position: relative;   
     width: 100%;
     height: auto;           
     min-height: 705px;      
-    overflow: hidden;       
+    overflow: hidden;        
     padding: 0;             
 }
 
@@ -24,15 +22,16 @@
     height: 100%;
     object-fit: cover;     
     transform: translate(-50%, -50%);
-    z-index: -1;            
+    z-index: -1;          
 }
+
+/* Todo el contenido encima del video */
 #ban, header, #textoo {
     position: relative;
     z-index: 1;              
-    color: black;           
+    color: black;            
 }
 
-/* resto de tu CSS sin cambios */
 h1 {
     color: black;
     font-family: "Nunito", sans-serif;
@@ -134,32 +133,4 @@ nav ul li:hover{
     text-align: left;
     font-family:"Nunito", sans-serif;
     font-weight: 400px;
-}
-
-
-/*Ambar final*/
-#section1{
-    width: 100%;
-    height: 500px;
-    background-color: #7ecc77;
-}
-#section12{
-    width: 100%;
-    height: 500px;
-    background-color: #aff1a9;
-}
-#section3{
-    width: 100%;
-    height: 500px;
-    background-color: #77b8cc;
-}
-#section4{
-    width: 100%;
-    height: 500px;
-    background-color: #d85cbd;
-}
-footer{
-    width: 100%;
-    height: 300px;
-    background-color: #df6060;
 }

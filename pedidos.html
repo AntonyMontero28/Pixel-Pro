@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedidos - PixelPro</title>
+<link rel="stylesheet" href="css/pedidos.css">
+</head>
+
+<body>
+
+<!-- FONDO CMYK ANIMADO -->
+<div class="bg">
+  <span class="circle cyan"></span>
+  <span class="circle magenta"></span>
+  <span class="circle yellow"></span>
+</div>
+
+<section class="pedido-container">
+
+  <h1>Realiza tu Pedido</h1>
+  <p>Rápido, fácil y directo con PixelPro</p>
+
+  <form id="formPedido">
+
+    <input type="text" id="nombre" placeholder="Nombre completo">
+    <input type="email" id="correo" placeholder="Correo electrónico">
+    <input type="tel" id="telefono" placeholder="Teléfono">
+
+    <select id="servicio">
+      <option value="">Tipo de impresión</option>
+      <option>Fotográfica</option>
+      <option>Blanco y negro</option>
+      <option>Color</option>
+    </select>
+
+    <textarea id="mensaje" placeholder="Describe tu pedido"></textarea>
+
+    <button type="submit">Enviar Pedido</button>
+
+  </form>
+
+</section>
+
+<script src="js/pedidos.js"></script>
+
+</body>
+</html>

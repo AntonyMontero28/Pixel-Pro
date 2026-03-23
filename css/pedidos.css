@@ -11,7 +11,7 @@ body{
 .bg .circle{
   position:absolute;
   border-radius:50%;
-  filter: blur(80px);
+  opacity: 0.5;
   animation: float 10s infinite alternate;
 }
 

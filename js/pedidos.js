@@ -43,7 +43,7 @@ Detalles: ${mensaje}`;
   const urlWhatsapp = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
 
   /* CORREO */
-  const urlCorreo = `mailto:contacto@pixelpro.com?subject=Pedido PixelPro&body=${encodeURIComponent(texto)}`;
+  const urlCorreo = `mailto:pixelproinpresionesdigitales@gmail.com?subject=Pedido PixelPro&body=${encodeURIComponent(texto)}`;
 
   /* ABRIR */
   window.open(urlWhatsapp, "_blank");

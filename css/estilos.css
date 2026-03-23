@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 *{
@@ -210,6 +211,7 @@ footer{
 
 .text-gradient-cmyk {
   background: linear-gradient(90deg, #00e5ff, #ff007f, #ffea00);
+  background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -343,3 +345,4 @@ footer{
 }
 
 /*yadiel*/ 
+

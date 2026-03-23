@@ -14,17 +14,39 @@
 
 /* Ambar inicio */
 #vp{
+    position: relative;      /* Necesario para que el video se ubique detrás */
     width: 100%;
     height: auto;           
     min-height: 705px;      
-    background-image: url(../img/bg2.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    overflow: visible;      
+    overflow: hidden;        /* Oculta bordes del video si se sale */
     padding: 0;             
+    /* Eliminamos la imagen de fondo */
+    /* background-image: url(../img/bg2.png); */
+    /* background-size: cover;
+    background-position: center;
+    background-attachment: fixed; */
 }
 
+/* Video de fondo */
+#vp video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* Hace que el video cubra todo el div */
+    transform: translate(-50%, -50%);
+    z-index: -1;             /* Lo manda detrás de todo */
+}
+
+/* Todo el contenido encima del video */
+#ban, header, #textoo {
+    position: relative;
+    z-index: 1;              /* Contenido encima del video */
+    color: black;            /* Mantiene tu color original */
+}
+
+/* resto de tu CSS sin cambios */
 h1 {
     color: black;
     font-family: "Nunito", sans-serif;
@@ -127,7 +149,6 @@ nav ul li:hover{
     font-family:"Nunito", sans-serif;
     font-weight: 400px;
 }
-
 
 
 /*Ambar final*/

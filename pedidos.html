@@ -1,54 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pedidos - PixelPro</title>
-<link rel="stylesheet" href="css/Pedidos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Pedidos.css">
 </head>
-
 <body>
+    <form>
+        <h2>Pedidos</h2>
+        <div class="input-group">
 
-<!-- FONDO CMYK ANIMADO -->
-<!-- FORMAS ANIMADAS CMYK -->
-  <div class="shape cyan"></div>
-  <div class="shape magenta"></div>
-  <div class="shape yellow"></div>
-  <div class="shape small cyan"></div>
-  <div class="shape small magenta"></div>
-  <div class="shape small yellow"></div>
-  <div class="shape small blue"></div>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" placeholder="Nombre">
+            <label>Tipo de impresión:</label>
+        <div class="radio-group">
+            <input type="radio" name="tipo" value="foto" required> Foto
+            <input type="radio" name="tipo" value="documento"> Documento
+        </div>
+             <label>Cantidad:</label>
+             <input type="number" name="cantidad" min="1" required>
+            <label>Subir archivo (opcional):</label>
+          <input type="file" name="archivo">
+            <label>Producto escolar (si compra):</label>
+           <input type="text" name="producto">
+        <input class="btn" type="submit" value="Enviar">
 
-<section class="pedido-container">
 
-  <h1>Realiza tu Pedido</h1>
-  <p>Rápido, fácil y directo con PixelPro</p>
-
-  <form id="formPedido">
-
-    <input type="text" id="nombre" placeholder="Nombre completo">
-    <input type="email" id="correo" placeholder="Correo electrónico">
-    <input type="tel" id="telefono" placeholder="Teléfono">
-
-    <select id="servicio">
-      <option value="">Tipo de impresión</option>
-      <option>Fotográfica</option>
-      <option>Blanco y negro</option>
-      <option>Color</option>
-    </select>
-
-    <textarea id="mensaje" placeholder="Describe tu pedido"></textarea>
-
-    <button type="submit">Enviar Pedido</button>
-
-  </form>
-
-</section>
-
-<script src="js/pedidos.js"></script>
-
+    </form>
 </body>
 </html>
+
 
 
 

@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@200..900&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* LOADER */
+#loader{
+  position:fixed;
+  width:100%;
+  height:100vh;
+  background:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+  transition:3s;
+}
+
+.loader-text{
+  font-family:'Chewy';
+  font-size:60px;
+  color:#fff;
+  animation:glow 1s infinite alternate;
+}
+
+@keyframes glow{
+  from{color:#FF1493;}
+  to{color:#00BFFF;}
+}
+
+/* FONDO */
+#vp{
+  width:100%;
+  min-height:100vh;
+  background:#fff;
+  overflow:hidden;
+  position:relative;
+}
+
+/* CMYK CIRCULOS */
+.circle{
+  position:absolute;
+  border-radius:50%;
+  filter: blur(1px);
+  animation: float 12s infinite alternate;
+}
+
+.cyan{background:#00bfff94;width:300px;height:300px;top:10%;left:5%;}
+.magenta{background:#ff149172;width:300px;height:300px;bottom:10%;right:10%;}
+.yellow{background:#ffd9008b;width:250px;height:250px;top:50%;left:60%;}
+.black{background:#171b2676;width:200px;height:200px;top:30%;left:40%;}
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  100%{transform:translateY(-40px);}
+}
+
+/* CONTENIDO */
+.intro-content{
+  text-align:center;
+  padding-top:100px;
+}
+
+.logo{
+  font-family:'Chewy';
+  font-size:80px;
+  color:#171B26;
+  animation:zoom 1.5s ease;
+}
+
+@keyframes zoom{
+  from{transform:scale(0);}
+  to{transform:scale(1);}
+}
+
+.slogan{
+  font-family:'Nunito';
+  margin:10px 0;
+}
+
+/* CARRUSEL */
+.carousel{
+  width:320px;
+  height:200px;
+  margin:20px auto;
+  overflow:hidden;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.slides{
+  display:flex;
+  animation:slide 50s infinite;
+}
+
+.slides img{
+  width:100%;
+}
+
+@keyframes slide{
+  0%{transform:translateX(0);}
+  25%{transform:translateX(-100%);}
+  50%{transform:translateX(-200%);}
+  75%{transform:translateX(-300%);}
+  100%{transform:translateX(0);}
+}
+
+.precios{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.precio-card{
+  display:inline-block;
+  margin:20px;
+  padding:25px;
+  width:250px;
+  border-radius:20px;
+  background:#fff;
+  border:3px solid #171B26;
+  transition:0.3s;
+}
+
+.precio-card:hover{
+  transform:translateY(-10px) scale(1.05);
+  box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+
+.precio-card span{
+  display:block;
+  margin-top:10px;
+  font-size:1.5rem;
+  color:#000000;
+  font-weight:bold;
+}
+.btn-venta{
+  display:inline-block;
+  margin-top:20px;
+  padding:15px 30px;
+  font-size:1.2rem;
+  font-weight:bold;
+  text-decoration:none;
+  color:#000000c7;
+  background:linear-gradient(45deg,#00bfffa1,#ff1491b3,#ffd900ba);
+  border-radius:50px;
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+  transition:0.3s;
+  animation:pulse 2s infinite;
+}
+
+.btn-venta:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 40px rgba(0, 0, 0, 0.612);
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.05);}
+  100%{transform:scale(1);}
+}
+
+/* BOTON PRO */
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:12px 40px;
+  border-radius:30px;
+  background:#FF1493;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  position:relative;
+  overflow:hidden;
+}
+
+.btn::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:#00BFFF;
+  left:-100%;
+  top:0;
+  transition:0.4s;
+}
+
+.btn:hover::before{
+  left:0;
+}
+
+.btn span{
+  position:relative;
+  z-index:1;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  color: #000;
+}
+
+/* CURSOR PERSONALIZADO */
+.cursor{
+  width:20px;
+  height:20px;
+  background:#FF1493;
+  border-radius:50%;
+  position:fixed;
+  pointer-events:none;
+  transform:translate(-50%, -50%);
+  z-index:9999;
+  mix-blend-mode:difference;
+}
+
+/* PARTÍCULAS DE TINTA */
+.particle{
+  position:fixed;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#00BFFF;
+  pointer-events:none;
+  animation: ink 1s forwards;
+}
+
+@keyframes ink{
+  0%{transform:scale(1); opacity:1;}
+  100%{transform:scale(3); opacity:0;}
+}
+
+/* BOTÓN LÍQUIDO */
+.btn{
+  position:relative;
+  overflow:hidden;
+}
+
+.btn::after{
+  content:"";
+  position:absolute;
+  width:300%;
+  height:300%;
+  background: radial-gradient(circle, #00BFFF, #FF1493);
+  top:-100%;
+  left:-100%;
+  animation: liquid 4s infinite linear;
+  opacity:0.3;
+}
+
+@keyframes liquid{
+  0%{transform:rotate(0);}
+  100%{transform:rotate(360deg);}
+}
+
+/* SCROLL ANIMATIONS */
+.fade-up{
+  opacity:0;
+  transform:translateY(50px);
+  transition:0.8s;
+}
+
+.fade-up.active{
+  opacity:1;
+  transform:translateY(0);
+}

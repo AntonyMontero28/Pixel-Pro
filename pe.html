@@ -6,30 +6,42 @@
     <link rel="stylesheet" href="css/pe.css">
 </head>
 <body>
-    <h2>Realiza tu Pedido</h2>
-    <form method="POST" action="php/guardar.php">
-        <label>Nombre:</label><br>
-        <input type="text" name="nombre" required><br><br>
 
-        <label>Correo:</label><br>
-        <input type="email" name="correo" required><br><br>
+<!-- FORMAS CMYK -->
+<div class="shape cyan"></div>
+<div class="shape magenta"></div>
+<div class="shape yellow"></div>
+<div class="shape small cyan"></div>
+<div class="shape small magenta"></div>
+<div class="shape small yellow"></div>
+<div class="shape small blue"></div>
 
-        <label>Teléfono:</label><br>
-        <input type="tel" name="telefono" required><br><br>
+<section class="pedido-container">
 
-        <label>Tipo de Impresión:</label><br>
-        <select name="servicio" required>
-            <option value="">Selecciona</option>
-            <option>Fotográfica</option>
-            <option>Blanco y negro</option>
-            <option>Color</option>
-            <option>Máximo color</option>
-        </select><br><br>
+<h1>Realiza tu Pedido</h1>
+<p>Rápido, fácil y directo con PixelPro</p>
 
-        <label>Detalles del Pedido:</label><br>
-        <textarea name="mensaje" required></textarea><br><br>
+<form method="POST" action="php/guardar.php">
 
-        <input type="submit" value="Enviar Pedido">
-    </form>
+    <input type="text" name="nombre" placeholder="Nombre completo" required>
+    <input type="email" name="correo" placeholder="Correo electrónico" required>
+    <input type="tel" name="telefono" placeholder="Teléfono" required>
+
+    <select name="servicio" required>
+        <option value="">Tipo de impresión</option>
+        <option>Fotográfica</option>
+        <option>Blanco y negro</option>
+        <option>Color</option>
+        <option>Máximo color</option>
+    </select>
+
+    <textarea name="mensaje" placeholder="Describe tu pedido" required></textarea>
+
+    <button type="submit">Enviar Pedido</button>
+
+</form>
+
+</section>
+
 </body>
 </html>

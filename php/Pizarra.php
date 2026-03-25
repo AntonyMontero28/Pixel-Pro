@@ -1,5 +1,5 @@
 <?php
-$conexion = new mysqli("localhost","root","","pixelpro");
+include "php/conexion.php";
 $result = $conexion->query("SELECT * FROM pedidos ORDER BY fecha DESC");
 ?>
 
@@ -12,7 +12,7 @@ $result = $conexion->query("SELECT * FROM pedidos ORDER BY fecha DESC");
 <style>
 table{width:100%;border-collapse:collapse;}
 th,td{border:1px solid #000;padding:10px;text-align:center;}
-button{padding:5px 10px;margin:2px;cursor:pointer;}
+select{padding:5px;}
 </style>
 </head>
 <body>

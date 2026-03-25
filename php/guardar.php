@@ -1,8 +1,7 @@
 <?php
-// Incluimos la conexión
 include "conexion.php";
 
-// Recibir datos del formulario (enviados vía fetch desde JS)
+// Recibir datos del formulario enviados vía fetch desde JS
 $data = json_decode(file_get_contents("php://input"), true);
 
 $nombre = $data['nombre'];

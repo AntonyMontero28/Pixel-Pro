@@ -4,9 +4,9 @@
 // ========================================
 
 // Datos de conexión
-$host = "localhost";      // Servidor MySQL, usualmente localhost en XAMPP
-$usuario = "root";        // Usuario MySQL (por defecto en XAMPP es root)
-$password = "";            // Contraseña MySQL (vacía en XAMPP por defecto)
+$host = "localhost";      // Servidor MySQL
+$usuario = "root";        // Usuario MySQL
+$password = "";           // Contraseña MySQL
 $basedatos = "pixelpro";  // Nombre de la base de datos
 
 // Crear conexión
@@ -19,6 +19,4 @@ if ($conexion->connect_error) {
 
 // Establecer codificación
 $conexion->set_charset("utf8mb4");
-
-// Listo para usar $conexion en otros scripts
 ?>

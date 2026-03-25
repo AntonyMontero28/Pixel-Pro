@@ -9,43 +9,38 @@ form.addEventListener("submit", function(e){
   const servicio = document.getElementById("servicio").value;
   const mensaje = document.getElementById("mensaje").value;
 
-  /* EXPRESIONES REGULARES */
   const regexNombre = /^[a-zA-ZÁ-ÿ\s]{3,40}$/;
   const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const regexTelefono = /^[0-9]{8,15}$/;
 
-  if(!regexNombre.test(nombre)){
-    alert("Nombre inválido");
-    return;
-  }
+  if(!regexNombre.test(nombre)){ alert("Nombre inválido"); return; }
+  if(!regexCorreo.test(correo)){ alert("Correo inválido"); return; }
+  if(!regexTelefono.test(telefono)){ alert("Teléfono inválido"); return; }
 
-  if(!regexCorreo.test(correo)){
-    alert("Correo inválido");
-    return;
-  }
-
-  if(!regexTelefono.test(telefono)){
-    alert("Teléfono inválido");
-    return;
-  }
-
-  /* MENSAJE */
   const texto = `Hola PixelPro, quiero hacer un pedido:
-  
 Nombre: ${nombre}
 Correo: ${correo}
 Teléfono: ${telefono}
 Servicio: ${servicio}
 Detalles: ${mensaje}`;
 
-  /* WHATSAPP */
-  const numero = "18294309250"; // CAMBIA A TU NUMERO
-  const urlWhatsapp = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+  // WhatsApp
+  const numero = "18294309250"; 
+  window.open(`https://wa.me/${numero}?text=${encodeURIComponent(texto)}`, "_blank");
 
-  /* CORREO */
-  const urlCorreo = `mailto:pixelproinpresionesdigitales@gmail.com?subject=Pedido PixelPro&body=${encodeURIComponent(texto)}`;
+  // Correo
+  window.location.href = `mailto:pixelproinpresionesdigitales@gmail.com?subject=Pedido PixelPro&body=${encodeURIComponent(texto)}`;
 
-  /* ABRIR */
-  window.open(urlWhatsapp, "_blank");
-  window.location.href = urlCorreo;
+  // Guardar en base de datos
+  fetch("php/guardarPedido.php", {
+    method:"POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({nombre, correo, telefono, servicio, mensaje})
+  })
+  .then(res => res.text())
+  .then(res => {
+    alert("Pedido registrado en la pizarra PixelPro ✅");
+    form.reset();
+  })
+  .catch(err => console.error(err));
 });

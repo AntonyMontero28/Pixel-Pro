@@ -141,14 +141,14 @@ nav ul li:hover{
 }
 #vpH{
     font-size:80px;
-    color: #f7dcc9;
+    color: black;
     text-align: left;
     font-family: "Coiny", system-ui;
     font-weight: 400;
 }
 #slogan{
     font-size:30px;
-    color: #f7dcc9;
+    color: black;
     text-align: left;
     font-family: "Coiny", system-ui;
 }
@@ -229,11 +229,6 @@ nav ul li:hover{
     text-align: center;
     padding-top: 45px;
     padding: 50px;
-}
-*{
-    padding: 0px;
-    margin: 0px;
-    padding: 0px;
 }
 footer{
     width: 100%;

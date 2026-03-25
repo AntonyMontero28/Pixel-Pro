@@ -19,5 +19,5 @@ if($estado=="Impreso"){
     mail($to,$subject,$message,$headers);
 }
 
-header("Location: ../pizarraPedidos.php");
+header("Location: ../pizarra.php");
 ?>

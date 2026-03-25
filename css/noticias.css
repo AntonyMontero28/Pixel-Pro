@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Handlee&family=Pacifico&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#vp{
+    position: relative;      
+    width: 100%;
+    height: auto;           
+    min-height: 705px;      
+    overflow: hidden;       
+    padding: 0;             
+}
+#vp video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     
+    transform: translate(-50%, -50%);
+    z-index: -1;            
+}
+#ban, header, #textoo {
+    position: relative;
+    z-index: 1;              
+    color: black;           
+}
+
+/* resto de tu CSS sin cambios */
+h1 {
+    color: black;
+    font-family: "Nunito", sans-serif;
+    font-size: 25px;
+}
+
+#ban{
+    width: 100%;            
+    height: auto;           
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+#l{
+    width: auto;
+    height: 30px;
+    display: flex;
+    align-self: center;
+    padding-left: 10px;
+}
+
+.icons{
+    width: 110px;
+    height: 40px;
+    display: flex; 
+}
+
+i {
+    font-size: 25px;
+    color: #000000;
+    margin: 5px;
+}
+
+header{
+    width: 100%;
+    height: auto;           
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo{
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+#log{
+    height: 200px;
+    width: 200px;
+}
+
+.nav{
+    width: 800px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a{
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+nav ul li:hover{
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+#textoo{
+    width:1000px;
+    height:500px;
+    padding: 50px;
+}
+#vpH{
+    font-size:80px;
+    color:black;
+    text-align: left;
+    font-family:"Nunito", sans-serif;
+    font-weight: 900px;
+}
+#slogan{
+    font-size:30px;
+    color:black;
+    text-align: left;
+    font-family:"Nunito", sans-serif;
+    font-weight: 400px;
+}
+#textoo{
+    width:1000px;
+    height:500px;
+    padding-left: 50px;
+}
+#vpH{
+    font-size:80px;
+    color: #f7dcc9;
+    text-align: left;
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+}
+#slogan{
+    font-size:30px;
+    color: #f7dcc9;
+    text-align: left;
+    font-family: "Coiny", system-ui;
+}
+#noti{
+    width: 100%;
+    height: 460px;
+}
+#notii{
+    font-size:50px;
+    color: #ad657c;
+    text-align: center;
+    font-family: "Coiny", system-ui;
+}
+#traba{
+    font-size:25px;
+    font-family: "Handlee", cursive;
+    color:black;
+    text-align: center;
+    padding-top: 45px;
+    padding: 50px;
+}
+#imagen{
+    background-image: url(../img/impre9.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height:500px;
+}
+#notiyma{
+    width: 100%;
+    height: 500px;
+    background: #ad657c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.hola{
+    width: 380px;
+    height: 400px;
+    background: #f7dcc9;
+    border-radius: 10px;
+}
+.bony{
+    font-size:23px;
+    color:#ad657c;
+    text-align: center;
+    font-family: "Coiny",system-ui;
+    padding-top: 40px;
+}
+.bonyy{
+    font-size: 20px;
+    font-family: "Handlee", cursive;
+    color:  black;
+    text-align: center;
+    padding-top: 30px;
+    padding: 30px;
+}
+#imagenn{
+    background-image: url(../img/impre8.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height:500px;
+}
+#notie{
+    width: 100%;
+    height: 460px;
+    padding-top: 75px;
+}
+#notiie{
+    font-size:50px;
+    color:#ad657c;
+    text-align: center;
+    font-family: "Coiny",system-ui;
+}
+#trabaa{
+    font-size:25px;
+    font-family: "Handlee", cursive;
+    color:black;
+    text-align: center;
+    padding-top: 45px;
+    padding: 50px;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.cajon1{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+#logo1{
+    width: 250px;
+    height: 250px;
+}
+#n1{
+      font-family: "Funnel Sans", sans-serif;
+      color: #3AB2E6;
+}
+#n2{
+    font-family: "Funnel Sans", sans-serif;
+    color: #E83A77;
+}
+#n3{
+    font-family: "Funnel Sans", sans-serif;
+      color: #FDD51D;
+}
+#n4{
+    font-family: "Funnel Sans", sans-serif;
+      color: #171B26;
+}
+.redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.icono {
+    width: 30px;
+    height: 30px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-family: "Funnel Sans", sans-serif;
+}
+a:hover{
+    font-size: 15px;
+}

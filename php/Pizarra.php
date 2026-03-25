@@ -1,5 +1,5 @@
 <?php
-include "php/conexion.php";
+include "conexion.php";
 $result = $conexion->query("SELECT * FROM pedidos ORDER BY fecha DESC");
 ?>
 

@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sssss", $nombre, $correo, $telefono, $servicio, $mensaje);
 
     if ($stmt->execute()) {
-        echo "Pedido agregado correctamente. <a href='../pizarra.php'>Ver Pizarra</a>";
+        echo "Pedido agregado correctamente. <a href='pizarra.php'>Ver Pizarra</a>";
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -31,4 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conexion->close();
-?>
+
+
+
+

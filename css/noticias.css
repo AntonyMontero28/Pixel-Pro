@@ -158,7 +158,7 @@ nav ul li:hover{
 }
 #notii{
     font-size:50px;
-    color: #ad657c;
+    color: rgb(234, 72, 234);
     text-align: center;
     font-family: "Coiny", system-ui;
 }
@@ -179,7 +179,7 @@ nav ul li:hover{
 #notiyma{
     width: 100%;
     height: 500px;
-    background: #ad657c;
+    background:linear-gradient(90deg, cyan, magenta, yellow);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -187,12 +187,12 @@ nav ul li:hover{
 .hola{
     width: 380px;
     height: 400px;
-    background: #f7dcc9;
+    background: white;
     border-radius: 10px;
 }
 .bony{
     font-size:23px;
-    color:#ad657c;
+    color:black;
     text-align: center;
     font-family: "Coiny",system-ui;
     padding-top: 40px;

@@ -31,7 +31,7 @@ select{padding:5px;}
 <td><?= $row['mensaje'] ?></td>
 <td id="estado<?= $row['id'] ?>"><?= $row['estado'] ?></td>
 <td>
-<form method="POST" action="php/cambiarEstado.php">
+<form method="POST" action="cambiarEstado.php">
 <input type="hidden" name="id" value="<?= $row['id'] ?>">
 <select name="estado" onchange="this.form.submit()">
 <option value="Pendiente" <?= $row['estado']=='Pendiente'?'selected':'' ?>>Pendiente</option>

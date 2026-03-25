@@ -1,6 +1,8 @@
 <?php
-header("Content-Type: application/json");
+// Incluimos la conexión
+include "conexion.php";
 
+// Recibir datos del formulario (enviados vía fetch desde JS)
 $data = json_decode(file_get_contents("php://input"), true);
 
 $nombre = $data['nombre'];
@@ -9,17 +11,13 @@ $telefono = $data['telefono'];
 $servicio = $data['servicio'];
 $mensaje = $data['mensaje'];
 
-$conexion = new mysqli("localhost","root","","pixelpro");
-
-if($conexion->connect_error){
-    die("Error: ".$conexion->connect_error);
-}
-
+// Preparar e insertar en la base de datos
 $stmt = $conexion->prepare("INSERT INTO pedidos (nombre, correo, telefono, servicio, mensaje) VALUES (?, ?, ?, ?, ?)");
-$stmt->bind_param("sssss",$nombre,$correo,$telefono,$servicio,$mensaje);
+$stmt->bind_param("sssss", $nombre, $correo, $telefono, $servicio, $mensaje);
 $stmt->execute();
 $stmt->close();
 $conexion->close();
 
+// Retornar respuesta para JS
 echo json_encode(["status"=>"success"]);
 ?>

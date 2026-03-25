@@ -260,3 +260,62 @@ body {
   max-width: 600px;
   margin: 0 auto 40px;
 }
+*{
+    padding: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.cajon1{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+#logo1{
+    width: 250px;
+    height: 250px;
+}
+#n1{
+      font-family: "Funnel Sans", sans-serif;
+      color: #3AB2E6;
+}
+#n2{
+    font-family: "Funnel Sans", sans-serif;
+    color: #E83A77;
+}
+#n3{
+    font-family: "Funnel Sans", sans-serif;
+      color: #FDD51D;
+}
+#n4{
+    font-family: "Funnel Sans", sans-serif;
+      color: #171B26;
+}
+.redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.icono {
+    width: 30px;
+    height: 30px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-family: "Funnel Sans", sans-serif;
+}
+a:hover{
+    font-size: 15px;
+}

@@ -18,7 +18,11 @@
   z-index:999;
   transition:3s;
 }
-
+.loader-logo {
+  width:300px;
+  margin-bottom:10px;
+  
+}
 .loader-text{
   font-family:'Chewy';
   font-size:60px;

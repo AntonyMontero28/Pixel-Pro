@@ -30,6 +30,6 @@ if(isset($_POST['id']) && isset($_POST['estado'])){
 }
 
 // Redirigir de vuelta a la pizarra
-header("Location: ../pizarra.php");
+header("Location: pizarra.php");
 exit;
 ?>

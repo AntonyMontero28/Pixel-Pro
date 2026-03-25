@@ -131,80 +131,257 @@ nav ul li:hover{
 
 
 /*Ambar final*/
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#222;
+}
+
+/* =========================
+   TITULO PRINCIPAL
+========================= */
 #bien{
-    width: 100%;
-    height: 250px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.541),rgba(0, 0, 0, 0.541)), url(../img/servicio.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align:center;
+    margin:50px 0;
 }
+
 #bienser{
-    color: white;
-    font-size: 55px;
+    font-size:30px;
 }
-#tser{
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
+
+/* =========================
+   TITULOS DE SERVICIOS
+========================= */
+.servi{
+    text-align:center;
+    margin:40px 0 10px;
 }
-#sect2{
+
+.servi h1{
+    font-size:26px;
+}
+
+.servi h1::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:4px;
+    margin:10px auto;
+    background:linear-gradient(90deg, cyan, magenta, yellow);
+    border-radius:10px;
+}
+
+/* =========================
+   SECCIONES (CON COLOR SUAVE)
+========================= */
+.section2,
+.section3{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1100px;
+    margin:25px auto;
+    padding:30px;
+    border-radius:15px;
+    gap:30px;
+    transition:0.3s;
+}
+
+/* CYAN */
+.section2{
+    background: linear-gradient(
+        135deg,
+        rgba(0,255,255,0.08),
+        #ffffff
+    );
+    border-left:5px solid cyan;
+}
+
+/* MAGENTA */
+.section3{
+    background: linear-gradient(
+        135deg,
+        rgba(255,0,255,0.08),
+        #ffffff
+    );
+    border-left:5px solid magenta;
+}
+
+/* HOVER */
+.section2:hover{
+    background: linear-gradient(
+        135deg,
+        rgba(0,255,255,0.15),
+        #ffffff
+    );
+}
+
+.section3:hover{
+    background: linear-gradient(
+        135deg,
+        rgba(255,0,255,0.15),
+        #ffffff
+    );
+}
+
+/* =========================
+   TEXTO
+========================= */
+.servi_texto{
+    flex:1;
+}
+
+.servi_texto h2{
+    margin-bottom:10px;
+}
+
+/* COLOR EN TITULOS SEGUN SECCION */
+.section2 .servi_texto h2{
+    color:#0097a7;
+}
+
+.section3 .servi_texto h2{
+    color:#c2185b;
+}
+
+.servi_texto p{
+    margin:10px 0;
+    line-height:1.5;
+    color:#444;
+}
+
+.servi_texto ul{
+    margin-top:10px;
+}
+
+.servi_texto ul li{
+    margin-bottom:8px;
+}
+
+/* =========================
+   BOTON
+========================= */
+.btn-servicio{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 20px;
+    border-radius:20px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(90deg, cyan, magenta);
+    transition:0.3s;
+}
+
+.btn-servicio:hover{
+    background:linear-gradient(90deg, magenta, yellow);
+    transform:scale(1.05);
+}
+
+/* =========================
+   EMOJI (IMAGEN)
+========================= */
+.emoji{
+    font-size:100px;
+    width:200px;
+    height:200px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:20px;
+    background: linear-gradient(
+        135deg,
+        rgba(0,255,255,0.2),
+        rgba(255,0,255,0.2),
+        rgba(255,255,0,0.2)
+    );
+    box-shadow:0 10px 20px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.emoji:hover{
+    transform:scale(1.08) rotate(3deg);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:768px){
+
+    .section2,
+    .section3{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .emoji{
+        width:150px;
+        height:150px;
+        font-size:70px;
+    }
+}
+footer{
     width: 100%;
-    height: 900px;
+    height: 300px;
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    gap: 40px;
-    flex-wrap: wrap;
+    align-items: center;
+
 }
-.cajonpri{
+.cajon1{
     width: 250px;
-    height: 350px;
-    background-color: blueviolet;
+    height: 250px;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px;
 }
-#imgcirc{
-    width: 100px;
-    height: 100px;
-    background-color: antiquewhite;
-    border-radius: 50%;
+#logo1{
+    width: 250px;
+    height: 250px;
+}
+#n1{
+      font-family: "Funnel Sans", sans-serif;
+      color: #3AB2E6;
+}
+#n2{
+    font-family: "Funnel Sans", sans-serif;
+    color: #E83A77;
+}
+#n3{
+    font-family: "Funnel Sans", sans-serif;
+      color: #FDD51D;
+}
+#n4{
+    font-family: "Funnel Sans", sans-serif;
+      color: #171B26;
+}
+.redes {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
 }
-#copia{
-    font-size: 50px;
+.icono {
+    width: 30px;
+    height: 30px;
 }
-.detalle{
-  font-size: 16px;
-
+a{
+    text-decoration: none;
+    color: black;
+    font-family: "Funnel Sans", sans-serif;
 }
-#sertitu{
-    font-size: 20px;
-    text-align: center;
-}
-.serti{
-    font-size: 25px;
-}
-#boton{
-  padding: 10px 50px;
-  border-radius: 20px;
-  background: linear-gradient(90deg, #ff7b00, #ff3cac);
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-#boton:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+a:hover{
+    font-size: 15px;
 }

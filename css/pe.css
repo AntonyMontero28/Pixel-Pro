@@ -4,7 +4,6 @@ body{
   margin:0;
   font-family:'Montserrat';
   background:#fff;
-  overflow:hidden;
 }
 
 .shape {
@@ -30,11 +29,10 @@ body{
 
 /* CONTENEDOR */
 .pedido-container{
-  position:relative;
   max-width:400px;
   margin:80px auto;
   padding:30px;
-  background:rgba(255,255,255,0.95);
+  background:#fff;
   border-radius:20px;
   text-align:center;
   box-shadow:0 20px 60px rgba(0,0,0,0.2);

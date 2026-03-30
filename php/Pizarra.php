@@ -1,82 +1,29 @@
 <?php
 session_start();
+$conexion = new mysqli("localhost","root","","pixelpro");
 
-// 🔌 CONEXIÓN
-$conexion = new mysqli("localhost", "root", "", "pixelpro");
-if ($conexion->connect_error) {
-    die("Error de conexión");
-}
-
-// 🔐 LOGIN
-if(isset($_POST['login'])){
-    $usuario = $_POST['usuario'];
-    $clave = $_POST['clave'];
-
-    if($usuario == "admin" && $clave == "1234"){
-        $_SESSION['login'] = true;
-    } else {
-        $error = "❌ Datos incorrectos";
-    }
-}
-
-// 🔒 PROTEGER
+// LOGIN SIMPLE
 if(!isset($_SESSION['login'])){
+    if(isset($_POST['user'])){
+        if($_POST['user']=="admin" && $_POST['pass']=="1234"){
+            $_SESSION['login']=true;
+        } else {
+            $error="Datos incorrectos";
+        }
+    }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Login PixelPro</title>
-<link rel="stylesheet" href="css/Pe.css">
-</head>
-<body>
 
-<div class="pedido-container">
+<form method="POST" style="text-align:center;margin-top:100px;">
 <h2>Login PixelPro</h2>
-
-<form method="POST">
-<input type="text" name="usuario" placeholder="Usuario" required>
-<input type="password" name="clave" placeholder="Contraseña" required>
-<button name="login">Entrar</button>
+<input name="user" placeholder="Usuario"><br><br>
+<input type="password" name="pass" placeholder="Clave"><br><br>
+<button>Entrar</button>
+<?= isset($error)?$error:"" ?>
 </form>
 
-<?php if(isset($error)) echo $error; ?>
+<?php exit; }
 
-</div>
-</body>
-</html>
-<?php
-exit;
-}
-
-// 🗑️ ELIMINAR
-if(isset($_POST['eliminar'])){
-    $id = $_POST['id'];
-    $stmt = $conexion->prepare("DELETE FROM pedidos WHERE id=?");
-    $stmt->bind_param("i",$id);
-    $stmt->execute();
-}
-
-// 🔄 CAMBIAR ESTADO
-if(isset($_POST['cambiar'])){
-    $id = $_POST['id'];
-    $estado = $_POST['estado'];
-
-    $stmt = $conexion->prepare("UPDATE pedidos SET estado=? WHERE id=?");
-    $stmt->bind_param("si",$estado,$id);
-    $stmt->execute();
-
-    // 📲 WhatsApp cliente
-    if($estado == "Impreso"){
-        $res = $conexion->query("SELECT telefono, nombre FROM pedidos WHERE id=$id");
-        $p = $res->fetch_assoc();
-
-        $mensaje = "Hola ".$p['nombre']." 👋, tu pedido ya está IMPRESO ✅ en PixelPro.";
-
-        echo "<script>window.open('https://wa.me/1".$p['telefono']."?text=".urlencode($mensaje)."','_blank');</script>";
-    }
-}
-
-// 📊 CONTADORES
+// CONTADORES
 $p1 = $conexion->query("SELECT COUNT(*) c FROM pedidos WHERE estado='Pendiente'")->fetch_assoc()['c'];
 $p2 = $conexion->query("SELECT COUNT(*) c FROM pedidos WHERE estado='Impreso'")->fetch_assoc()['c'];
 $p3 = $conexion->query("SELECT COUNT(*) c FROM pedidos WHERE estado='Entregado'")->fetch_assoc()['c'];
@@ -85,68 +32,35 @@ $result = $conexion->query("SELECT * FROM pedidos ORDER BY fecha DESC");
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>PixelPro Dashboard</title>
+<title>Dashboard PixelPro</title>
 
 <style>
-body{
-  font-family:Montserrat;
-  margin:0;
-  background:#f5f5f5;
-}
+body{font-family:Montserrat;background:#f5f5f5;}
 
-h1{text-align:center;}
-
-.cards{
-  display:flex;
-  justify-content:space-around;
-  margin:20px;
-}
-
-.card{
-  padding:15px;
-  border-radius:15px;
-  color:#fff;
-  font-weight:bold;
-}
-
+.cards{display:flex;justify-content:space-around;}
+.card{padding:15px;border-radius:10px;color:#fff;}
 .p1{background:#2196F3;}
 .p2{background:#FF1493;}
 .p3{background:#00BCD4;}
 
 table{
-  width:95%;
-  margin:auto;
-  border-collapse:collapse;
-  background:#fff;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 20px 60px rgba(0,0,0,0.2);
+width:95%;margin:auto;background:#fff;
+border-collapse:collapse;
 }
 
-th{
-  background:#171B26;
-  color:#fff;
-}
-
-th,td{
-  padding:10px;
-  text-align:center;
-}
+th{background:#171B26;color:#fff;}
+th,td{padding:10px;text-align:center;}
 
 button{
-  background:linear-gradient(45deg,#00BFFF,#FF1493);
-  color:#fff;
-  border:none;
-  padding:6px;
-  border-radius:8px;
-  cursor:pointer;
+background:linear-gradient(45deg,#00BFFF,#FF1493);
+color:#fff;border:none;padding:5px;
+cursor:pointer;
 }
 </style>
-
 </head>
+
 <body>
 
 <h1>🚀 PixelPro Dashboard</h1>
@@ -159,7 +73,7 @@ button{
 
 <table>
 <tr>
-<th>ID</th><th>Nombre</th><th>Teléfono</th><th>Archivo</th><th>Estado</th><th>Acciones</th>
+<th>ID</th><th>Nombre</th><th>Archivo</th><th>Estado</th><th>Acciones</th>
 </tr>
 
 <?php while($row = $result->fetch_assoc()): ?>
@@ -167,45 +81,45 @@ button{
 
 <td><?= $row['id'] ?></td>
 <td><?= $row['nombre'] ?></td>
-<td><?= $row['telefono'] ?></td>
 
 <td>
-<a href="<?= $row['archivo'] ?>" target="_blank">Ver</a>
+<?php if($row['archivo']): ?>
+<a href="<?= $row['archivo'] ?>" target="_blank">📄 Ver</a>
+<?php endif; ?>
 </td>
 
+<td><?= $row['estado'] ?></td>
+
 <td>
-<form method="POST">
+
+<form method="POST" action="php/cambiar.php">
 <input type="hidden" name="id" value="<?= $row['id'] ?>">
 <select name="estado" onchange="this.form.submit()">
-<option value="Pendiente" <?= $row['estado']=='Pendiente'?'selected':'' ?>>Pendiente</option>
-<option value="Impreso" <?= $row['estado']=='Impreso'?'selected':'' ?>>Impreso</option>
-<option value="Entregado" <?= $row['estado']=='Entregado'?'selected':'' ?>>Entregado</option>
+<option <?= $row['estado']=="Pendiente"?"selected":"" ?>>Pendiente</option>
+<option <?= $row['estado']=="Impreso"?"selected":"" ?>>Impreso</option>
+<option <?= $row['estado']=="Entregado"?"selected":"" ?>>Entregado</option>
 </select>
-<input type="hidden" name="cambiar">
 </form>
-</td>
 
-<td>
-<form method="POST">
+<form method="POST" action="php/eliminar.php">
 <input type="hidden" name="id" value="<?= $row['id'] ?>">
-<button name="eliminar">Eliminar</button>
+<button>Eliminar</button>
 </form>
+
 </td>
 
 </tr>
 <?php endwhile; ?>
 </table>
+<?php
+$conexion = new mysqli("localhost","root","","pixelpro");
 
-<audio id="sonido" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
+$id = $_POST['id'];
 
-<script>
-let prev = 0;
+$stmt = $conexion->prepare("DELETE FROM pedidos WHERE id=?");
+$stmt->bind_param("i",$id);
+$stmt->execute();
 
-setInterval(()=>{
- fetch("")
- .then(()=>location.reload())
-},);
-</script>
-
+header("Location: ../pizarra.php");
 </body>
-</html>  
+</html> 

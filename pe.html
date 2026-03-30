@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Realiza tu Pedido - PixelPro</title>
-    <link rel="stylesheet" href="css/pe.css">
+<meta charset="UTF-8">
+<title>PixelPro Pedido</title>
+<link rel="stylesheet" href="css/pe.css">
 </head>
+
 <body>
 
-<!-- FORMAS CMYK -->
 <div class="shape cyan"></div>
 <div class="shape magenta"></div>
 <div class="shape yellow"></div>
-<div class="shape small cyan"></div>
-<div class="shape small magenta"></div>
-<div class="shape small yellow"></div>
-<div class="shape small blue"></div>
 
 <section class="pedido-container">
 
 <h1>Realiza tu Pedido</h1>
-<p>Rápido, fácil y directo con PixelPro</p>
 
-<form method="POST" action="php/guardar.php">
+<form method="POST" action="php/guardar.php" enctype="multipart/form-data">
 
-    <input type="text" name="nombre" placeholder="Nombre completo" required>
-    <input type="email" name="correo" placeholder="Correo electrónico" required>
-    <input type="tel" name="telefono" placeholder="Teléfono" required>
+<input type="text" name="nombre" placeholder="Nombre" required>
+<input type="email" name="correo" placeholder="Correo" required>
+<input type="tel" name="telefono" placeholder="Teléfono" required>
 
-    <select name="servicio" required>
-        <option value="">Tipo de impresión</option>
-        <option>Fotográfica</option>
-        <option>Blanco y negro</option>
-        <option>Color</option>
-        <option>Máximo color</option>
-    </select>
+<select name="servicio" required>
+<option value="">Tipo de impresión</option>
+<option>Color</option>
+<option>Blanco y negro</option>
+</select>
 
-    <textarea name="mensaje" placeholder="Describe tu pedido" required></textarea>
+<textarea name="mensaje" placeholder="Detalles"></textarea>
 
-    <button type="submit">Enviar Pedido</button>
+<input type="file" name="archivo" required>
+
+<button>Enviar Pedido</button>
 
 </form>
 

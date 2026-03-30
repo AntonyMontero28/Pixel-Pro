@@ -3,7 +3,7 @@ session_start();
 $conexion = new mysqli("localhost","root","","pixelpro");
 if($conexion->connect_error) die("Error DB: ".$conexion->connect_error);
 
-// 🔐 LOGIN ADMIN SIMPLE
+// 📌 LOGIN ADMIN SIMPLE
 if(!isset($_SESSION['login'])){
     if(isset($_POST['user'])){
         if($_POST['user']=="admin" && $_POST['pass']=="1234"){
@@ -33,9 +33,40 @@ button{background:linear-gradient(45deg,#00BFFF,#FF1493);color:#fff;cursor:point
 </html>
 <?php exit; }
 
+// 💾 REGISTRAR PEDIDO (con archivo)
+if(isset($_POST['guardar'])){
+    $nombre = $_POST['nombre'];
+    $correo = $_POST['correo'];
+    $telefono = $_POST['telefono'];
+    $servicio = $_POST['servicio'];
+    $mensaje = $_POST['mensaje'];
+    $archivo = "";
+
+    if(isset($_FILES['archivo']) && $_FILES['archivo']['error']==0){
+        if(!is_dir("uploads")) mkdir("uploads");
+        $ext = pathinfo($_FILES['archivo']['name'], PATHINFO_EXTENSION);
+        $archivo = "uploads/".time()."_".rand(100,999).".".$ext;
+        move_uploaded_file($_FILES['archivo']['tmp_name'], $archivo);
+    }
+
+    $stmt = $conexion->prepare("INSERT INTO pedidos (nombre, correo, telefono, servicio, mensaje, archivo, estado, fecha) VALUES (?,?,?,?,?,?, 'Pendiente', NOW())");
+    $stmt->bind_param("ssssss",$nombre,$correo,$telefono,$servicio,$mensaje,$archivo);
+    $stmt->execute();
+
+    // WhatsApp a la empresa
+    $telefono_empresa = "8294309250";
+    $mensaje_ws = "Nuevo pedido de $nombre\nServicio: $servicio";
+    echo "<script>window.open('https://wa.me/$telefono_empresa?text=".urlencode($mensaje_ws)."','_blank');</script>";
+}
+
 // 💾 ELIMINAR PEDIDO
 if(isset($_POST['eliminar'])){
     $id = $_POST['id'];
+    // Borrar archivo si existe
+    $res = $conexion->query("SELECT archivo FROM pedidos WHERE id=$id");
+    $row = $res->fetch_assoc();
+    if($row['archivo'] && file_exists($row['archivo'])) unlink($row['archivo']);
+
     $stmt = $conexion->prepare("DELETE FROM pedidos WHERE id=?");
     $stmt->bind_param("i",$id);
     $stmt->execute();
@@ -45,17 +76,15 @@ if(isset($_POST['eliminar'])){
 if(isset($_POST['cambiar'])){
     $id = $_POST['id'];
     $estado = $_POST['estado'];
-
     $stmt = $conexion->prepare("UPDATE pedidos SET estado=? WHERE id=?");
     $stmt->bind_param("si",$estado,$id);
     $stmt->execute();
 
-    // 📲 WhatsApp al número de la empresa SI está impreso
     if($estado=="Impreso"){
         $res = $conexion->query("SELECT nombre, servicio FROM pedidos WHERE id=$id");
         $p = $res->fetch_assoc();
         $mensaje = "Nuevo pedido de ".$p['nombre']."\nServicio: ".$p['servicio'];
-        $telefono_empresa = "8294309250"; // Número de la empresa
+        $telefono_empresa = "8294309250";
         echo "<script>window.open('https://wa.me/$telefono_empresa?text=".urlencode($mensaje)."','_blank');</script>";
     }
 }
@@ -89,6 +118,7 @@ th,td{padding:10px;text-align:center;}
 button, select{background:linear-gradient(45deg,#00BFFF,#FF1493);color:#fff;border:none;padding:5px;cursor:pointer;border-radius:5px;}
 button:hover, select:hover{opacity:0.9;}
 a{color:#FF1493;text-decoration:none;}
+form{margin:0;}
 </style>
 </head>
 <body>
@@ -134,6 +164,23 @@ a{color:#FF1493;text-decoration:none;}
 <?php endwhile; ?>
 </table>
 
+<h2 style="text-align:center;margin-top:40px;">📥 Registrar Pedido Manual</h2>
+<form method="POST" enctype="multipart/form-data" style="width:300px;margin:20px auto;">
+<input type="text" name="nombre" placeholder="Nombre" required><br>
+<input type="email" name="correo" placeholder="Correo" required><br>
+<input type="tel" name="telefono" placeholder="Teléfono" required><br>
+<select name="servicio" required>
+<option value="">Servicio</option>
+<option>Fotográfica</option>
+<option>Blanco y negro</option>
+<option>Color</option>
+<option>Máximo color</option>
+</select><br>
+<textarea name="mensaje" placeholder="Mensaje"></textarea><br>
+<input type="file" name="archivo"><br><br>
+<button name="guardar">Guardar Pedido</button>
+</form>
+
 <script>
 // Eliminar pedido
 function eliminarPedido(id){
@@ -153,15 +200,9 @@ function cambiarEstado(id, estado){
         method:"POST",
         headers:{"Content-Type":"application/x-www-form-urlencoded"},
         body:"cambiar=1&id="+id+"&estado="+encodeURIComponent(estado)
-    }).then(()=>actualizarContadores())
+    }).then(()=>location.reload())
       .catch(e=>alert("Error al cambiar estado: "+e));
 }
-
-// Actualizar contadores
-function actualizarContadores(){
-    fetch("").then(()=>location.reload());
-}
 </script>
-
 </body>
 </html>

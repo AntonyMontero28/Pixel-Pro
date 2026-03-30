@@ -1,28 +1,35 @@
 <?php
-$conexion = new mysqli("localhost", "root", "", "pixelpro");
+include "conexion.php";
 
-$nombre = $_POST["nombre"];
-$correo = $_POST["correo"];
-$telefono = $_POST["telefono"];
-$servicio = $_POST["servicio"];
-$mensaje = $_POST["mensaje"];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-$archivo = "";
+    $nombre = $_POST["nombre"];
+    $correo = $_POST["correo"];
+    $telefono = $_POST["telefono"];
+    $servicio = $_POST["servicio"];
+    $mensaje = $_POST["mensaje"];
 
-// Guardar archivo
-if(isset($_FILES['archivo']) && $_FILES['archivo']['error'] == 0){
-    $ext = pathinfo($_FILES['archivo']['name'], PATHINFO_EXTENSION);
-    $archivo = "uploads/" . time() . "_" . rand(100,999) . "." . $ext;
-    move_uploaded_file($_FILES['archivo']['tmp_name'], "../".$archivo);
+    // Subir archivo
+    $archivoNombre = $_FILES["archivo"]["name"];
+    $ruta = "../uploads/" . $archivoNombre;
+    move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta);
+
+    
+
+    // Guardar en BD
+    $stmt = $conexion->prepare("INSERT INTO pedidos (nombre, correo, telefono, servicio, mensaje, archivo) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssss", $nombre, $correo, $telefono, $servicio, $mensaje, $ruta);
+    $stmt->execute();
+
+    // WhatsApp empresa
+    $mensajeWP = "Nuevo pedido PixelPro 🚀
+Nombre: $nombre
+Tel: $telefono
+Servicio: $servicio
+Detalles: $mensaje";
+
+    header("Location: https://wa.me/18294309250?text=" . urlencode($mensajeWP));
+    exit;
 }
-
-// Insertar en BD
-$stmt = $conexion->prepare("INSERT INTO pedidos (nombre, correo, telefono, servicio, mensaje, archivo) VALUES (?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssssss", $nombre, $correo, $telefono, $servicio, $mensaje, $archivo);
-$stmt->execute();
-
-// WhatsApp empresa
-$mensaje_ws = "Nuevo pedido de $nombre - $servicio";
-header("Location: https://wa.me/18294309250?text=" . urlencode($mensaje_ws));
-exit;
+?>
 

@@ -38,29 +38,20 @@ $result = $conexion->query("SELECT * FROM pedidos ORDER BY fecha DESC");
 
 <style>
 body{font-family:Montserrat;background:#f5f5f5;}
-
 .cards{display:flex;justify-content:space-around;}
 .card{padding:15px;border-radius:10px;color:#fff;}
 .p1{background:#2196F3;}
 .p2{background:#FF1493;}
 .p3{background:#00BCD4;}
-
-table{
-width:95%;margin:auto;background:#fff;
-border-collapse:collapse;
-}
-
+table{width:95%;margin:auto;background:#fff;border-collapse:collapse;}
 th{background:#171B26;color:#fff;}
 th,td{padding:10px;text-align:center;}
-
 button{
 background:linear-gradient(45deg,#00BFFF,#FF1493);
-color:#fff;border:none;padding:5px;
-cursor:pointer;
+color:#fff;border:none;padding:5px;cursor:pointer;
 }
 </style>
 </head>
-
 <body>
 
 <h1>🚀 PixelPro Dashboard</h1>
@@ -71,14 +62,13 @@ cursor:pointer;
 <div class="card p3">Entregados: <?= $p3 ?></div>
 </div>
 
-<table>
+<table id="tablaPedidos">
 <tr>
 <th>ID</th><th>Nombre</th><th>Archivo</th><th>Estado</th><th>Acciones</th>
 </tr>
 
 <?php while($row = $result->fetch_assoc()): ?>
-<tr>
-
+<tr id="pedido-<?= $row['id'] ?>">
 <td><?= $row['id'] ?></td>
 <td><?= $row['nombre'] ?></td>
 
@@ -88,10 +78,7 @@ cursor:pointer;
 <?php endif; ?>
 </td>
 
-<td><?= $row['estado'] ?></td>
-
 <td>
-
 <form method="POST" action="cambiarEstado.php">
 <input type="hidden" name="id" value="<?= $row['id'] ?>">
 <select name="estado" onchange="this.form.submit()">
@@ -100,27 +87,34 @@ cursor:pointer;
 <option <?= $row['estado']=="Entregado"?"selected":"" ?>>Entregado</option>
 </select>
 </form>
-
-<form method="POST" action="php/eliminar.php">
-<input type="hidden" name="id" value="<?= $row['id'] ?>">
-<button>Eliminar</button>
-</form>
-
 </td>
 
+<td>
+<button onclick="eliminarPedido(<?= $row['id'] ?>)">Eliminar</button>
+</td>
 </tr>
 <?php endwhile; ?>
 </table>
-<?php
-$conexion = new mysqli("localhost","root","","pixelpro");
 
-$id = $_POST['id'];
+<script>
+// Función para eliminar pedido por AJAX
+function eliminarPedido(id){
+    if(confirm("¿Deseas eliminar este pedido?")){
+        fetch("php/eliminar.php", {
+            method: "POST",
+            headers: {"Content-Type": "application/x-www-form-urlencoded"},
+            body: "id=" + id
+        })
+        .then(res => res.text())
+        .then(res => {
+            // quitar fila de la tabla
+            const fila = document.getElementById("pedido-" + id);
+            fila.parentNode.removeChild(fila);
+        })
+        .catch(err => alert("Error al eliminar: " + err));
+    }
+}
+</script>
 
-$stmt = $conexion->prepare("DELETE FROM pedidos WHERE id=?");
-$stmt->bind_param("i",$id);
-$stmt->execute();
-
-header("Location: pizarra.php");
-?>
 </body>
-</html> 
+</html>

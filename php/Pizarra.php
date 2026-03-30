@@ -100,7 +100,7 @@ color:#fff;border:none;padding:5px;cursor:pointer;
 // Función para eliminar pedido por AJAX
 function eliminarPedido(id){
     if(confirm("¿Deseas eliminar este pedido?")){
-        fetch("php/eliminar.php", {
+        fetch("eliminar.php", {
             method: "POST",
             headers: {"Content-Type": "application/x-www-form-urlencoded"},
             body: "id=" + id

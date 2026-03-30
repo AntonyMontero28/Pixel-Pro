@@ -1,18 +1,28 @@
 <?php
 $conexion = new mysqli("localhost","root","","pixelpro");
 
-// Datos del formulario
-$nombre = $_POST["nombre"];
-$correo = $_POST["correo"];
-$telefono = $_POST["telefono"];
-$servicio = $_POST["servicio"];
-$mensaje = $_POST["mensaje"];
+$id = $_POST['id'];
+$estado = $_POST['estado'];
 
-$archivo = "";
+$stmt = $conexion->prepare("UPDATE pedidos SET estado=? WHERE id=?");
+$stmt->bind_param("si",$estado,$id);
+$stmt->execute();
 
-// 📁 Subir archivo
-if(isset($_FILES['archivo']) && $_FILES['archivo']['error'] == 0){
-    $ext = pathinfo($_FILES['archivo']['name'], PATHINFO_EXTENSION);
-    $archivo = "uploads/" . time() . "_" . rand(100,999) . "." . $ext;
-    move
+// WhatsApp cliente
+if($estado == "Impreso"){
+    $res = $conexion->query("SELECT telefono,nombre FROM pedidos WHERE id=$id");
+    $p = $res->fetch_assoc();
+
+    $msg = "Hola ".$p['nombre']." tu pedido ya esta IMPRESO ✅";
+    $url = "https://wa.me/1".$p['telefono']."?text=".urlencode($msg);
+
+    // Abrir en otra pestaña usando JavaScript
+    echo "<script>
+        window.open('$url', '_blank');
+        window.location.href = 'pizarra.php';
+    </script>";
+    exit;
+}
+
+header("Location: pizarra.php");
 ?>

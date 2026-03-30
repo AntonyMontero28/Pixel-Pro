@@ -24,13 +24,9 @@ if(!isset($_SESSION['login'])){
 <?php exit; }
 
 // CONTADORES
-function contarEstado($conexion, $estado){
-    return $conexion->query("SELECT COUNT(*) c FROM pedidos WHERE estado='$estado'")->fetch_assoc()['c'];
-}
-
-$p1 = contarEstado($conexion, "Pendiente");
-$p2 = contarEstado($conexion, "Impreso");
-$p3 = contarEstado($conexion, "Entregado");
+$p1 = $conexion->query("SELECT COUNT(*) c FROM pedidos WHERE estado='Pendiente'")->fetch_assoc()['c'];
+$p2 = $conexion->query("SELECT COUNT(*) c FROM pedidos WHERE estado='Impreso'")->fetch_assoc()['c'];
+$p3 = $conexion->query("SELECT COUNT(*) c FROM pedidos WHERE estado='Entregado'")->fetch_assoc()['c'];
 
 $result = $conexion->query("SELECT * FROM pedidos ORDER BY fecha DESC");
 ?>
@@ -39,32 +35,31 @@ $result = $conexion->query("SELECT * FROM pedidos ORDER BY fecha DESC");
 <html>
 <head>
 <title>Dashboard PixelPro</title>
+
 <style>
-body{font-family:Montserrat;background:#f5f5f5;margin:0;padding:0;}
-.cards{display:flex;justify-content:space-around;margin:20px 0;}
-.card{padding:15px;border-radius:10px;color:#fff;width:150px;text-align:center;}
+body{font-family:Montserrat;background:#f5f5f5;}
+.cards{display:flex;justify-content:space-around;}
+.card{padding:15px;border-radius:10px;color:#fff;}
 .p1{background:#2196F3;}
 .p2{background:#FF1493;}
 .p3{background:#00BCD4;}
 table{width:95%;margin:auto;background:#fff;border-collapse:collapse;}
 th{background:#171B26;color:#fff;}
 th,td{padding:10px;text-align:center;}
-button, select{
+button{
 background:linear-gradient(45deg,#00BFFF,#FF1493);
 color:#fff;border:none;padding:5px;cursor:pointer;
-border-radius:5px;
 }
-button:hover, select:hover{opacity:0.9;}
 </style>
 </head>
 <body>
 
-<h1 style="text-align:center;">🚀 PixelPro Dashboard</h1>
+<h1>🚀 PixelPro Dashboard</h1>
 
 <div class="cards">
-<div class="card p1">Pendientes: <span id="contPendiente"><?= $p1 ?></span></div>
-<div class="card p2">Impresos: <span id="contImpreso"><?= $p2 ?></span></div>
-<div class="card p3">Entregados: <span id="contEntregado"><?= $p3 ?></span></div>
+<div class="card p1">Pendientes: <?= $p1 ?></div>
+<div class="card p2">Impresos: <?= $p2 ?></div>
+<div class="card p3">Entregados: <?= $p3 ?></div>
 </div>
 
 <table id="tablaPedidos">
@@ -84,11 +79,14 @@ button:hover, select:hover{opacity:0.9;}
 </td>
 
 <td>
-<select onchange="cambiarEstado(<?= $row['id'] ?>, this.value)">
+<form method="POST" action="cambiarEstado.php">
+<input type="hidden" name="id" value="<?= $row['id'] ?>">
+<select name="estado" onchange="this.form.submit()">
 <option <?= $row['estado']=="Pendiente"?"selected":"" ?>>Pendiente</option>
 <option <?= $row['estado']=="Impreso"?"selected":"" ?>>Impreso</option>
 <option <?= $row['estado']=="Entregado"?"selected":"" ?>>Entregado</option>
 </select>
+</form>
 </td>
 
 <td>
@@ -99,7 +97,7 @@ button:hover, select:hover{opacity:0.9;}
 </table>
 
 <script>
-// Eliminar pedido con AJAX
+// Función para eliminar pedido por AJAX
 function eliminarPedido(id){
     if(confirm("¿Deseas eliminar este pedido?")){
         fetch("php/eliminar.php", {
@@ -109,40 +107,14 @@ function eliminarPedido(id){
         })
         .then(res => res.text())
         .then(res => {
-            document.getElementById("pedido-" + id).remove();
-            actualizarContadores();
+            // quitar fila de la tabla
+            const fila = document.getElementById("pedido-" + id);
+            fila.parentNode.removeChild(fila);
         })
         .catch(err => alert("Error al eliminar: " + err));
     }
 }
-
-// Cambiar estado con AJAX
-function cambiarEstado(id, estado){
-    fetch("php/cambiarEstado.php", {
-        method: "POST",
-        headers: {"Content-Type": "application/x-www-form-urlencoded"},
-        body: "id=" + id + "&estado=" + encodeURIComponent(estado)
-    })
-    .then(res => res.text())
-    .then(res => {
-        actualizarContadores();
-        if(estado == "Impreso"){
-            fetch("php/whatsapp.php?id=" + id) // notificación WhatsApp
-        }
-    })
-    .catch(err => alert("Error al cambiar estado: " + err));
-}
-
-// Actualizar contadores
-function actualizarContadores(){
-    fetch("php/contadores.php")
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("contPendiente").innerText = data.Pendiente;
-        document.getElementById("contImpreso").innerText = data.Impreso;
-        document.getElementById("contEntregado").innerText = data.Entregado;
-    });
-}
 </script>
+
 </body>
 </html>

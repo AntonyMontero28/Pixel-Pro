@@ -19,5 +19,5 @@ if($estado=="Impreso"){
     exit;
 }
 
-header("Location: ../pizarra.php");
+header("Location: pizarra.php");
 ?>

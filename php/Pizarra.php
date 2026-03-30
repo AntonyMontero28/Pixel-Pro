@@ -92,7 +92,7 @@ cursor:pointer;
 
 <td>
 
-<form method="POST" action="php/cambiar.php">
+<form method="POST" action="cambiarEstado.php">
 <input type="hidden" name="id" value="<?= $row['id'] ?>">
 <select name="estado" onchange="this.form.submit()">
 <option <?= $row['estado']=="Pendiente"?"selected":"" ?>>Pendiente</option>
@@ -120,7 +120,7 @@ $stmt = $conexion->prepare("DELETE FROM pedidos WHERE id=?");
 $stmt->bind_param("i",$id);
 $stmt->execute();
 
-header("Location: ../pizarra.php");
+header("Location: pizarra.php");
 ?>
 </body>
 </html> 

@@ -138,7 +138,34 @@ nav ul li:hover{
     font-weight: 400px;
 }
 
+/* CURSOR PERSONALIZADO */
+.cursor{
+  width:20px;
+  height:20px;
+  background:#FF1493;
+  border-radius:50%;
+  position:fixed;
+  pointer-events:none;
+  transform:translate(-50%, -50%);
+  z-index:9999;
+  mix-blend-mode:difference;
+}
 
+/* PARTÍCULAS DE TINTA */
+.particle{
+  position:fixed;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#00BFFF;
+  pointer-events:none;
+  animation: ink 1s forwards;
+}
+
+@keyframes ink{
+  0%{transform:scale(1); opacity:1;}
+  100%{transform:scale(3); opacity:0;}
+}
 
 
 
@@ -261,11 +288,10 @@ h3{
     background: radial-gradient(circle, #3AB2E6, transparent);
     
 }
-
 /* Variaciones */
 .circulo:nth-child(1){
     left: 10%;
-    top: 90%;
+    top: 70%;
     background: #3AB2E6;
     animation-duration: 8s;
 }

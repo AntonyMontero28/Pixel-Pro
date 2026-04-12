@@ -142,3 +142,99 @@ button:hover{
   transform:scale(1.05);
   box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px){
+
+  .pedido-container{
+    width:95%;
+    flex-direction:column;
+  }
+
+  .info-panel,
+  .form-panel{
+    width:100%;
+    box-sizing:border-box;
+  }
+
+  .info-panel{
+    padding:30px;
+    text-align:center;
+    align-items:center;
+  }
+
+  .info-panel ul{
+    padding-left:0;
+    list-style:none;
+  }
+
+  .logo{
+    width:110px;
+  }
+
+  .form-panel{
+    padding:30px;
+  }
+
+}
+
+@media (max-width: 600px){
+
+  body{
+    padding:20px 0;
+    align-items:flex-start;
+  }
+
+  .pedido-container{
+    width:95%;
+    margin:20px 0;
+    border-radius:18px;
+  }
+
+  .info-panel{
+    padding:25px 20px;
+  }
+
+  .form-panel{
+    padding:25px 20px;
+  }
+
+  .info-panel h2{
+    font-size:24px;
+  }
+
+  .form-panel h1{
+    font-size:24px;
+  }
+
+  form input,
+  form select,
+  form textarea{
+    width:100%;
+    box-sizing:border-box;
+    font-size:14px;
+  }
+
+  button{
+    width:100%;
+    font-size:15px;
+  }
+
+  /* Reducir formas decorativas */
+  .shape.cyan{
+    width:180px;
+    height:180px;
+  }
+
+  .shape.magenta{
+    width:220px;
+    height:220px;
+  }
+
+  .shape.yellow{
+    width:150px;
+    height:150px;
+  }
+
+}

@@ -1,59 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pixel Pro - Caja</title>
-<link rel="stylesheet" href="css/cotizador.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Pro - Caja</title>
+    <link rel="stylesheet" href="css/cotizador.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- FONDO CMYK -->
+    <div class="bg cyan"></div>
+    <div class="bg magenta"></div>
+    <div class="bg yellow"></div>
 
-<!-- FONDO CMYK -->
-<div class="bg cyan"></div>
-<div class="bg magenta"></div>
-<div class="bg yellow"></div>
+    <section class="container">
+      <h1>Caja Pixel Pro</h1>
 
-<section class="container">
+      <input type="text" id="cliente" placeholder="Nombre del cliente" />
 
-<h1> Caja Pixel Pro</h1>
+      <select id="tipo">
+        <option value="Color">Color</option>
+        <option value="B/N">Blanco y Negro</option>
+        <option value="Fotográfica">Fotográfica</option>
+      </select>
 
-<input type="text" id="cliente" placeholder="Nombre del cliente">
+      <input type="number" id="cantidad" placeholder="Cantidad" />
 
-<select id="tipo">
-  <option value="Color">Color</option>
-  <option value="B/N">Blanco y Negro</option>
-  <option value="Fotográfica">Fotográfica</option>
-</select>
+      <select id="material">
+        <option value="Normal">Carta 4A</option>
+        <option value="Satinado">Satinado</option>
+        <option value="Vinil">Fotografico</option>
+      </select>
 
-<input type="number" id="cantidad" placeholder="Cantidad">
+      <button onclick="calcular()">Calcular</button>
 
-<select id="material">
-  <option value="Normal">Carta 4A</option>
-  <option value="Satinado">Satinado</option>
-  <option value="Vinil">Fotografico</option>
-</select>
+      <h2 id="total">RD$ 0</h2>
 
-<button onclick="calcular()">Calcular</button>
+      <button onclick="enviarFactura()" class="btn-enviar">
+        Enviar Factura
+      </button>
 
-<h2 id="total">RD$ 0</h2>
+      <!-- FACTURA -->
+      <div id="factura" class="factura">
+        <h2>FACTURA PIXEL PRO</h2>
+        <p id="f-cliente"></p>
+        <p id="f-servicio"></p>
+        <p id="f-cantidad"></p>
+        <p id="f-material"></p>
+        <h3 id="f-total"></h3>
+      </div>
+    </section>
 
-<button onclick="enviarFactura()" class="btn-enviar">
- Enviar Factura
-</button>
-
-<!-- FACTURA -->
-<div id="factura" class="factura">
-  <h2> FACTURA PIXEL PRO</h2>
-  <p id="f-cliente"></p>
-  <p id="f-servicio"></p>
-  <p id="f-cantidad"></p>
-  <p id="f-material"></p>
-  <h3 id="f-total"></h3>
-</div>
-
-</section>
-
-<script src="js/cotizador.js"></script>
-</body>
+    <script src="js/cotizador.js"></script>
+  </body>
 </html>

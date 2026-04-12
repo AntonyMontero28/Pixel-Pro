@@ -1,47 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Panel de Caja - Pixel Pro</title>
-<link rel="stylesheet" href="css/verCaja.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de Caja - Pixel Pro</title>
+    <link rel="stylesheet" href="css/verCaja.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- FONDO CMYK -->
+    <div class="bg cyan"></div>
+    <div class="bg magenta"></div>
+    <div class="bg yellow"></div>
 
-<!-- FONDO CMYK -->
-<div class="bg cyan"></div>
-<div class="bg magenta"></div>
-<div class="bg yellow"></div>
+    <!-- HEADER -->
+    <header class="header">
+      <img src="img/logo.png" class="logo" />
+      <h1>Panel de Caja</h1>
+    </header>
 
-<!-- HEADER -->
-<header class="header">
-  <img src="img/logo.png" class="logo">
-  <h1>Panel de Caja</h1>
-</header>
+    <!-- CONTENEDOR -->
+    <section class="container">
+      <h2>📊 Registro de Ventas</h2>
 
-<!-- CONTENEDOR -->
-<section class="container">
+      <div class="tabla">
+        <div class="fila encabezado">
+          <div>Cliente</div>
+          <div>Total</div>
+          <div>Fecha</div>
+        </div>
 
-  <h2>📊 Registro de Ventas</h2>
+        <div id="datos"></div>
+      </div>
 
-  <div class="tabla">
+      <h3 id="totalGeneral">Total General: RD$ 0</h3>
+    </section>
 
-    <div class="fila encabezado">
-      <div>Cliente</div>
-      <div>Total</div>
-      <div>Fecha</div>
-    </div>
-
-    <div id="datos"></div>
-
-  </div>
-
-  <h3 id="totalGeneral">Total General: RD$ 0</h3>
-
-</section>
-
-<script src="js/verCaja.js"></script>
-
-</body>
+    <script src="js/verCaja.js"></script>
+  </body>
 </html>

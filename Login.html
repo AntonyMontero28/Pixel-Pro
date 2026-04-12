@@ -1,73 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PixelPro Clientes</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixelPro Clientes</title>
 
-<link rel="stylesheet" href="css/Login.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- FONDO CMYK -->
+    <div class="shape cyan"></div>
+    <div class="shape magenta"></div>
+    <div class="shape yellow"></div>
+    <div class="shape blue"></div>
 
-</head>
-<body>
+    <div class="container">
+      <div class="form-box" id="loginBox">
+        <h2>PixelPro</h2>
+        <p>Iniciar Sesión</p>
 
-<!-- FONDO CMYK -->
-<div class="shape cyan"></div>
-<div class="shape magenta"></div>
-<div class="shape yellow"></div>
-<div class="shape blue"></div>
+        <form id="loginForm">
+          <input type="email" placeholder="Correo" required />
+          <input type="password" placeholder="Contraseña" required />
 
-<div class="container">
+          <button>Entrar</button>
+        </form>
 
-<div class="form-box" id="loginBox">
+        <p class="switch">
+          ¿No tienes cuenta? <span onclick="mostrarRegistro()">Regístrate</span>
+        </p>
+      </div>
 
-<h2>PixelPro</h2>
-<p>Iniciar Sesión</p>
+      <div class="form-box hidden" id="registerBox">
+        <h2>Crear Cuenta</h2>
 
-<form id="loginForm">
-<input type="email" placeholder="Correo" required>
-<input type="password" placeholder="Contraseña" required>
+        <form id="registerForm">
+          <input type="text" placeholder="Nombre completo" required />
+          <input type="tel" placeholder="Teléfono" required />
+          <input type="email" placeholder="Correo" required />
+          <input type="password" placeholder="Contraseña" required />
 
-<button>Entrar</button>
-</form>
+          <div class="check">
+            <input type="checkbox" id="terms" required />
+            <label for="terms"
+              >Acepto
+              <span onclick="mostrarModal('privacidad')"
+                >Política de privacidad</span
+              >
+              y <span onclick="mostrarModal('terminos')">Términos</span></label
+            >
+          </div>
 
-<p class="switch">¿No tienes cuenta? <span onclick="mostrarRegistro()">Regístrate</span></p>
+          <button>Registrarse</button>
+        </form>
 
-</div>
+        <p class="switch">
+          ¿Ya tienes cuenta? <span onclick="mostrarLogin()">Inicia sesión</span>
+        </p>
+      </div>
+    </div>
 
-<div class="form-box hidden" id="registerBox">
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <div id="contenidoModal"></div>
+      </div>
+    </div>
 
-<h2>Crear Cuenta</h2>
-
-<form id="registerForm">
-<input type="text" placeholder="Nombre completo" required>
-<input type="tel" placeholder="Teléfono" required>
-<input type="email" placeholder="Correo" required>
-<input type="password" placeholder="Contraseña" required>
-
-<div class="check">
-<input type="checkbox" id="terms" required>
-<label for="terms">Acepto <span onclick="mostrarModal('privacidad')">Política de privacidad</span> y <span onclick="mostrarModal('terminos')">Términos</span></label>
-</div>
-
-<button>Registrarse</button>
-</form>
-
-<p class="switch">¿Ya tienes cuenta? <span onclick="mostrarLogin()">Inicia sesión</span></p>
-
-</div>
-
-</div>
-
-<!-- MODAL -->
-<div id="modal" class="modal">
-<div class="modal-content">
-<span class="close" onclick="cerrarModal()">&times;</span>
-<div id="contenidoModal"></div>
-</div>
-</div>
-
-<script src="js/Login.js"></script>
-
-</body>
+    <script src="js/Login.js"></script>
+  </body>
 </html>

@@ -1,42 +1,65 @@
 <!doctype html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <title>PixelPro Pedido</title>
     <link rel="stylesheet" href="css/pe.css" />
-  </head>
+</head>
 
-  <body>
-    º
+<body>
 
     <div class="shape cyan"></div>
     <div class="shape magenta"></div>
     <div class="shape yellow"></div>
 
     <section class="pedido-container">
-      <h1>Realiza tu Pedido</h1>
 
-      <form
-        method="POST"
-        action="php/guardar.php"
-        enctype="multipart/form-data"
-      >
-        <input type="text" name="nombre" placeholder="Nombre" required />
-        <input type="email" name="correo" placeholder="Correo" required />
-        <input type="tel" name="telefono" placeholder="Teléfono" required />
+        <div class="info-panel">
+            <img src="img/logo.png" alt="PixelPro Logo" class="logo">
 
-        <select name="servicio" required>
-          <option value="">Tipo de impresión</option>
-          <option>Color</option>
-          <option>Blanco y negro</option>
-        </select>
+            <h2>Bienvenido a PixelPro</h2>
 
-        <textarea name="mensaje" placeholder="Detalles"></textarea>
+            <p>
+                Completa este formulario para solicitar tu impresión de manera rápida,
+                organizada y profesional.
+            </p>
 
-        <input type="file" name="archivo" required />
+            <p>
+                Adjunta tu archivo, indica detalles importantes y nuestro equipo
+                procesará tu pedido inmediatamente.
+            </p>
 
-        <button>Enviar Pedido</button>
-      </form>
+            <ul>
+                <li>✔ Impresión a color / B&N</li>
+                <li>✔ Carga de documentos</li>
+                <li>✔ Gestión en tiempo real</li>
+                <li>✔ Notificaciones por WhatsApp</li>
+            </ul>
+        </div>
+
+        <div class="form-panel">
+            <h1>Realiza tu Pedido</h1>
+
+            <form method="POST" action="php/guardar.php" enctype="multipart/form-data">
+                <input type="text" name="nombre" placeholder="Nombre" required />
+                <input type="email" name="correo" placeholder="Correo" required />
+                <input type="tel" name="telefono" placeholder="Teléfono" required />
+
+                <select name="servicio" required>
+                    <option value="">Tipo de impresión</option>
+                    <option>Color</option>
+                    <option>Blanco y negro</option>
+                </select>
+
+                <textarea name="mensaje" placeholder="Detalles"></textarea>
+
+                <input type="file" name="archivo" required />
+
+                <button>Enviar Pedido</button>
+            </form>
+        </div>
+
     </section>
-  </body>
+
+</body>
 </html>

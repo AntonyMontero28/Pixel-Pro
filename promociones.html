@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promociones - Pixel Pro</title>
+
+<link rel="stylesheet" href="css/promociones.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- LOGO -->
+<div class="top-bar">
+  <img src="img/logo.png" class="logo">
+</div>
+
+<!-- FONDO CMYK -->
+<div class="bg">
+  <span class="circle cyan"></span>
+  <span class="circle magenta"></span>
+  <span class="circle yellow"></span>
+</div>
+
+<section class="promo-container">
+
+  <h1 class="titulo">🔥 OFERTAS LIMITADAS 🔥</h1>
+  <p class="sub">Solo por hoy — aprovecha antes de que se acaben</p>
+
+  <!-- ALERTA DE URGENCIA -->
+  <div class="alerta">
+    ⚡ 7 personas viendo estas ofertas ahora mismo
+  </div>
+ <br>
+ <br>
+  <!-- PROMOS -->
+  <div class="promo-grid">
+
+    <div class="card">
+      <span class="badge">TOP 🔥</span>
+      <h2>📄 Copias PRO</h2>
+      <p>10 copias + 1 GRATIS</p>
+      <span class="price">RD$50</span>
+      <button onclick="enviar('Copias PRO')">QUIERO ESTA OFERTA</button>
+    </div>
+
+    <div class="card magenta-card">
+      <span class="badge">-20%</span>
+      <h2>🖨️ Impresión Color</h2>
+      <p>Descuento exclusivo en color</p>
+      <span class="price">Desde RD$15</span>
+      <button onclick="enviar('Impresión Color')">APROVECHAR AHORA</button>
+    </div>
+
+    <div class="card yellow-card">
+      <span class="badge">POPULAR</span>
+      <h2>🎒 Combo Estudiante</h2>
+      <p>Copias + encuadernado</p>
+      <span class="price">RD$120</span>
+      <button onclick="enviar('Combo Estudiante')">LO QUIERO</button>
+    </div>
+
+  </div>
+
+  <!-- CONTADOR -->
+  <div class="countdown">
+    ⏳ Oferta termina en:
+    <span id="timer">00:00:00</span>
+  </div>
+
+  <!-- TESTIMONIOS -->
+  <h2 class="sub2">Clientes felices 💬</h2>
+
+  <div class="reviews">
+
+    <div class="review">
+      ⭐⭐⭐⭐⭐
+      <p>"Me ahorré mucho dinero con las promos 🔥"</p>
+    </div>
+
+    <div class="review">
+      ⭐⭐⭐⭐⭐
+      <p>"Rápido y barato, recomendado"</p>
+    </div>
+
+    <div class="review">
+      ⭐⭐⭐⭐⭐
+      <p>"Los mejores precios de la zona 😎"</p>
+    </div>
+
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="cta-final">
+    <h2>No pierdas esta oportunidad</h2>
+    <button onclick="enviar('Promoción general')">PEDIR POR WHATSAPP</button>
+  </div>
+<br>
+<br>
+</section>
+
+<script src="js/promociones.js"></script>
+
+</body>
+</html>

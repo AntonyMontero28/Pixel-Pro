@@ -65,7 +65,7 @@ body{
 .info-panel{
   width:45%;
   padding:40px;
-  background:linear-gradient(135deg,#171B26,#0D47A1);
+  background:linear-gradient(135deg,#171b26df,#0d48a1e6);
   color:white;
   display:flex;
   flex-direction:column;
@@ -73,7 +73,7 @@ body{
 }
 
 .logo{
-  width:130px;
+  width:150px;
   margin-bottom:20px;
 }
 

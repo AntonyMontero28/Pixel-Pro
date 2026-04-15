@@ -23,6 +23,6 @@ $stmt->execute();
 
 // WhatsApp empresa
 $mensaje_ws = "Nuevo pedido de $nombre - $servicio";
-header("Location: https://wa.me/18294309250?text=" . urlencode($mensaje_ws));
+header("Location: https://wa.me/18498752651?text=" . urlencode($mensaje_ws));
 exit;
 ?>

@@ -8,18 +8,19 @@ $stmt = $conexion->prepare("UPDATE pedidos SET estado=? WHERE id=?");
 $stmt->bind_param("si",$estado,$id);
 $stmt->execute();
 
-// WhatsApp cliente
 if($estado == "Impreso"){
+
     $res = $conexion->query("SELECT telefono,nombre FROM pedidos WHERE id=$id");
     $p = $res->fetch_assoc();
 
-    $msg = "Hola ".$p['nombre']." tu pedido ya esta IMPRESO ✅";
-    $url = "https://wa.me/1".$p['telefono']."?text=".urlencode($msg);
+    $msg = "Hola ".$p['nombre']." tu pedido ya está IMPRESO ✅";
 
-    // Abrir en otra pestaña usando JavaScript
+    // Enviar al cliente
+    $url = "https://wa.me/1".$p['telefono']."?text=" . urlencode($msg);
+
     echo "<script>
         window.open('$url', '_blank');
-        window.location.href = 'pizarra.php';
+        window.location.href='pizarra.php';
     </script>";
     exit;
 }

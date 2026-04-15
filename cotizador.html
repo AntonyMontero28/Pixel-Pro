@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Pro - Caja</title>
+    <link rel="stylesheet" href="css/cotizador.css" />
+  </head>
+
+  <body>
+    <!-- FONDO CMYK -->
+    <div class="bg cyan"></div>
+    <div class="bg magenta"></div>
+    <div class="bg yellow"></div>
+
+    <section class="container">
+      <h1>Caja Pixel Pro</h1>
+
+      <input type="text" id="cliente" placeholder="Nombre del cliente" />
+
+      <select id="tipo">
+        <option value="Color">Color</option>
+        <option value="B/N">Blanco y Negro</option>
+        <option value="Fotográfica">Fotográfica</option>
+      </select>
+
+      <input type="number" id="cantidad" placeholder="Cantidad" />
+
+      <select id="material">
+        <option value="Normal">Carta 4A</option>
+        <option value="Satinado">Satinado</option>
+        <option value="Vinil">Fotografico</option>
+      </select>
+
+      <button onclick="calcular()">Calcular</button>
+
+      <h2 id="total">RD$ 0</h2>
+
+      <button onclick="enviarFactura()" class="btn-enviar">
+        Enviar Factura
+      </button>
+
+      <!-- FACTURA -->
+      <div id="factura" class="factura">
+        <h2>FACTURA PIXEL PRO</h2>
+        <p id="f-cliente"></p>
+        <p id="f-servicio"></p>
+        <p id="f-cantidad"></p>
+        <p id="f-material"></p>
+        <h3 id="f-total"></h3>
+      </div>
+    </section>
+
+    <script src="js/cotizador.js"></script>
+  </body>
+</html>

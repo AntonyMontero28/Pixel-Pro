@@ -37,7 +37,6 @@ h1 {
     font-family: "Nunito", sans-serif;
     font-size: 25px;
 }
-
 #ban{
     width: 100%;            
     height: auto;           
@@ -46,7 +45,6 @@ h1 {
     align-items: center;
     padding-bottom: 20px;
 }
-
 #l{
     width: auto;
     height: 30px;
@@ -54,13 +52,11 @@ h1 {
     align-self: center;
     padding-left: 10px;
 }
-
 .icons{
     width: 110px;
     height: 40px;
     display: flex; 
 }
-
 i {
     font-size: 25px;
     color: #000000;
@@ -158,7 +154,8 @@ nav ul li:hover{
 }
 #notii{
     font-size:50px;
-    color: rgb(234, 72, 234);
+    padding-top:100px;
+    color: black;
     text-align: center;
     font-family: "Coiny", system-ui;
 }
@@ -196,6 +193,10 @@ nav ul li:hover{
     text-align: center;
     font-family: "Coiny",system-ui;
     padding-top: 40px;
+    transform: scale(1.2);
+}
+.bony:hover {
+    transform: scale(1.2);
 }
 .bonyy{
     font-size: 20px;
@@ -204,6 +205,16 @@ nav ul li:hover{
     text-align: center;
     padding-top: 30px;
     padding: 30px;
+}
+.botoneee{
+    width: 170px;
+    height: 50px;
+    font-size: 20px;
+    margin-left: 100px;
+    color: black;
+    background: #3aa6d4;
+    border-radius: 5%;
+     font-family: "Coiny",system-ui;
 }
 #imagenn{
     background-image: url(../img/impre8.jpg);

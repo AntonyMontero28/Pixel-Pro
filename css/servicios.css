@@ -10,29 +10,12 @@
     position: relative;      
     width: 100%;
     height: auto;           
-    min-height: 705px;      
-    overflow: hidden;       
-    padding: 0;             
-}
+    min-height: 705px; 
+    background-image:url(../img/bg2.png) ;  
+    background-size: cover;
+    background-attachment: fixed;   
 
-/* Video de fondo */
-#vp video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;     
-    transform: translate(-50%, -50%);
-    z-index: -1;            
 }
-#ban, header, #textoo {
-    position: relative;
-    z-index: 1;              
-    color: black;           
-}
-
-/* resto de tu CSS sin cambios */
 h1 {
     color: black;
     font-family: "Nunito", sans-serif;
@@ -85,7 +68,7 @@ header{
 
 #log{
     height: 200px;
-    width: 225px;
+    width: 200px;
 }
 
 .nav{
@@ -128,30 +111,14 @@ nav ul li:hover{
     font-family:"Nunito", sans-serif;
     font-weight: 900px;
 }
-
-
-/*Ambar final*/
-/* =========================
-   RESET
-========================= */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+#slogan{
+    font-size:30px;
+    color:black;
+    text-align: left;
+    font-family:"Nunito", sans-serif;
+    font-weight: 400px;
 }
 
-/* =========================
-   BODY
-========================= */
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background:#ffffff;
-    color:#222;
-}
-
-/* =========================
-   TITULO PRINCIPAL
-========================= */
 #bien{
     text-align:center;
     margin:50px 0;
@@ -161,9 +128,7 @@ body{
     font-size:30px;
 }
 
-/* =========================
-   TITULOS DE SERVICIOS
-========================= */
+
 .servi{
     text-align:center;
     margin:40px 0 10px;

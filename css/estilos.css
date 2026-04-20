@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -64,7 +65,7 @@ header{
     height: auto;           
     display: flex;
     justify-content: space-around;
-    align-items: center;
+
 }
 
 #logo{
@@ -128,9 +129,10 @@ header{
 }
 
 #textoo{
-    width:1000px;
-    height:500px;
+    max-width: 1000px;
+    width: 100%;
     padding: 50px;
+    box-sizing: border-box;
 }
 #vpH{
     font-size:80px;

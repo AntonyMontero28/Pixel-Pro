@@ -94,19 +94,13 @@ nav ul{
     gap: 15px;
 }
 
-nav ul li a{
-    font-size: 20px;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-}
 nav ul li a {
     font-size: 20px;
     color: black;
     text-decoration: none;
-    position: relative; /* importante */
+    position: relative;
     padding-bottom: 5px;
+    display: inline-block;
 }
 
 /* Línea oculta al inicio */

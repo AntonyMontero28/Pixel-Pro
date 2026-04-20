@@ -8,44 +8,59 @@
   </head>
 
   <body>
-    <!-- 🔴 TU VIEWPORT (NO MODIFICADO) -->
     <article id="vp">
-      <video autoplay muted loop id="bg-video">
-        <source src="img/back.mp4" type="video/mp4" />
-      </video>
 
-      <section id="ban">
-        <div id="l">
-          <h1>“Imprime. Impacta. Destaca.”</h1>
+        <section id="ban">
+            <div id="l">
+                <h1>“Imprime. Impacta. Destaca.”</h1>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-user"></i> 
+                <i class="fa-solid fa-location-dot"></i> 
+                <i class="fa-solid fa-bell"></i>
+            </div> 
+        </section>
+
+        <header class="header">
+    
+    <nav class="nav left">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios de Impresión</a>
+        <a href="tienda.html">Tienda Escolar</a>
+    </nav>
+
+    <div class="logo">
+        <img src="img/logo.png" alt="logo">
+    </div>
+
+    <nav class="nav right">
+        <a href="galeria2.html">Galería</a>
+        <a href="promociones.html">Promociones</a>
+        <a href="acercade.html">Sobre nosotros</a>
+    </nav>
+
+</header>
+
+        <section id="vp-servicios">
+    <div class="vp-overlay"></div>
+
+    <div class="vp-contenido">
+        <span class="mini">PIXELPRO SERVICES</span>
+
+        <h1 id="vpH">Servicios de Impresión</h1>
+
+        <p id="slogan">
+            Impresiones, diseños y acabados con calidad profesional para destacar en cada detalle.
+        </p>
+
+        <div class="vp-botones">
+            <a href="#bien" class="btn-vp">Ver servicios</a>
+            <a href="#" class="btn-vp2">Contactar</a>
         </div>
-      </section>
-
-      <header>
-        <nav class="nav">
-          <ul>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Sobre nosotros</a></li>
-            <li><a href="servicios.html">Servicios de Impresión</a></li>
-          </ul>
-        </nav>
-
-        <div id="logo">
-          <img id="log" src="img/logo.png" />
-        </div>
-
-        <nav class="nav">
-          <ul>
-            <li><a href="#">Tienda Escolar</a></li>
-            <li><a href="#">Galería</a></li>
-            <li><a href="#">Atención al cliente</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <section id="textoo">
-        <h1 id="vpH">Servicios con calidad de Pixel Pro.</h1>
-      </section>
+    </div>
+</section>
     </article>
+    <!-- Ambar -->
 
     <!-- 🔽 DESDE AQUÍ ES LO QUE MODIFICAMOS -->
 
@@ -54,7 +69,7 @@
     </section>
 
     <!-- COPIAS -->
-    <div class="servi"><h1>📄 COPIAS E IMPRESIONES</h1></div>
+    <div class="servi"><h1> COPIAS E IMPRESIONES</h1></div>
 
     <section class="section2">
       <div class="servi_texto">
@@ -71,14 +86,14 @@
           <li>✔ Servicio rápido y confiable</li>
         </ul>
 
-        <a href="#" class="btn-servicio">Solicitar servicio</a>
+        <a href="http://localhost/Pixel-Pro/pe.html" class="btn-servicio">Solicitar servicio</a>
       </div>
 
       <div class="servi_imagen emoji">📄</div>
     </section>
 
     <!-- FOTOS -->
-    <div class="servi"><h1>🖼️ FOTOGRAFÍAS</h1></div>
+    <div class="servi"><h1> FOTOGRAFÍAS</h1></div>
 
     <section class="section3">
       <div class="servi_imagen emoji">🖼️</div>
@@ -97,12 +112,12 @@
           <li>✔ Ideal para eventos y recuerdos</li>
         </ul>
 
-        <a href="#" class="btn-servicio">Solicitar servicio</a>
+        <a href="http://localhost/Pixel-Pro/pe.html" class="btn-servicio">Solicitar servicio</a>
       </div>
     </section>
 
     <!-- ENCUADERNADO -->
-    <div class="servi"><h1>📚 ENCUADERNADO Y LAMINADO</h1></div>
+    <div class="servi"><h1> ENCUADERNADO Y LAMINADO</h1></div>
 
     <section class="section2">
       <div class="servi_texto">
@@ -119,14 +134,14 @@
           <li>✔ Ideal para proyectos escolares</li>
         </ul>
 
-        <a href="#" class="btn-servicio">Solicitar servicio</a>
+        <a href="http://localhost/Pixel-Pro/pe.html" class="btn-servicio">Solicitar servicio</a>
       </div>
 
       <div class="servi_imagen emoji">📚</div>
     </section>
 
     <!-- OTROS -->
-    <div class="servi"><h1>💻 OTROS SERVICIOS</h1></div>
+    <div class="servi"><h1> OTROS SERVICIOS</h1></div>
 
     <section class="section3">
       <div class="servi_imagen emoji">💻</div>
@@ -145,7 +160,7 @@
           <li>✔ Asesoría personalizada</li>
         </ul>
 
-        <a href="#" class="btn-servicio">Solicitar servicio</a>
+        <a href="http://localhost/Pixel-Pro/pe.html" class="btn-servicio">Solicitar servicio</a>
       </div>
     </section>
     <footer>
@@ -195,5 +210,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/servicios.js"></script>
   </body>
 </html>

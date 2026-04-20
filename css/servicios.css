@@ -1,41 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 
 *{
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 /* Ambar inicio */
 #vp{
     position: relative;      
     width: 100%;
     height: auto;           
-    min-height: 705px;      
-    overflow: hidden;       
-    padding: 0;             
-}
+    min-height: 705px; 
+    background-image:url(../img/bg2.png) ;  
+    background-size: cover;
+    background-attachment: fixed;   
 
-/* Video de fondo */
-#vp video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;     
-    transform: translate(-50%, -50%);
-    z-index: -1;            
 }
-#ban, header, #textoo {
-    position: relative;
-    z-index: 1;              
-    color: black;           
-}
-
-/* resto de tu CSS sin cambios */
 h1 {
     color: black;
-    font-family: "Nunito", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 25px;
 }
 
@@ -73,7 +58,7 @@ header{
     height: auto;           
     display: flex;
     justify-content: space-around;
-    align-items: center;
+
 }
 
 #logo{
@@ -85,73 +70,162 @@ header{
 
 #log{
     height: 200px;
-    width: 225px;
+    width: 200px;
 }
-
-.nav{
-    width: 800px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-nav ul{
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-nav ul li a{
-    font-size: 20px;
-    font-family: "Nunito", sans-serif;
-    color: black;
+/* HEADER */
+.header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+/* NAVS */
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+
+.logo img {
+    width: 180px;
+}
+
+
+.nav a {
+    position: relative;
     text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding-bottom: 5px;
+    display: inline-block;
 }
 
-nav ul li:hover{
-    transform: scale(1.2);
-    transition: 1s;
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #FFD700;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
-#textoo{
-    width:1000px;
-    height:500px;
-    padding: 50px;
+/* hover */
+.nav a:hover::after {
+    transform: scaleX(1);
 }
-#vpH{
-    font-size:80px;
-    color:black;
-    text-align: left;
-    font-family:"Nunito", sans-serif;
-    font-weight: 900px;
+/* CONTENEDOR */
+#vp-servicios {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+
+    background: url('../img/bg2.png');
+    background-size: cover;
+    background-position: center;
 }
 
+/* CAPA OSCURA */
+.vp-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.8) 30%,
+        rgba(0,0,0,0.3) 70%
+    );
+    top: 0;
+    left: 0;
+}
+
+/* CONTENIDO */
+.vp-contenido {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+    color: white;
+}
+
+/* TEXTO PEQUEÑO */
+.mini {
+    color: cyan;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+/* TITULO */
+#vpH {
+    font-size: 55px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* DESCRIPCION */
+#slogan {
+    font-size: 20px;
+    color: #ddd;
+}
+
+/* BOTONES */
+.vp-botones {
+    margin-top: 20px;
+}
+
+.btn-vp,
+.btn-vp2 {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+/* BOTON PRINCIPAL */
+.btn-vp {
+    background: linear-gradient(90deg, cyan, magenta);
+    color: white;
+}
+
+/* BOTON SECUNDARIO */
+.btn-vp2 {
+    border: 2px solid white;
+    color: white;
+}
+
+/* HOVER */
+.btn-vp:hover {
+    transform: scale(1.05);
+}
+
+.btn-vp2:hover {
+    background: white;
+    color: black;
+}
+
+/* EFECTO BRILLO DECORATIVO */
+#vp-servicios::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0,255,255,0.3), transparent 70%);
+    top: -100px;
+    right: -100px;
+}
 
 /*Ambar final*/
-/* =========================
-   RESET
-========================= */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-/* =========================
-   BODY
-========================= */
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background:#ffffff;
-    color:#222;
-}
-
-/* =========================
-   TITULO PRINCIPAL
-========================= */
 #bien{
     text-align:center;
     margin:50px 0;
@@ -159,18 +233,26 @@ body{
 
 #bienser{
     font-size:30px;
+    font-family: "Montserrat", sans-serif;
 }
 
-/* =========================
-   TITULOS DE SERVICIOS
-========================= */
+
 .servi{
     text-align:center;
     margin:40px 0 10px;
 }
-
+h2{
+    font-family: "Montserrat", sans-serif;
+}
+li{
+    font-family: "Montserrat", sans-serif;
+}
+p{
+    font-family: "Montserrat", sans-serif;
+}
 .servi h1{
     font-size:26px;
+    font-family: "Montserrat", sans-serif;
 }
 
 .servi h1::after{
@@ -183,9 +265,7 @@ body{
     border-radius:10px;
 }
 
-/* =========================
-   SECCIONES (CON COLOR SUAVE)
-========================= */
+
 .section2,
 .section3{
     display:flex;
@@ -235,10 +315,31 @@ body{
         #ffffff
     );
 }
+.section2,
+.section3 {
+    opacity: 0;
+    transform: translateY(50px);
+}
 
-/* =========================
-   TEXTO
-========================= */
+.section2.visible,
+.section3.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+
+/* ANIMACION FLOTAR */
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.emoji {
+    animation: flotar 3s ease-in-out infinite;
+}
+
+
 .servi_texto{
     flex:1;
 }
@@ -247,7 +348,7 @@ body{
     margin-bottom:10px;
 }
 
-/* COLOR EN TITULOS SEGUN SECCION */
+
 .section2 .servi_texto h2{
     color:#0097a7;
 }
@@ -270,9 +371,7 @@ body{
     margin-bottom:8px;
 }
 
-/* =========================
-   BOTON
-========================= */
+
 .btn-servicio{
     display:inline-block;
     margin-top:10px;
@@ -289,9 +388,7 @@ body{
     transform:scale(1.05);
 }
 
-/* =========================
-   EMOJI (IMAGEN)
-========================= */
+
 .emoji{
     font-size:100px;
     width:200px;
@@ -314,9 +411,7 @@ body{
     transform:scale(1.08) rotate(3deg);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+
 @media(max-width:768px){
 
     .section2,
@@ -352,19 +447,19 @@ footer{
     height: 250px;
 }
 #n1{
-      font-family: "Funnel Sans", sans-serif;
+      font-family: "Montserrat", sans-serif;
       color: #3AB2E6;
 }
 #n2{
-    font-family: "Funnel Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #E83A77;
 }
 #n3{
-    font-family: "Funnel Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
       color: #FDD51D;
 }
 #n4{
-    font-family: "Funnel Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
       color: #171B26;
 }
 .redes {
@@ -380,8 +475,5 @@ footer{
 a{
     text-decoration: none;
     color: black;
-    font-family: "Funnel Sans", sans-serif;
-}
-a:hover{
-    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
 }

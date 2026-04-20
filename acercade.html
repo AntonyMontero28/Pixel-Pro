@@ -7,25 +7,26 @@
   <link rel="stylesheet" href="css/acercade.css">
 </head>
 <body>
-  <header>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Sobre nosotros</a></li>
-                    <li><a href="servicios.html">Servicios de Impresión</a></li>
-                </ul>
-            </nav>
-            <div id="logo">
-                <img id="log" src="img/logo.png">
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">Tienda Escolar</a></li>
-                    <li><a href="#">Galería</a></li>
-                    <li><a href="#">Atención al cliente</a></li>
-                </ul>
-            </nav>
-        </header>
+  <header class="header">
+    
+    <nav class="nav left">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios de Impresión</a>
+        <a href="tienda.html">Tienda Escolar</a>
+    </nav>
+
+    <div class="logo">
+        <img src="img/logo.png" alt="logo">
+    </div>
+
+    <nav class="nav right">
+        <a href="galeria2.html">Galería</a>
+        <a href="promociones.html">Promociones</a>
+        <a href="acercade.html">Sobre nosotros</a>
+    </nav>
+
+</header>
+          
 
   <section class="hero">
     <!-- FORMAS ANIMADAS CMYK -->
@@ -52,90 +53,182 @@
     <h2>Nuestros Servicios</h2>
     <div class="cards">
       <div class="card">
-        <img src="icon-color.png" alt="Alta fidelidad de color">
+        <img src="img/palta-removebg-preview.png" class="img7">
         <h3>Alta Fidelidad de Color</h3>
         <p>Impresiones con colores vivos, precisos y profesionales para todos tus proyectos.</p>
       </div>
       <div class="card">
-        <img src="img/copia.png" alt="Impresiones rápidas">
+        <img src="img/copia.png" class="img7">
         <h3>Impresiones Rápidas</h3>
         <p>Entrega veloz sin sacrificar calidad, ideal para proyectos urgentes o grandes tiradas.</p>
       </div>
       <div class="card">
-        <img src="icon-price.png" alt="Precios accesibles">
+        <img src="img/financiar-a-bajo-precio.avif" class="img7">
         <h3>Precios Accesibles</h3>
         <p>Servicios competitivos adaptados a estudiantes, emprendedores y profesionales.</p>
       </div>
       <div class="card">
-        <img src="icon-trust.png" alt="Servicio confiable">
+        <img src="img/execelencia.png"  class="img7">
         <h3>Servicio Confiable</h3>
         <p>Atención personalizada y compromiso con la satisfacción total del cliente.</p>
       </div>
     </div>
   </section>
 
-  <!-- SECCIÓN SOBRE NOSOTROS -->
-  <section class="about">
-<!-- UBICACIÓN -->
-  <section id="ubicacion" class="section">
-    <h2>Ubicación</h2>
-    <p>Estamos ubicados en <strong>Av. Francisco Rosario Sanchez</strong></p>
-   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15134.549687621264!2d-69.88653143120891!3d18.500075636936646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf891fe3985893%3A0x2f9a8e789439e7bb!2sDOMINGO%20SAVIO%20FE%20Y%20ALEGRIA!5e0!3m2!1ses-419!2sdo!4v1774204152729!5m2!1ses-419!2sdo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </section>
+<section class="about-pro">
 
-    <div class="about-left">
-      <h2>Quiénes Somos</h2>
-      <div class="who-text">
-        <p>PixelPro es una empresa especializada en impresiones digitales de alta calidad. Nos enfocamos en entregar soluciones creativas y eficientes, adaptadas a estudiantes, emprendedores y profesionales que buscan resultados impactantes. Nuestra pasión por la innovación nos permite garantizar un servicio confiable y productos con fidelidad de color excepcional, asegurando la satisfacción de cada cliente.</p>
-      </div>
+  <!-- FONDO DECORATIVO CMYK -->
+  <div class="bg-cmyk">
+    <span class="c1"></span>
+    <span class="c2"></span>
+    <span class="c3"></span>
+  </div>
 
-      <!-- CONTACTO -->
-  <section id="contacto" class="section">
-    <h2>Contacto & Redes Sociales</h2>
-    
-    <div class="socials">
-      <a href="#" class="social facebook">Facebook</a>
-      <a href="#" class="social whatsapp">WhatsApp</a>
-      <a href="#" class="social instagram">Instagram</a>
-      <a href="#" class="social telegram">Telegram</a>
-    </div>
-  </section>
-     </section>
+  <div class="about-container">
 
-    <section id="sobre-nosotros" class="section">
+    <div class="about-card map-card">
+      <h2>📍 Ubicación</h2>
+      <p>Estamos en <strong>Av. Francisco Rosario Sanchez</strong></p>
 
-    <div class="circles">
-      <div class="circle" style="background-color:#00BCD4">
-        <h3>Misión</h3>
-        <p class="circle-info">Brindar soluciones creativas y de calidad que satisfagan las necesidades de nuestros clientes.</p>
-      </div>
-      <div class="circle" style="background-color:#E91E63">
-        <h3>Visión</h3>
-        <p class="circle-info">Ser líderes en servicios de impresión y diseño digital reconocidos por innovación y excelencia.</p>
-      </div>
-      <div class="circle" style="background-color:#FFEB3B; color:#000">
-        <h3>Valores</h3>
-        <p class="circle-info">Compromiso, eficiencia, trabajo en equipo, enfoque al cliente, puntualidad y calidad en cada proyecto.</p>
+      <div class="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15134.549687621264!2d-69.88653143120891!3d18.500075636936646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf891fe3985893%3A0x2f9a8e789439e7bb!2sDOMINGO%20SAVIO%20FE%20Y%20ALEGRIA!5e0!3m2!1ses-419!2sdo!4v1774204152729!5m2!1ses-419!2sdo"></iframe>
       </div>
     </div>
-  </section>
-<br>
-<br>
-<br><br><br><br><br><br>
+
+    <div class="about-info">
+
+      <div class="about-card info-card">
+        <h2>Quiénes Somos</h2>
+        <p>
+          En <strong>PixelPro</strong> transformamos ideas en impresiones de alto impacto.
+          Trabajamos con tecnología CMYK avanzada para ofrecer resultados vibrantes,
+          precisos y profesionales.
+        </p>
+
+        <p>
+          Nos enfocamos en estudiantes, negocios y emprendedores que buscan calidad,
+          rapidez y diseño moderno. Más que imprimir… creamos experiencias visuales.
+        </p>
+      </div>
+
+      <div class="about-card contact-pro">
+
+  <h2>Conecta con PixelPro</h2>
+  <p class="contact-sub">
+    Estamos listos para imprimir tus ideas 🚀
+  </p>
+
+  <div class="contact-grid">
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/18498752651" target="_blank" class="contact-box wa">
+      <div class="icon">💬</div>
+      <div>
+        <h3>WhatsApp</h3>
+        <p>Respuesta inmediata</p>
+      </div>
+    </a>
+
+    <!-- LLAMADA -->
+    <a href="tel:8294452410" class="contact-box call">
+      <div class="icon">📞</div>
+      <div>
+        <h3>Llámanos</h3>
+        <p>Atención directa</p>
+      </div>
+    </a>
+
+    <!-- EMAIL -->
+    <a href="mailto:pixelproinpresionesdigitales@gmail.com" class="contact-box mail">
+      <div class="icon">📧</div>
+      <div>
+        <h3>Correo</h3>
+        <p>Envíanos tu pedido</p>
+      </div>
+    </a>
+
+    <!-- INSTAGRAM -->
+    <a href="#" class="contact-box ig">
+      <div class="icon">📸</div>
+      <div>
+        <h3>Instagram</h3>
+        <p>Ver trabajos</p>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+    </div>
+
+  </div>
+</section>
+<section id="mvv-pro">
+
+
+  <div class="mvv-container">
+
+    <!-- MISION -->
+    <div class="mvv-card cyan">
+      <div class="mvv-overlay"></div>
+      <img src="img/mision.png" alt="">
+      <p>
+        Brindar soluciones creativas y de alta calidad que transformen las ideas
+        de nuestros clientes en impresiones impactantes.
+      </p>
+    </div>
+
+    <!-- VISION -->
+    <div class="mvv-card magenta">
+      <div class="mvv-overlay"></div>
+      <img src="img/vision (1).png" alt="">
+      <p>
+        Ser líderes en impresión digital, reconocidos por innovación,
+        excelencia y experiencias visuales únicas.
+      </p>
+    </div>
+
+    <!-- VALORES -->
+    <div class="mvv-card yellow">
+      <div class="mvv-overlay"></div>
+      <img src="img/VALORES.gif" id="va">
+      <p>
+        Compromiso, eficiencia, trabajo en equipo, enfoque al cliente,
+        puntualidad y calidad en cada proyecto.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
   <section class="about-page">
   <div class="mesh-gradient"></div>
 
   <div class="container">
-    <header class="about-header">
-      <h1 class="reveal-up">El Corazón de <span class="text-gradient">Pixel Pro</span></h1>
-      <p class="subtitle">Un equipo multidisciplinario unido por la precisión y la creatividad.</p>
-    </header>
+   <div class="hero-text">
+
+  <h1 class="titulo-hero reveal-up">
+    El Corazón de 
+    <span class="text-gradient">Pixel Pro</span>
+  </h1>
+
+  <div class="linea-glow"></div>
+
+  <p class="subtitle reveal-up">
+    Un equipo multidisciplinario unido por la precisión, 
+    la creatividad y la innovación digital.
+  </p>
+
+</div>
+<br>
+<br>
 
     <div class="team-grid">
       
       <div class="member-card leader" data-aos="fade-up">
         <div class="photo-wrapper">
-          <img src="https://via.placeholder.com/300x400/00e5ff/ffffff?text=Jose+Yadiel" alt="José Yadiel Cedeño">
+          <img src="img/yadi-removebg-preview.png" alt="José Yadiel Cedeño">
           <div class="role-badge badge-cian">CEO / Dirección</div>
         </div>
         <div class="member-info">
@@ -234,10 +327,13 @@
         <p>Banners</p>
       </div>
     </div>
-  
+  <script src="js/acercade.js"></script>
+  <br>
+  <br>
+  <br>
 <footer>
       <div class="cajon1">
-        <img id="logo1" src="Img/logo.png" alt="">
+        <img id="logo1" src="Img/logo.png" alt="PixelPro Logo">
       </div>
 
       <div class="cajon1">

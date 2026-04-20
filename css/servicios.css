@@ -19,7 +19,7 @@
 }
 h1 {
     color: black;
-    font-family:"Nunito", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 25px;
 }
 
@@ -88,7 +88,7 @@ nav ul{
 
 nav ul li a{
     font-size: 20px;
-    font-family:"Nunito", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: black;
     display: flex;
     justify-content: space-between;
@@ -109,14 +109,14 @@ nav ul li:hover{
     font-size:80px;
     color:black;
     text-align: left;
-    font-family:"Nunito", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 900px;
 }
 #slogan{
     font-size:30px;
     color:black;
     text-align: left;
-    font-family:"Nunito", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400px;
 }
 /* CONTENEDOR */
@@ -126,7 +126,7 @@ nav ul li:hover{
     height: 420px;
     display: flex;
     align-items: center;
-    padding-left: 80px;
+    justify-content: space-evenly;
     overflow: hidden;
 
     background: url('../img/bg2.png');
@@ -232,6 +232,7 @@ nav ul li:hover{
 
 #bienser{
     font-size:30px;
+    font-family: "Montserrat", sans-serif;
 }
 
 
@@ -239,9 +240,18 @@ nav ul li:hover{
     text-align:center;
     margin:40px 0 10px;
 }
-
+h2{
+    font-family: "Montserrat", sans-serif;
+}
+li{
+    font-family: "Montserrat", sans-serif;
+}
+p{
+    font-family: "Montserrat", sans-serif;
+}
 .servi h1{
     font-size:26px;
+    font-family: "Montserrat", sans-serif;
 }
 
 .servi h1::after{
@@ -436,19 +446,19 @@ footer{
     height: 250px;
 }
 #n1{
-      font-family: "Funnel Sans", sans-serif;
+      font-family: "Montserrat", sans-serif;
       color: #3AB2E6;
 }
 #n2{
-    font-family: "Funnel Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #E83A77;
 }
 #n3{
-    font-family: "Funnel Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
       color: #FDD51D;
 }
 #n4{
-    font-family: "Funnel Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
       color: #171B26;
 }
 .redes {
@@ -464,7 +474,7 @@ footer{
 a{
     text-decoration: none;
     color: black;
-    font-family: "Funnel Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 a:hover{
     font-size: 15px;

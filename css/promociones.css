@@ -7,17 +7,69 @@ body{
   background:#fff;
 }
 
-/* LOGO */
-.top-bar{
-  text-align:center;
-  padding:20px;
+
+header{
+    width: 100%;
+    height: auto;           
+    display: flex;
+    justify-content: space-around;
+
 }
 
-.logo{
-  width:120px;
-  animation:logoPop 1s ease;
+#logo{
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
 }
 
+#log{
+    height: 200px;
+    width: 200px;
+}
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+/* NAVS */
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+
+.logo img {
+    width: 180px;
+}
+
+
+.nav a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #FFD700;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
 @keyframes logoPop{
   from{transform:scale(0);}
   to{transform:scale(1);}

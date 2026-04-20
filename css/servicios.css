@@ -118,6 +118,110 @@ nav ul li:hover{
     font-family:"Nunito", sans-serif;
     font-weight: 400px;
 }
+/* CONTENEDOR */
+#vp-servicios {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    overflow: hidden;
+
+    background: url('../img/bg2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* CAPA OSCURA */
+.vp-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.8) 30%,
+        rgba(0,0,0,0.3) 70%
+    );
+    top: 0;
+    left: 0;
+}
+
+/* CONTENIDO */
+.vp-contenido {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+    color: white;
+}
+
+/* TEXTO PEQUEÑO */
+.mini {
+    color: cyan;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+/* TITULO */
+#vpH {
+    font-size: 55px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* DESCRIPCION */
+#slogan {
+    font-size: 20px;
+    color: #ddd;
+}
+
+/* BOTONES */
+.vp-botones {
+    margin-top: 20px;
+}
+
+.btn-vp,
+.btn-vp2 {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+/* BOTON PRINCIPAL */
+.btn-vp {
+    background: linear-gradient(90deg, cyan, magenta);
+    color: white;
+}
+
+/* BOTON SECUNDARIO */
+.btn-vp2 {
+    border: 2px solid white;
+    color: white;
+}
+
+/* HOVER */
+.btn-vp:hover {
+    transform: scale(1.05);
+}
+
+.btn-vp2:hover {
+    background: white;
+    color: black;
+}
+
+/* EFECTO BRILLO DECORATIVO */
+#vp-servicios::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0,255,255,0.3), transparent 70%);
+    top: -100px;
+    right: -100px;
+}
 
 /*Ambar final*/
 #bien{
@@ -149,9 +253,7 @@ nav ul li:hover{
     border-radius:10px;
 }
 
-/* =========================
-   SECCIONES (CON COLOR SUAVE)
-========================= */
+
 .section2,
 .section3{
     display:flex;
@@ -201,10 +303,31 @@ nav ul li:hover{
         #ffffff
     );
 }
+.section2,
+.section3 {
+    opacity: 0;
+    transform: translateY(50px);
+}
 
-/* =========================
-   TEXTO
-========================= */
+.section2.visible,
+.section3.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+
+/* ANIMACION FLOTAR */
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.emoji {
+    animation: flotar 3s ease-in-out infinite;
+}
+
+
 .servi_texto{
     flex:1;
 }
@@ -213,7 +336,7 @@ nav ul li:hover{
     margin-bottom:10px;
 }
 
-/* COLOR EN TITULOS SEGUN SECCION */
+
 .section2 .servi_texto h2{
     color:#0097a7;
 }
@@ -236,9 +359,7 @@ nav ul li:hover{
     margin-bottom:8px;
 }
 
-/* =========================
-   BOTON
-========================= */
+
 .btn-servicio{
     display:inline-block;
     margin-top:10px;
@@ -255,9 +376,7 @@ nav ul li:hover{
     transform:scale(1.05);
 }
 
-/* =========================
-   EMOJI (IMAGEN)
-========================= */
+
 .emoji{
     font-size:100px;
     width:200px;
@@ -280,9 +399,7 @@ nav ul li:hover{
     transform:scale(1.08) rotate(3deg);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+
 @media(max-width:768px){
 
     .section2,

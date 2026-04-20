@@ -211,6 +211,10 @@ header{
     align-items:center;
     justify-content:space-evenly;
     margin-left:30px;
+    transition: transform 0.4s ease; 
+}
+#im1:hover {
+    transform: scale(1.2);
 }
 #nos1{
     width:300px;
@@ -222,6 +226,10 @@ header{
     width:400px;
     height:600px;
     display: flex;
+    transition: transform 0.4s ease; 
+}
+#im2:hover {
+    transform: scale(1.2);
 }
 #nos2{
     width:250px;

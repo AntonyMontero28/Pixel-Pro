@@ -1,109 +1,108 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-
-
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin:0;
+  font-family:'Montserrat';
+  background:#0f172a;
+  overflow:hidden;
 }
 
-
-form{
-    width: 340px;
-    padding: 50px 55px;
-    box-shadow: 0px 0px 20px rgba(0,0,0);
-    text-align: center;
+/* FORMAS CMYK */
+.shape{
+  position:fixed;
+  border-radius:50%;
+  opacity:0.9;
+  animation: float 12s infinite alternate;
 }
 
+.cyan{background:#00BCD4;width:300px;height:300px;top:10%;left:5%;}
+.magenta{background:#FF1493;width:350px;height:350px;bottom:5%;right:10%;}
+.yellow{background:#FFEB3B;width:250px;height:250px;top:60%;left:60%;}
+.blue{background:#2196F3;width:200px;height:200px;top:30%;right:40%;}
 
-.input-group{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+@keyframes float{
+  from{transform:translateY(0);}
+  to{transform:translateY(-40px);}
 }
 
-
-h2{
-    color: #3AB2E6;
-    font-size: 35px;
+/* CONTENEDOR */
+.container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
 }
 
-
-label{
-    color: #171B26;
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 15px;
+/* CAJA */
+.form-box{
+  background:rgba(0, 0, 0, 0.267);
+  backdrop-filter:blur(20px);
+  padding:40px;
+  border-radius:20px;
+  width:320px;
+  text-align:center;
+  color:#fff;
+  animation:fadeIn 0.8s;
 }
 
+.hidden{display:none;}
 
-input , textarea{
-    padding: 17px 25px;
-    border-radius: 25px;
-    margin-bottom: 20px;
-    background-color:#3AB2E6;
-    border: 2px solid #FDD51D;
-    outline: none;
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1;}
 }
 
-
-input::placeholder, textarea::placeholder{
-    color: #E93A78;
+/* INPUTS */
+input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:10px;
+  border:none;
+  outline:none;
 }
 
-
-.form-txt{
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+/* BOTÓN */
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#00BFFF,#FF1493);
+  color:#fff;
+  cursor:pointer;
 }
 
-
-.form-txt a{
-    color: #FDD51D;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
+/* SWITCH */
+.switch span{
+  color:#FF1493;
+  cursor:pointer;
 }
 
-
-.btn{
-    font-size: 16px;
-    color: #ffff;
-    border: 0px;
-    border-radius: 25px;
-    background-color: #3AB2E6;
-    box-shadow: 0 0 20px rgba(25,254,0,0.24);
-    cursor: pointer;
+/* CHECK */
+.check{
+  font-size:12px;
+  text-align:left;
 }
 
-
-.btn:hover{
-    background-color: #E93A78;
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
 }
 
+.modal-content{
+  background:#fff;
+  color:#000;
+  padding:20px;
+  border-radius:10px;
+  width:300px;
+}
 
-@media (max-width: 991px)  {
-
-
-    body{
-        padding: 30px;
-    }
-
-
-    form{
-        padding: 50px 30px;
-        width: 100%;
-    }
-
-
-    input{
-        padding: 15px;
-    }
+.close{
+  float:right;
+  cursor:pointer;
 }

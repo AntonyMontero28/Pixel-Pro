@@ -4,50 +4,110 @@ body{
   margin:0;
   font-family:'Montserrat';
   background:#fff;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   overflow:hidden;
 }
 
-.shape {
-  position: fixed; border-radius: 50%; 
-  animation: float 15s infinite ease-in-out alternate;
-  opacity: 0.7;
-  z-index: -1;
-}
-.shape.cyan { background: #00BCD4; width: 300px; height: 300px; top: 10%; left: 5%; }
-.shape.magenta { background: #E91E63; width: 350px; height: 350px; bottom: 5%; right: 15%; }
-.shape.yellow { background: #FFEB3B; width: 250px; height: 250px; top: 50%; left: 60%; }
-.shape.small { width: 100px; height: 100px; opacity: 0.5; animation-duration: 20s; }
-.shape.small.cyan { top: 80%; left: 10%; }
-.shape.small.magenta { top: 20%; left: 80%; }
-.shape.small.yellow { top: 70%; left: 50%; }
-.shape.small.blue { top: 40%; left: 30%; background: #2196F3; }
-
-@keyframes float {
-  0% { transform: translateY(0) translateX(0) rotate(0deg);}
-  50% { transform: translateY(-50px) translateX(30px) rotate(20deg);}
-  100% { transform: translateY(0) translateX(0) rotate(0deg);}
+/* FORMAS */
+.shape{
+  position:fixed;
+  border-radius:50%;
+  animation:float 15s infinite ease-in-out alternate;
+  opacity:0.7;
+  z-index:-1;
 }
 
-/* CONTENEDOR */
+.shape.cyan{
+  background:#00BCD4;
+  width:300px;
+  height:300px;
+  top:10%;
+  left:5%;
+}
+
+.shape.magenta{
+  background:#E91E63;
+  width:350px;
+  height:350px;
+  bottom:5%;
+  right:15%;
+}
+
+.shape.yellow{
+  background:#FFEB3B;
+  width:250px;
+  height:250px;
+  top:50%;
+  left:60%;
+}
+
+@keyframes float{
+  0%{transform:translateY(0) translateX(0) rotate(0deg);}
+  50%{transform:translateY(-50px) translateX(30px) rotate(20deg);}
+  100%{transform:translateY(0) translateX(0) rotate(0deg);}
+}
+
+/* CONTENEDOR GENERAL */
 .pedido-container{
-  position:relative;
-  max-width:400px;
-  margin:80px auto;
-  padding:30px;
-  background:rgba(255,255,255,0.95);
-  border-radius:20px;
-  text-align:center;
+  width:90%;
+  max-width:1100px;
+  display:flex;
+  background:#fff;
+  border-radius:25px;
+  overflow:hidden;
   box-shadow:0 20px 60px rgba(0,0,0,0.2);
 }
 
-/* TITULOS */
-h1{
+/* PANEL IZQUIERDO */
+.info-panel{
+  width:45%;
+  padding:40px;
+  background:linear-gradient(135deg,#171b26df,#0d48a1e6);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.logo{
+  width:150px;
+  margin-bottom:20px;
+}
+
+.info-panel h2{
+  margin-bottom:15px;
+  font-size:30px;
+}
+
+.info-panel p{
+  line-height:1.7;
+  margin-bottom:15px;
+}
+
+.info-panel ul{
+  padding-left:20px;
+  line-height:2;
+}
+
+/* PANEL DERECHO */
+.form-panel{
+  width:55%;
+  padding:40px;
+  text-align:center;
+}
+
+.form-panel h1{
   color:#171B26;
-  margin-bottom:10px;
+  margin-bottom:20px;
 }
 
 /* INPUTS */
-form input, form select, form textarea{
+form input,
+form select,
+form textarea{
   width:90%;
   padding:12px;
   margin:10px 0;
@@ -55,9 +115,12 @@ form input, form select, form textarea{
   border:2px solid #171B26;
   outline:none;
   transition:0.3s;
+  font-family:'Montserrat';
 }
 
-form input:focus, form textarea:focus{
+form input:focus,
+form select:focus,
+form textarea:focus{
   border-color:#FF1493;
   box-shadow:0 0 10px #FF1493;
 }
@@ -76,6 +139,102 @@ button{
 }
 
 button:hover{
-  transform:scale(1.1);
+  transform:scale(1.05);
   box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px){
+
+  .pedido-container{
+    width:95%;
+    flex-direction:column;
+  }
+
+  .info-panel,
+  .form-panel{
+    width:100%;
+    box-sizing:border-box;
+  }
+
+  .info-panel{
+    padding:30px;
+    text-align:center;
+    align-items:center;
+  }
+
+  .info-panel ul{
+    padding-left:0;
+    list-style:none;
+  }
+
+  .logo{
+    width:110px;
+  }
+
+  .form-panel{
+    padding:30px;
+  }
+
+}
+
+@media (max-width: 600px){
+
+  body{
+    padding:20px 0;
+    align-items:flex-start;
+  }
+
+  .pedido-container{
+    width:95%;
+    margin:20px 0;
+    border-radius:18px;
+  }
+
+  .info-panel{
+    padding:25px 20px;
+  }
+
+  .form-panel{
+    padding:25px 20px;
+  }
+
+  .info-panel h2{
+    font-size:24px;
+  }
+
+  .form-panel h1{
+    font-size:24px;
+  }
+
+  form input,
+  form select,
+  form textarea{
+    width:100%;
+    box-sizing:border-box;
+    font-size:14px;
+  }
+
+  button{
+    width:100%;
+    font-size:15px;
+  }
+
+  /* Reducir formas decorativas */
+  .shape.cyan{
+    width:180px;
+    height:180px;
+  }
+
+  .shape.magenta{
+    width:220px;
+    height:220px;
+  }
+
+  .shape.yellow{
+    width:150px;
+    height:150px;
+  }
+
 }

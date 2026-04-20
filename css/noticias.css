@@ -11,9 +11,11 @@
     position: relative;      
     width: 100%;
     height: auto;           
-    min-height: 705px;      
-    overflow: hidden;       
-    padding: 0;             
+    min-height: 705px; 
+    background-image:url(../img/bg2.png) ;  
+    background-size: cover;
+    background-attachment: fixed;   
+
 }
 #vp video {
     position: absolute;

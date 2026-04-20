@@ -1,37 +1,28 @@
 <?php
-// Conexión a la base de datos
 $conexion = new mysqli("localhost", "root", "", "pixelpro");
 
-// Verifica la conexión
-if ($conexion->connect_error) {
-    die("Conexión fallida: " . $conexion->connect_error);
+$nombre = $_POST["nombre"];
+$correo = $_POST["correo"];
+$telefono = $_POST["telefono"];
+$servicio = $_POST["servicio"];
+$mensaje = $_POST["mensaje"];
+
+$archivo = "";
+
+// Guardar archivo
+if(isset($_FILES['archivo']) && $_FILES['archivo']['error'] == 0){
+    $ext = pathinfo($_FILES['archivo']['name'], PATHINFO_EXTENSION);
+    $archivo = "uploads/" . time() . "_" . rand(100,999) . "." . $ext;
+    move_uploaded_file($_FILES['archivo']['tmp_name'], "../".$archivo);
 }
 
-// Si se envió el formulario
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = $_POST["nombre"];
-    $correo = $_POST["correo"];
-    $telefono = $_POST["telefono"];
-    $servicio = $_POST["servicio"];
-    $mensaje = $_POST["mensaje"];
+// Insertar en BD
+$stmt = $conexion->prepare("INSERT INTO pedidos (nombre, correo, telefono, servicio, mensaje, archivo) VALUES (?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("ssssss", $nombre, $correo, $telefono, $servicio, $mensaje, $archivo);
+$stmt->execute();
 
-    // Insertar en la base de datos usando prepared statement
-    $sql = "INSERT INTO pedidos (nombre, correo, telefono, servicio, mensaje)
-            VALUES (?, ?, ?, ?, ?)";
-    $stmt = $conexion->prepare($sql);
-    $stmt->bind_param("sssss", $nombre, $correo, $telefono, $servicio, $mensaje);
-
-    if ($stmt->execute()) {
-        echo "Pedido agregado correctamente. <a href='pizarra.php'>Ver Pizarra</a>";
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-
-    $stmt->close();
-}
-
-$conexion->close();
-
-
-
-
+// WhatsApp empresa
+$mensaje_ws = "Nuevo pedido de $nombre - $servicio";
+header("Location: https://wa.me/18498752651?text=" . urlencode($mensaje_ws));
+exit;
+?>

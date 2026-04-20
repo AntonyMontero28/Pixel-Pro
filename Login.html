@@ -1,34 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="css/Login.css">
-</head>
-<body>
-    <form>
-        <h2>Login</h2>
-        <div class="input-group">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixelPro Clientes</title>
 
+    <link rel="stylesheet" href="css/Login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- FONDO CMYK -->
+    <div class="shape cyan"></div>
+    <div class="shape magenta"></div>
+    <div class="shape yellow"></div>
+    <div class="shape blue"></div>
 
-            <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" placeholder="Nombre">
-            <label for="phone">Telefono</label>
-            <input type="tel" name="phone" id="phone" placeholder="Telefono">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Email">
-            <label for="message">Mensaje</label>
-            <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+    <div class="container">
+      <div class="form-box" id="loginBox">
+        <h2>PixelPro</h2>
+        <p>Iniciar Sesión</p>
 
+        <form id="loginForm">
+          <input type="email" placeholder="Correo" required />
+          <input type="password" placeholder="Contraseña" required />
 
-            <div class="form-txt"></div>
-            <a href="#">Politica de privacidad</a>
-            <a href="#">Terminos y condiciones</a>  
-        </div>
-        <input class="btn" type="submit" value="Enviar">
+          <button>Entrar</button>
+        </form>
 
+        <p class="switch">
+          ¿No tienes cuenta? <span onclick="mostrarRegistro()">Regístrate</span>
+        </p>
+      </div>
 
-    </form>
-</body>
+      <div class="form-box hidden" id="registerBox">
+        <h2>Crear Cuenta</h2>
+
+        <form id="registerForm">
+          <input type="text" placeholder="Nombre completo" required />
+          <input type="tel" placeholder="Teléfono" required />
+          <input type="email" placeholder="Correo" required />
+          <input type="password" placeholder="Contraseña" required />
+
+          <div class="check">
+            <input type="checkbox" id="terms" required />
+            <label for="terms"
+              >Acepto
+              <span onclick="mostrarModal('privacidad')"
+                >Política de privacidad</span
+              >
+              y <span onclick="mostrarModal('terminos')">Términos</span></label
+            >
+          </div>
+
+          <button>Registrarse</button>
+        </form>
+
+        <p class="switch">
+          ¿Ya tienes cuenta? <span onclick="mostrarLogin()">Inicia sesión</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <div id="contenidoModal"></div>
+      </div>
+    </div>
+
+    <script src="js/Login.js"></script>
+  </body>
 </html>

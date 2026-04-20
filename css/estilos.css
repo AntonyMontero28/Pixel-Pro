@@ -92,12 +92,12 @@ header{
     gap: 20px;
 }
 
-/* LOGO */
+
 .logo img {
     width: 180px;
 }
 
-/* LINKS */
+
 .nav a {
     position: relative;
     text-decoration: none;
@@ -107,7 +107,7 @@ header{
     display: inline-block;
 }
 
-/* 💛 línea animada */
+
 .nav a::after {
     content: "";
     position: absolute;

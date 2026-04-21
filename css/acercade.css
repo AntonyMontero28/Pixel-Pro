@@ -10,6 +10,8 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    background-color: #00000000;
+    height: 30vh;
     align-items: center;
     padding: 0 40px;
 }
@@ -35,7 +37,6 @@ body {
     display: inline-block;
 }
 
-/* 💛 línea animada */
 .nav a::after {
     content: "";
     position: absolute;
@@ -74,7 +75,8 @@ body {
   position: relative;
   height: 50vh;
   display: flex;
-  height: 70vh;
+  background-color: #00000000;
+  height: 60vh;
   justify-content: center;
   align-items: center;
   overflow: hidden;

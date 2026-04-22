@@ -5,19 +5,19 @@
 *{
     margin: 0;
     padding: 0;
-    border: 0;
+    box-sizing: border-box;
 }
-/* Ambar inicio */
+
+/* ----------- HERO ----------- */
 #vp{
     position: relative;      
     width: 100%;
-    height: auto;           
     min-height: 705px; 
-    background-image:url(../img/bg2.png) ;  
+    background-image:url(../img/bg2.png);  
     background-size: cover;
     background-attachment: fixed;   
-
 }
+
 #vp video {
     position: absolute;
     top: 50%;
@@ -28,70 +28,62 @@
     transform: translate(-50%, -50%);
     z-index: -1;            
 }
+
 #ban, header, #textoo {
     position: relative;
     z-index: 1;              
     color: black;           
 }
 
-}
 h1 {
-    color: black;
     font-family: "Nunito", sans-serif;
     font-size: 25px;
 }
+
+/* ----------- BANNER ----------- */
 #ban{
-    width: 100%;            
-    height: auto;           
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px;
-}
-#l{
-    width: auto;
-    height: 30px;
-    display: flex;
-    align-self: center;
-    padding-left: 10px;
-}
-.icons{
-    width: 110px;
-    height: 40px;
-    display: flex; 
-}
-i {
-    font-size: 25px;
-    color: #000000;
-    margin: 5px;
+    padding: 10px;
 }
 
-header{
-    width: 100%;
-    height: auto;           
+#l{
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 
+.icons{
+    display: flex; 
+}
+
+i {
+    font-size: 25px;
+    margin: 5px;
+}
+
+/* ----------- HEADER ----------- */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 #logo{
-    width: 250px;
-    height: 200px;
+    width: 200px;
     display: flex;
     justify-content: center;
 }
 
 #log{
-    height: 200px;
-    width: 200px;
+    width: 150px;
 }
 
+/* NAV */
 .nav{
-    width: 800px;
-    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
 }
 
 nav ul{
@@ -101,184 +93,212 @@ nav ul{
 }
 
 nav ul li a{
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Nunito", sans-serif;
     color: black;
-    display: flex;
-    justify-content: space-between;
     text-decoration: none;
 }
 
 nav ul li:hover{
-    transform: scale(1.2);
-    transition: 1s;
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
+/* TEXTO HERO */
 #textoo{
-    width:1000px;
-    height:500px;
+    max-width: 1000px;
+    width: 100%;
     padding: 50px;
 }
+
 #vpH{
-    font-size:80px;
-    color:black;
-    text-align: left;
+    font-size: 70px;
     font-family:"Nunito", sans-serif;
-    font-weight: 900px;
-}
-#slogan{
-    font-size:30px;
-    color:black;
-    text-align: left;
-    font-family:"Nunito", sans-serif;
-    font-weight: 400px;
+    font-weight: 900;
 }
 
-/*Ambar final*/
+#slogan{
+    font-size: 25px;
+    font-family:"Nunito", sans-serif;
+}
+
+/* ----------- NOTICIAS ----------- */
 #noti{
     width: 100%;
-    height: 460px;
+    padding: 50px 0;
 }
+
 #notii{
-    font-size:50px;
-    padding-top:100px;
-    color: black;
+    font-size:40px;
     text-align: center;
     font-family: "Coiny", system-ui;
 }
+
 #traba{
-    font-size:25px;
+    font-size:20px;
     font-family: "Handlee", cursive;
-    color:black;
     text-align: center;
-    padding-top: 45px;
-    padding: 50px;
+    padding: 20px;
 }
+
 #imagen{
     background-image: url(../img/impre9.png);
     background-size: cover;
     background-attachment: fixed;
-    height:500px;
+    height:400px;
 }
+
+/* TARJETAS */
 #notiyma{
     width: 100%;
-    height: 500px;
     background:linear-gradient(90deg, cyan, magenta, yellow);
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.hola{
-    width: 380px;
-    height: 400px;
-    background: white;
-    border-radius: 10px;
-}
-.bony{
-    font-size:23px;
-    color:black;
-    text-align: center;
-    font-family: "Coiny",system-ui;
-    padding-top: 40px;
-    transform: scale(1.2);
-}
-.bony:hover {
-    transform: scale(1.2);
-}
-.bonyy{
-    font-size: 20px;
-    font-family: "Handlee", cursive;
-    color:  black;
-    text-align: center;
-    padding-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 30px;
 }
+
+.hola{
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.bony{
+    font-size:20px;
+    text-align: center;
+    font-family: "Coiny",system-ui;
+}
+
+.bonyy{
+    font-size: 16px;
+    font-family: "Handlee", cursive;
+    text-align: center;
+    padding: 15px;
+}
+
 .botoneee{
-    width: 170px;
-    height: 50px;
-    font-size: 20px;
-    margin-left: 100px;
-    color: black;
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+    margin: 20px auto;
+    display: block;
     background: #3aa6d4;
     border-radius: 5%;
-     font-family: "Coiny",system-ui;
+    font-family: "Coiny",system-ui;
 }
+
+/* IMAGEN FINAL */
 #imagenn{
     background-image: url(../img/impre8.jpg);
     background-size: cover;
     background-attachment: fixed;
-    height:500px;
+    height:400px;
 }
-#notie{
-    width: 100%;
-    height: 460px;
-    padding-top: 75px;
-}
-#notiie{
-    font-size:50px;
-    color:#ad657c;
-    text-align: center;
-    font-family: "Coiny",system-ui;
-}
-#trabaa{
-    font-size:25px;
-    font-family: "Handlee", cursive;
-    color:black;
-    text-align: center;
-    padding-top: 45px;
-    padding: 50px;
-}
-footer{
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 
-}
-.cajon1{
-    width: 250px;
-    height: 250px;
+/* ----------- FOOTER ----------- */
+footer{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+    padding: 20px;
 }
-#logo1{
-    width: 250px;
-    height: 250px;
-}
-#n1{
-      font-family: "Funnel Sans", sans-serif;
-      color: #3AB2E6;
-}
-#n2{
-    font-family: "Funnel Sans", sans-serif;
-    color: #E83A77;
-}
-#n3{
-    font-family: "Funnel Sans", sans-serif;
-      color: #FDD51D;
-}
-#n4{
-    font-family: "Funnel Sans", sans-serif;
-      color: #171B26;
-}
-.redes {
+
+.cajon1{
+    width: 200px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
 }
-.icono {
-    width: 30px;
-    height: 30px;
+
+#logo1{
+    width: 150px;
 }
+
+.redes {
+    display: flex;
+    gap: 10px;
+}
+
+.icono {
+    width: 25px;
+}
+
+/* LINKS */
 a{
     text-decoration: none;
     color: black;
-    font-family: "Funnel Sans", sans-serif;
 }
-a:hover{
-    font-size: 15px;
+
+/* ----------- RESPONSIVE ----------- */
+
+/* 📱 CELULAR */
+@media (max-width: 768px){
+
+    header{
+        flex-direction: column;
+    }
+
+    nav ul{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #textoo{
+        text-align: center;
+        padding: 20px;
+    }
+
+    #vpH{
+        font-size: 35px;
+    }
+
+    #slogan{
+        font-size: 18px;
+    }
+
+    #ban{
+        flex-direction: column;
+    }
+
+    #notiyma{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hola{
+        width: 90%;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cajon1{
+        width: 100%;
+    }
+}
+
+/* 📲 TABLET */
+@media (min-width: 769px) and (max-width: 1024px){
+
+    .hola{
+        width: 45%;
+    }
+
+    .cajon1{
+        width: 45%;
+    }
+}
+
+/* 💻 PC */
+@media (min-width: 1025px){
+
+    .hola{
+        width: 30%;
+    }
 }

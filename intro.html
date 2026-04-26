@@ -1,82 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PixelPro - Intro Pro</title>
-    <link rel="stylesheet" href="css/intro.css" />
-  </head> 
-  <body>
-    <!-- LOADER -->
-    <div id="loader">
-      <img src="img/logo.png" alt="PixelPro Logo" class="loader-logo" />
-      <h1 class="loader-text">PIXELPRO</h1>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Pro | Intro Premium</title>
+  <link rel="stylesheet" href="css/intro.css">
 
-    <!-- SECCIÓN PRINCIPAL -->
-    <section id="vp">
-      <!-- EFECTOS DE FONDO -->
-      <div class="bg-effects">
-        <div class="circle cyan"></div>
-        <div class="circle magenta"></div>
-        <div class="circle yellow"></div>
-        <div class="circle black"></div>
-      </div>
+  <!-- FUENTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-      <!-- CONTENIDO -->
-      <div class="intro-content">
-        <h1 class="logo">PIXELPRO</h1>
-        <p class="slogan">Impresiones digitales rápidas y profesionales</p>
+<!-- LOADER -->
+<div id="loader">
+    <div class="loader-anillo"></div>
+    <img src="img/log-removebg-preview.png" class="loader-logo">
+    <h1 class="loader-texto">PIXEL PRO</h1>
+</div>
 
-        <!-- CARRUSEL -->
-        <div class="carousel">
-          <div class="slides">
-            <img src="img/servicio.png" alt="Servicio 1" />
-            <img src="img/copia.png" alt="Servicio 2" />
-            <img src="img/servicio.png" alt="Servicio 3" />
-            <img src="img/copia.png" alt="Servicio 4" />
-          </div>
-        </div>
+<!-- HERO -->
+<section class="hero">
 
-        <h2 class="intro-text">
-          Impresiones rápidas, económicas y de alta calidad
-        </h2>
-        <p class="intro-desc">
-          Desde tareas escolares hasta proyectos profesionales. Entregas rápidas
-          y resultados perfectos.
-        </p>
+    <!-- VIDEO -->
+    <div class="video-fondo">
+  <iframe 
+    src="https://www.youtube.com/embed/sA4FXGNdTHw?autoplay=1&mute=1&loop=1&playlist=sA4FXGNdTHw&controls=0&showinfo=0&modestbranding=1"
+    title="Video fondo Pixel Pro"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</div>
 
-        <!-- SECCIÓN DE PRECIOS -->
-        <section class="precios">
-          <h2>Precios de Impresión</h2>
-          <div class="precio-container">
-            <div class="precio-card">
-              <h3>Blanco y Negro</h3>
-              <p>📄 Carta / A4 / Oficio</p>
-              <span>$10 DOP</span>
-            </div>
-            <div class="precio-card">
-              <h3>Color</h3>
-              <p>🎨 Alta calidad</p>
-              <span>$15 - $25 DOP</span>
-            </div>
-            <div class="precio-card">
-              <h3>Papel Fotográfico</h3>
-              <p>📸 Brillo profesional</p>
-              <span>$50 - $150 DOP</span>
-            </div>
-          </div>
+    <!-- CAPA OSCURA -->
+    <div class="overlay"></div>
 
-          <!-- BOTONES -->
-          <div class="btn-container">
-            <a href="pe.html" class="btn-venta">Hacer pedido</a>
-            <br />
-            <a href="index.html" class="btn">Entrar</a>
-          </div>
-        </section>
-      </div>
-    </section>
+    <div class="contenido">
+    <img src="img/logo.png" alt="Logo Pixel Pro" class="logo">
 
-    <script src="js/intro.js"></script>
-  </body>
+    <h1 class="titulo">
+        Donde las ideas cobran vida en cada impresión
+        <span>PIXEL PRO</span>
+    </h1>
+
+    <p class="subtitulo">
+        Calidad • Rapidez • Innovación • Diseño profesional
+    </p>
+
+   <div class="botones">
+    <a href="index.html" class="btn entrar">Entrar</a>
+    <a href="pe.html" class="btn pedido">Hacer Pedido</a>
+</div>
+</div>
+
+</section>
+
+<script src="js/intro.js"></script>
+</body>
 </html>

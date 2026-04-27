@@ -1,38 +1,12 @@
-// CURSOR PERSONALIZADO
-const cursor = document.createElement("div");
-cursor.classList.add("cursor");
-document.body.appendChild(cursor);
+const cards = document.querySelectorAll(".card");
 
-document.addEventListener("mousemove", (e)=>{
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
+cards.forEach((card, index) => {
+  card.style.opacity = "0";
+  card.style.transform = "translateY(50px)";
+
+  setTimeout(() => {
+    card.style.transition = "0.6s";
+    card.style.opacity = "1";
+    card.style.transform = "translateY(0)";
+  }, index * 200);
 });
-
-// CURSOR INTERACTIVO
-const links = document.querySelectorAll("a, button");
-
-links.forEach(link=>{
-  link.addEventListener("mouseover", ()=>{
-    document.querySelector(".cursor").classList.add("active");
-  });
-
-  link.addEventListener("mouseout", ()=>{
-    document.querySelector(".cursor").classList.remove("active");
-  });
-});
-
-// EFECTO TINTA (PARTÍCULAS)
-document.addEventListener("mousemove", function(e){
-  let particle = document.createElement("div");
-  particle.classList.add("particle");
-
-  particle.style.left = e.clientX + "px";
-  particle.style.top = e.clientY + "px";
-
-  document.body.appendChild(particle);
-
-  setTimeout(()=>{
-    particle.remove();
-  },1000);
-});
-

@@ -1,312 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/tienda.css">
-    <title>Tienda Escolar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Escolar</title>
+  <link rel="stylesheet" href="css/tienda.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <article id="vp">
 
-        <section id="ban">
-            <div id="l">
-                <h1>“Imprime. Impacta. Destaca.”</h1>
-            </div>
-            <div class="icons">
-                <i class="fa-solid fa-user"></i> 
-                <i class="fa-solid fa-location-dot"></i> 
-                <i class="fa-solid fa-bell"></i>
-            </div> 
-        </section>
-
-<header class="header">
-    
-    <nav class="nav left">
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios de Impresión</a>
-        <a href="tienda.html">Tienda Escolar</a>
-    </nav>
-
-    <div class="logo">
-        <img src="img/logo.png" alt="logo">
-    </div>
-
-    <nav class="nav right">
-        <a href="galeria2.html">Galería</a>
-        <a href="promociones.html">Promociones</a>
-        <a href="acercade.html">Sobre nosotros</a>
-    </nav>
-
+<header>
+  <h1>✨ PixelPro Store</h1>
+  <p>“Dale vida a tus ideas en cada impresión.”</p>
 </header>
 
-        <section id="textoo">
-            <h1 id="vpH">Bienvenidos a PixelPro</h1>
-            <p id="slogan">“Dale vida a tus ideas en cada impresión.”</p>
-        </section>
-    </article>
-    <!-- Ambar -->
+<section class="contenedor">
 
+  <!-- CATEGORIA -->
+  <h2>Impresiones Básicas</h2>
 
-    <article id="productos">
-        <article id="productos">
+  <div class="grid">
+    <div class="card">
+      <img src="img/p1.webp">
+      <h3>Impresión Blanco y Negro</h3>
+      <p>Alta calidad ideal para tareas.</p>
+      <span>RD$10</span>
+      <button>Comprar</button>
+    </div>
 
-    <div class="fondo-circulos">
-    <div class="circulo" style="--i:1;"></div>
-    <div class="circulo" style="--i:2;"></div>
-    <div class="circulo" style="--i:3;"></div>
-    <div class="circulo" style="--i:4;"></div>
-    <div class="circulo" style="--i:5;"></div>
-    <div class="circulo" style="--i:6;"></div>
-    <div class="circulo" style="--i:7;"></div>
-    <div class="circulo" style="--i:8;"></div>
-    <div class="circulo" style="--i:9;"></div>
-    <div class="circulo" style="--i:10;"></div>
-    <div class="circulo" style="--i:11;"></div>
-    <div class="circulo" style="--i:12;"></div>
-</div>
-        <section class="produ">
-            <section class="titulo">Impresiones Básicas</section>
+    <div class="card">
+      <img src="img/p2.jpg">
+      <h3>Impresión a Color</h3>
+      <p>Colores vibrantes.</p>
+      <span>RD$15</span>
+      <button>Comprar</button>
+    </div>
 
-            <div class="producto">
-                <img src="img/p1.webp" class="img">
-                <h3>Impresión Blanco y Negro</h3>
-                <p>Impresión sencilla en alta calidad ideal para tareas, documentos y copias rápidas.</p>
-                <p class="precio">RD$10 p/u</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
+    <div class="card">
+      <img src="img/p3.jpg">
+      <h3>Fotocopias</h3>
+      <p>Copias rápidas.</p>
+      <span>RD$5</span>
+      <button>Comprar</button>
+    </div>
+  </div>
 
-            <div class="producto">
-                <img src="img/p2.jpg" class="img">
-                <h3>Impresión a Color</h3>
-                <p>Colores vibrantes y definidos, perfecta para presentaciones y trabajos escolares.</p>
-                <p class="precio">RD$15 p/u</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
+  <!-- CATEGORIA -->
+  <h2>Encuadernación y Acabados</h2>
 
-            <div class="producto">
-                <img src="img/p3.jpg" class="img">
-                <h3>Fotocopias</h3>
-                <p>Copias rápidas y económicas para uso diario.</p>
-                <p class="precio">RD$5 p/u</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
+  <div class="grid">
+    <div class="card">
+      <img src="img/p4.jpg">
+      <h3>Espiral</h3>
+      <p>Abre completamente.</p>
+      <span>RD$150</span>
+      <button>Comprar</button>
+    </div>
 
-        </section>
+    <div class="card">
+      <img src="img/p5.webp">
+      <h3>Térmico</h3>
+      <p>Acabado elegante.</p>
+      <span>RD$250</span>
+      <button>Comprar</button>
+    </div>
 
-         <section class="produ">
-            <section class="titulo">Encuadernación y Acabados</section>
-              
-            <div class="producto">
-                <img src="img/p4.jpg" class="img">
-                <h3>Encuadernado Espiral</h3>
-                <p>Ideal para proyectos y cuadernos, permite abrir completamente las páginas.</p>
-                <p class="precio">RD$150</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
+    <div class="card">
+      <img src="img/p6.jpg">
+      <h3>Laminado</h3>
+      <p>Protección total.</p>
+      <span>RD$100</span>
+      <button>Comprar</button>
+    </div>
+  </div>
 
-            <div class="producto">
-                <img src="img/p5.webp" class="img">
-                <h3>Encuadernado Térmico</h3>
-                <p>Acabado elegante tipo libro, perfecto para trabajos formales.</p>
-                <p class="precio">RD$250</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
+  <!-- Puedes seguir agregando las demás categorías igual -->
 
-            <div class="producto">
-                <img src="img/p6.jpg" class="img">
-                <h3>Laminado (Plastificado)</h3>
-                <p>Protege documentos importantes contra agua, suciedad y desgaste.</p>
-                <p class="precio">RD$100 por/h</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
+</section>
 
-        </section>
+<footer>
+  <p>© 2026 PixelPro</p>
+</footer>
 
-        <section class="produ">
-            <section class="titulo">Diseño e Impresión Creativa</section>
-              
-            <div class="producto">
-                <img src="img/p7.jpg" class="img">
-                <h3>Tarjetas de Presentación</h3>
-                <p>Diseños profesionales para promocionar tu marca o negocio.</p>
-                <p class="precio">RD$300</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
-
-            <div class="producto">
-                <img src="img/p8.webp" class="img">
-                <h3>Flyers / Volantes</h3>
-                <p>Ideales para publicidad, eventos o promociones.</p>
-                <p class="precio">RD$500</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
-
-            <div class="producto">
-                <img src="img/p9.jpg" class="img">
-                <h3>Afiches (Posters)</h3>
-                <p>Impresión en gran formato con excelente calidad visual.</p>
-                <p class="precio">RD$200</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
-
-        </section>
-
-        <section class="produ">
-            <section class="titulo">Papelería Escolar</section>
-              
-            <div class="producto">
-                <img src="img/p10.jpg" class="img">
-                <h3>Cuadernos Personalizados</h3>
-                <p>Diseños únicos con nombre, portada personalizada y estilo creativo..</p>
-                <p class="precio">RD$250</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
-
-            <div class="producto">
-                <img src="img/p11.jpg" class="img">
-                <h3>Etiquetas Escolares</h3>
-                <p>Perfectas para identificar útiles escolares con diseños divertidos.</p>
-                <p class="precio">RD$100</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
-
-            <div class="producto">
-                <img src="img/p12.jfif" class="img">
-                <h3>Agendas Personalizadas</h3>
-                <p>Organización diaria con estilo propio y personalizado.</p>
-                <p class="precio">RD$350</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
-
-        </section>
-
-        <section class="produ">
-            <section class="titulo">Impresión Fotográfica</section>
-              
-            <div class="producto">
-                <img src="img/p13.jpg" class="img">
-                <h3>Fotos Tamaño 4x6</h3>
-                <p>Impresión de fotos con excelente calidad y colores vivos.</p>
-                <p class="precio">RD$25</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
-
-            <div class="producto">
-                <img src="img/p14.webp" class="img">
-                <h3>Fotos Tamaño 5x7</h3>
-                <p>Tamaño ideal para marcos y recuerdos especiales.</p>
-                <p class="precio">RD$40</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
-
-            <div class="producto">
-                <img src="img/p16.jfif" class="img">
-                <h3>Fotos Tipo Póster</h3>
-                <p>Imágenes grandes para decoración o regalos.</p>
-                <p class="precio">RD$150</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
-
-        </section>
-
-        <section class="produ">
-            <section class="titulo">Servicios Digitales</section>
-              
-            <div class="producto">
-                <img src="img/p17.webp" class="img">
-                <h3>Escaneo de Documentos</h3>
-                <p>Digitaliza tus documentos de forma rápida y segura.</p>
-                <p class="precio">RD$20 p/u</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
-
-            <div class="producto">
-                <img src="img/p18.jpg" class="img">
-                <h3>Edición de Documentos</h3>
-                <p>Corrección, formato y mejora de trabajos escritos.</p>
-                <p class="precio">RD$100</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
-
-            <div class="producto">
-                <img src="img/p19.webp" class="img">
-                <h3>Diseño Básico</h3>
-                <p>Creación de diseños simples para tareas, flyers o presentaciones.</p>
-                <p class="precio">RD$200</p>
-                <button class="b" onclick="agregarAlCarrito('Paleta de chocolate', 70)">Comprar</button>
-            </div>
-
-        </section>
-       
-    </article>
-     <script src="js/tienda.js"></script>
-
-    <footer>
-      <div class="cajon1">
-        <img id="logo1" src="Img/logo.png" alt="">
-      </div>
-
-      <div class="cajon1">
-
-         <h4 id="n1">INFORMACIÓN</h4>
-
-        <a href="#">Sobre nosotros</a>
-        <a href="#">Más búsqueda</a>
-        <a href="#">Blog</a>
-        <a href="#">Testimonios</a>
-        <a href="#">Eventos</a>
-
-      </div>
-
-      <div class="cajon1">
-
-        <h4 id="n2">ENLACES ÚTILES</h4>
-
-        <a href="#">Servicios</a>
-        <a href="#">Soporte</a>
-        <a href="#">Términos y condiciones</a>
-        <a href="#">Política de privacidad</a>
-
-      </div>
-
-
-      <div class="cajon1">
-
-        <h4 id="n3">SERVICIOS</h4>
-
-        <a href="#">Lista de marcas</a> 
-        <a href="#">Pedidos</a>
-        <a href="#">Cambios y devoluciones</a>
-        <a href="#">Lista de moda</a>
-        <a href="#">Blog</a>
-
-      </div>
-
-
-
-
-
-      <div class="cajon1">
-        
-         <h4 id="n4">CONTÁCTANOS</h4>
-        <a href="#"> +91 9999 999 999</a>
-        <a href="#">  youremaillid.com</a>
-
-        <div class="redes">
-            <img class="icono" src="IMG/ICON (4).png" alt="Facebook">
-            <img class="icono" src="IMG/ICON (5).png" alt="Google">
-            <img class="icono" src="IMG/ICON (6).png" alt="YouTube">
-            <img class="icono" src="IMG/ICON (7).png" alt="Instagram">
-        </div>
-      </div>
-
-    </footer>
-
-    <script src="js/script.js"></script>
-    
 </body>
-</html>    
-
-    
+</html>

@@ -10,6 +10,8 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    background-color: #00000000;
+    height: 30vh;
     align-items: center;
     padding: 0 40px;
 }
@@ -35,7 +37,6 @@ body {
     display: inline-block;
 }
 
-/* 💛 línea animada */
 .nav a::after {
     content: "";
     position: absolute;
@@ -74,7 +75,7 @@ body {
   position: relative;
   height: 50vh;
   display: flex;
-  height: 70vh;
+  background-color: #00000000;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -154,7 +155,8 @@ body {
 }
 
 .character {
-  width: 400px;
+  width: 445px;
+  background-color: #00bbd400;
   animation: sway 4s infinite alternate ease-in-out;
 }
 
@@ -190,6 +192,8 @@ body {
   margin-top: 10px;
   color: #171b26;
 }
+
+
 
 /* SERVICIOS */
 .services {
@@ -333,13 +337,6 @@ body {
   color: #555;
 }
 
-/* GRID */
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
 /* TARJETAS */
 .contact-box {
   display: flex;
@@ -442,11 +439,16 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
+/* GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
 #mvv-pro {
   position: relative;
   padding: 100px 40px;
-  background: #ffffff00;
+  background: #ffffffe9;
   overflow: hidden;
   text-align: center;
 }
@@ -820,7 +822,8 @@ body {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 30px;
   width: auto;
-  padding: 20px;
+  height: auto;
+  padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -839,11 +842,11 @@ body {
   margin-bottom: 25px;
   border-radius: 20px;
   overflow: hidden;
-  height: 400px;
+  height: 450px;
 }
 
 .photo-wrapper img {
-  width: 100%;
+  width:  90%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;

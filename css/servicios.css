@@ -127,12 +127,9 @@ header{
     height: 420px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start; /* 🔥 CLAVE */
+    padding: 0 40px; /* margen controlado */
     overflow: hidden;
-
-    background: url('../img/bg2.png');
-    background-size: cover;
-    background-position: center;
 }
 
 /* CAPA OSCURA */
@@ -225,7 +222,7 @@ header{
     right: -100px;
 }
 
-/*Ambar final*/
+
 #bien{
     text-align:center;
     margin:50px 0;
@@ -476,4 +473,235 @@ a{
     text-decoration: none;
     color: black;
     font-family: "Montserrat", sans-serif;
+}
+
+
+
+
+#vp{
+    background-attachment: scroll !important;
+}
+
+/* TEXTOS FLEXIBLES */
+#vpH{
+    font-size: clamp(28px, 5vw, 55px);
+}
+
+#slogan{
+    font-size: clamp(14px, 2.5vw, 20px);
+}
+
+h1{
+    font-size: clamp(18px, 3vw, 25px);
+}
+
+/* HEADER */
+@media(max-width: 900px){
+
+    .header{
+        flex-direction: column !important;
+        gap: 15px;
+        padding: 20px !important;
+    }
+
+    .nav{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .logo img{
+        width: 140px !important;
+    }
+}
+
+/* TOP BAR */
+@media(max-width: 600px){
+
+    #ban{
+        flex-direction: column !important;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .icons{
+        justify-content: center;
+    }
+}
+
+/* HERO */
+@media(max-width: 768px){
+
+    #vp-servicios{
+        height: auto !important;
+        padding: 40px 20px !important;
+        text-align: center;
+    }
+
+    .vp-contenido{
+        max-width: 100%;
+    }
+
+    .vp-botones{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-vp,
+    .btn-vp2{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* SECCIONES */
+@media(max-width: 768px){
+
+    .section2,
+    .section3{
+        flex-direction: column !important;
+        text-align: center;
+        padding: 20px !important;
+    }
+
+    .servi_texto{
+        text-align: center;
+        order: 2;
+    }
+
+    .servi_texto ul{
+        padding-left: 0;
+        list-style: none;
+    }
+}
+
+/* EMOJIS */
+@media(max-width: 768px){
+    .emoji{
+        width: 150px !important;
+        height: 150px !important;
+        font-size: 70px !important;
+        order: 1;
+    }
+}
+
+/* FOOTER */
+@media(max-width: 900px){
+
+    footer{
+        flex-wrap: wrap !important;
+        height: auto !important;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .cajon1{
+        width: 45% !important;
+        height: auto !important;
+    }
+
+    #logo1{
+        width: 150px !important;
+        height: auto !important;
+    }
+}
+
+@media(max-width: 500px){
+
+    .cajon1{
+        width: 100% !important;
+        text-align: center;
+    }
+
+    footer{
+        flex-direction: column !important;
+        align-items: center;
+    }
+}
+
+
+
+.menu-toggle{
+    display: none;
+    font-size: 28px;
+    background: none;
+    cursor: pointer;
+}
+
+/* MOVIL */
+@media(max-width: 768px){
+
+    /* BOTON */
+    .menu-toggle{
+        display: block;
+        position: absolute;
+        top: 20px;   /* 🔥 CORREGIDO */
+        left: 20px;
+        z-index: 2000;
+    }
+
+    /* HEADER */
+    .header{
+        position: relative;
+        flex-direction: column !important;
+    }
+
+    /* 🔥 UNIFICAR LOS DOS MENUS */
+    .nav{
+        position: absolute;
+        top: 70px; /* 🔥 MÁS ARRIBA */
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 15px 0;
+        z-index: 1500;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    /* 🔥 ACTIVAR */
+    .nav.active{
+        display: flex;
+    }
+
+    /* LINKS */
+    .nav a{
+        padding: 12px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* 🔥 UNIR MENUS EN MOVIL */
+@media(max-width: 768px){
+
+    .nav.left,
+    .nav.right{
+        position: static; /* 🔥 clave */
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .nav{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* CUANDO SE ABRE */
+    .nav.active{
+        display: flex;
+    }
+
+    /* CONTENEDOR PADRE */
+    .header{
+        position: relative;
+    }
+
 }

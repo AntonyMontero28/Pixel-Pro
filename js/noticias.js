@@ -1,24 +1,12 @@
-function scrollServicios(){
-    document.getElementById("noticias").scrollIntoView({
-        behavior: "smooth"
-    });
-}
+ let cards = document.querySelectorAll(".card");
 
-function mensaje(){
-    alert("Gracias por contactarnos 😊 Pronto te responderemos.");
-}
+cards.forEach(card => {
+    card.addEventListener("click", function(){
 
-/* Animación al hacer scroll */
-window.addEventListener("scroll", function(){
-    let cards = document.querySelectorAll(".card");
+        // Quita el efecto a todos
+        cards.forEach(c => c.classList.remove("activo"));
 
-    cards.forEach(card => {
-        let position = card.getBoundingClientRect().top;
-        let screen = window.innerHeight;
-
-        if(position < screen - 100){
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-        }
+        // Activa solo el que tocaste
+        card.classList.add("activo");
     });
 });

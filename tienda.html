@@ -2,465 +2,115 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixelPro | Impresiones Digitales</title>
-    <link rel="stylesheet" href="css/tienda.css ">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>PixelPro</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Loader CMYK -->
-    <div class="loader">
-        <div class="loader-dot dot-cyan"></div>
-        <div class="loader-dot dot-magenta"></div>
-        <div class="loader-dot dot-yellow"></div>
-        <div class="loader-dot dot-cyan"></div>
-    </div>
 
-    <!-- Barra superior -->
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <span><i class="fas fa-truck"></i> Envíos a todo el país</span>
-            <span><i class="fas fa-clock"></i> Impresión en 24h</span>
-            <span><i class="fas fa-phone"></i> +1 234 567 890</span>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="header-container">
-            <div class="logo-section">
-                <div class="logo-icon">
-                    <div class="cmyk-dots">
-                        <span class="cmyk-dot c"></span>
-                        <span class="cmyk-dot m"></span>
-                        <span class="cmyk-dot y"></span>
-                        <span class="cmyk-dot k"></span>
-                    </div>
-                </div>
-                <div class="logo-text">
-                    <h1 class="brand-name">PIXEL<span class="pro">PRO</span></h1>
-                    <p class="brand-tagline">Impresiones Digitales</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <ul class="nav-menu">
-                <li><a href="#" class="nav-link active">INICIO</a></li>
-                <li><a href="#" class="nav-link">SERVICIOS</a></li>
-                <li><a href="#" class="nav-link">PRODUCTOS</a></li>
-                <li><a href="#" class="nav-link">GALERÍA</a></li>
-                <li><a href="#" class="nav-link">PRESUPUESTO</a></li>
-                <li><a href="#" class="nav-link">CONTACTO</a></li>
-            </ul>
-            <button class="btn-cotizar">COTIZAR AHORA</button>
-        </div>
+<!-- NAVBAR -->
+<header class="navbar">
+    <h2 class="logo">PixelPro</h2>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Nosotros</a>
     </nav>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="hero-badge">IMPRESIÓN PROFESIONAL</span>
-            <h2 class="hero-title">
-                <span class="cyan-text">Calidad</span> en cada 
-                <span class="magenta-text">pixel</span>
-            </h2>
-            <p class="hero-description">
-                Impresiones digitales de alta definición con tecnología CMYK. 
-                Láminas, vinilos, lonas, papelería corporativa y mucho más.
-            </p>
-            <div class="hero-buttons">
-                <a href="#" class="btn-primary">VER SERVICIOS</a>
-                <a href="#" class="btn-secondary">SOLICITAR MUESTRA</a>
-            </div>
-            <div class="hero-features">
-                <div class="feature-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Alta resolución</span>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Colores CMYK reales</span>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Entrega rápida</span>
-                </div>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>IMPRESIONES<br><span>DIGITALES PRO</span></h1>
+        <p>Calidad profesional en cada impresión. ¡Ordena ahora!</p>
+    </div>
+    <div class="hero-img">
+        <!-- IMAGEN AQUÍ -->
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+    <div class="products-header">
+        <h2>PRODUCTOS</h2>
+        <div class="search-cart">
+            <input type="text" placeholder="Buscar...">
+            <button>🔍</button>
+            <span class="cart">🛒</span>
+        </div>
+    </div>
+
+    <div class="grid">
+
+        <!-- CARD -->
+        <div class="card">
+            <div class="img"></div>
+            <p class="price">RD$300</p>
+            <h3>Tarjetas de Presentación</h3>
+            <div class="buttons">
+                <button>Comprar</button>
+                <button>Agregar</button>
             </div>
         </div>
-        <div class="hero-shapes">
-            <div class="shape shape-cyan"></div>
-            <div class="shape shape-magenta"></div>
-            <div class="shape shape-yellow"></div>
-        </div>
-    </section>
 
-    <!-- Servicios Section -->
-    <section class="services" id="servicios">
-        <div class="section-header">
-            <span class="section-badge">SERVICIOS</span>
-            <h2 class="section-title">Soluciones de <span class="yellow-text">impresión</span></h2>
-            <p class="section-subtitle">Ofrecemos una amplia gama de servicios con la mejor calidad</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon cyan-bg">
-                    <i class="fas fa-print"></i>
-                </div>
-                <h3>Impresión Digital</h3>
-                <p>Alta definición en papel fotográfico, mate, brillante, canvas y más.</p>
-                <a href="#" class="service-link">Más info <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card">
-                <div class="service-icon magenta-bg">
-                    <i class="fas fa-file-alt"></i>
-                </div>
-                <h3>Papelería Corporativa</h3>
-                <p>Tarjetas, hojas membretadas, sobres, carpetas y folletos personalizados.</p>
-                <a href="#" class="service-link">Más info <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card">
-                <div class="service-icon yellow-bg">
-                    <i class="fas fa-vector-square"></i>
-                </div>
-                <h3>Gran Formato</h3>
-                <p>Lonas, vinilos, banners, displays y señalética de gran tamaño.</p>
-                <a href="#" class="service-link">Más info <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card">
-                <div class="service-icon cyan-bg">
-                    <i class="fas fa-tshirt"></i>
-                </div>
-                <h3>Textil Personalizado</h3>
-                <p>Estampado en camisetas, bolsas, gorras y artículos promocionales.</p>
-                <a href="#" class="service-link">Más info <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card">
-                <div class="service-icon magenta-bg">
-                    <i class="fas fa-paint-roller"></i>
-                </div>
-                <h3>Señalética</h3>
-                <p>Letreros, vinilos para vidrieras, cartelería interior y exterior.</p>
-                <a href="#" class="service-link">Más info <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card">
-                <div class="service-icon yellow-bg">
-                    <i class="fas fa-box"></i>
-                </div>
-                <h3>Packaging</h3>
-                <p>Cajas, etiquetas, bolsas y empaques con tu diseño personalizado.</p>
-                <a href="#" class="service-link">Más info <i class="fas fa-arrow-right"></i></a>
+        <div class="card">
+            <div class="img"></div>
+            <p class="price">RD$500</p>
+            <h3>Flyers</h3>
+            <div class="buttons">
+                <button>Comprar</button>
+                <button>Agregar</button>
             </div>
         </div>
-    </section>
 
-    <!-- Productos Destacados Section -->
-    <section class="featured-products">
-        <div class="section-header">
-            <span class="section-badge">PRODUCTOS</span>
-            <h2 class="section-title">Productos <span class="cyan-text">destacados</span></h2>
-            <p class="section-subtitle">Los más solicitados por nuestros clientes</p>
-        </div>
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="cmyk-stripe"></div>
-                    <span class="product-tag">BEST SELLER</span>
-                    <i class="fas fa-image product-placeholder"></i>
-                </div>
-                <div class="product-info">
-                    <h3>Láminas Fotográficas</h3>
-                    <p>Papel premium 300gr</p>
-                    <div class="product-footer">
-                        <span class="product-price">Desde $15.00</span>
-                        <button class="btn-product">Cotizar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="cmyk-stripe"></div>
-                    <span class="product-tag">NUEVO</span>
-                    <i class="fas fa-id-card product-placeholder"></i>
-                </div>
-                <div class="product-info">
-                    <h3>Tarjetas de Presentación</h3>
-                    <p>Diseño + Impresión</p>
-                    <div class="product-footer">
-                        <span class="product-price">Desde $25.00</span>
-                        <button class="btn-product">Cotizar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="cmyk-stripe"></div>
-                    <span class="product-tag">OFERTA</span>
-                    <i class="fas fa-window-maximize product-placeholder"></i>
-                </div>
-                <div class="product-info">
-                    <h3>Vinilos Decorativos</h3>
-                    <p>Alta durabilidad</p>
-                    <div class="product-footer">
-                        <span class="product-price">Desde $30.00</span>
-                        <button class="btn-product">Cotizar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="cmyk-stripe"></div>
-                    <i class="fas fa-scroll product-placeholder"></i>
-                </div>
-                <div class="product-info">
-                    <h3>Roll Up Publicitario</h3>
-                    <p>Incluye estructura</p>
-                    <div class="product-footer">
-                        <span class="product-price">Desde $85.00</span>
-                        <button class="btn-product">Cotizar</button>
-                    </div>
-                </div>
+        <div class="card">
+            <div class="img"></div>
+            <p class="price">RD$800</p>
+            <h3>Banners</h3>
+            <div class="buttons">
+                <button>Comprar</button>
+                <button>Agregar</button>
             </div>
         </div>
-    </section>
 
-    <!-- Proceso CMYK Section -->
-    <section class="cmyk-process">
-        <div class="process-container">
-            <div class="process-info">
-                <span class="section-badge">TECNOLOGÍA</span>
-                <h2>Proceso <span class="magenta-text">CMYK</span> Profesional</h2>
-                <p>Trabajamos con equipos de última generación y tintas originales para garantizar colores vibrantes y precisos en cada impresión.</p>
-                <div class="color-samples">
-                    <div class="color-sample">
-                        <div class="color-dot cyan-dot"></div>
-                        <div>
-                            <strong>Cyan</strong>
-                            <span>Precisión milimétrica</span>
-                        </div>
-                    </div>
-                    <div class="color-sample">
-                        <div class="color-dot magenta-dot"></div>
-                        <div>
-                            <strong>Magenta</strong>
-                            <span>Intensidad pura</span>
-                        </div>
-                    </div>
-                    <div class="color-sample">
-                        <div class="color-dot yellow-dot"></div>
-                        <div>
-                            <strong>Amarillo</strong>
-                            <span>Brillo excepcional</span>
-                        </div>
-                    </div>
-                    <div class="color-sample">
-                        <div class="color-dot black-dot"></div>
-                        <div>
-                            <strong>Negro</strong>
-                            <span>Contraste perfecto</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="process-visual">
-                <div class="cmyk-circle">
-                    <div class="circle-segment cyan-segment"></div>
-                    <div class="circle-segment magenta-segment"></div>
-                    <div class="circle-segment yellow-segment"></div>
-                    <div class="circle-segment black-segment"></div>
-                    <span class="circle-center">CMYK</span>
-                </div>
+        <div class="card">
+            <div class="img"></div>
+            <p class="price">RD$250</p>
+            <h3>Stickers</h3>
+            <div class="buttons">
+                <button>Comprar</button>
+                <button>Agregar</button>
             </div>
         </div>
-    </section>
 
-    <!-- Testimonios Section -->
-    <section class="testimonials">
-        <div class="section-header">
-            <span class="section-badge">CLIENTES</span>
-            <h2 class="section-title">Lo que dicen <span class="yellow-text">nuestros clientes</span></h2>
-        </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-quote">"</div>
-                <p>Excelente calidad de impresión y atención. Los colores CMYK son increíblemente fieles al diseño original.</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">MC</div>
-                    <div>
-                        <strong>María C.</strong>
-                        <span>Diseñadora Gráfica</span>
-                    </div>
-                </div>
-                <div class="testimonial-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-quote">"</div>
-                <p>Rápidos, profesionales y con precios competitivos. Mis tarjetas de presentación quedaron perfectas.</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">RL</div>
-                    <div>
-                        <strong>Roberto L.</strong>
-                        <span>Emprendedor</span>
-                    </div>
-                </div>
-                <div class="testimonial-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-quote">"</div>
-                <p>Los vinilos para mi local quedaron espectaculares. Resistencia y calidad de color excepcionales.</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">AG</div>
-                    <div>
-                        <strong>Ana G.</strong>
-                        <span>Comerciante</span>
-                    </div>
-                </div>
-                <div class="testimonial-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
+        <div class="card">
+            <div class="img"></div>
+            <p class="price">RD$600</p>
+            <h3>Posters</h3>
+            <div class="buttons">
+                <button>Comprar</button>
+                <button>Agregar</button>
             </div>
         </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-content">
-            <h2>¿Listo para imprimir?</h2>
-            <p>Solicita tu presupuesto sin compromiso y recibe atención personalizada</p>
-            <form class="cta-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="btn-cta">SOLICITAR PRESUPUESTO</button>
-            </form>
-        </div>
-        <div class="cta-decoration">
-            <div class="floating-dot cyan-dot-float"></div>
-            <div class="floating-dot magenta-dot-float"></div>
-            <div class="floating-dot yellow-dot-float"></div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <div class="logo-footer">
-                    <div class="cmyk-dots-footer">
-                        <span></span><span></span><span></span><span></span>
-                    </div>
-                    <h3>PIXEL<span class="pro">PRO</span></h3>
-                </div>
-                <p>Impresiones digitales de alta calidad con tecnología CMYK profesional.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h4>Servicios</h4>
-                    <ul>
-                        <li><a href="#">Impresión Digital</a></li>
-                        <li><a href="#">Gran Formato</a></li>
-                        <li><a href="#">Papelería</a></li>
-                        <li><a href="#">Textil</a></li>
-                        <li><a href="#">Packaging</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li><a href="#">Nosotros</a></li>
-                        <li><a href="#">Galería</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Preguntas Frecuentes</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Contacto</h4>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> Calle Pixel 123, CMYK City</li>
-                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
-                        <li><i class="fas fa-envelope"></i> hola@pixelpro.com</li>
-                        <li><i class="fas fa-clock"></i> Lun-Vie 9:00 - 18:00</li>
-                    </ul>
-                </div>
+        <div class="card">
+            <div class="img"></div>
+            <p class="price">RD$1200</p>
+            <h3>Catálogos</h3>
+            <div class="buttons">
+                <button>Comprar</button>
+                <button>Agregar</button>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 PixelPro Impresiones Digitales. Todos los derechos reservados.</p>
-        </div>
-    </footer>
 
-    <!-- Botón flotante WhatsApp -->
-    <a href="#" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    </div>
+</section>
 
-    <script>
-        // Loader
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.querySelector('.loader').classList.add('hidden');
-            }, 1200);
-        });
+<!-- FOOTER -->
+<footer class="footer">
+    <div>PixelPro</div>
+    <div>Contacto: 809-000-0000</div>
+    <div>Redes: 🌐 📸 🐦</div>
+</footer>
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Intersection Observer para animaciones
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.service-card, .product-card, .testimonial-card').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
 </body>
 </html>

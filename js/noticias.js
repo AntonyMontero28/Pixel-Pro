@@ -1,16 +1,24 @@
-let productos = document.querySelectorAll(".hola");
+function scrollServicios(){
+    document.getElementById("noticias").scrollIntoView({
+        behavior: "smooth"
+    });
+}
 
-productos.forEach(function(cajon) {
-  cajon.addEventListener("mouseover", function() {
-    cajon.style.transform = "scale(1.1)";
-    cajon.style.transition = "0.5s"
-    cajon.classList.add('brillo');
-  });
+function mensaje(){
+    alert("Gracias por contactarnos 😊 Pronto te responderemos.");
+}
 
-  cajon.addEventListener("mouseout", function() {
-    cajon.style.transform = "scale(1)";
-    cajon.classList.remove('brillo');
+/* Animación al hacer scroll */
+window.addEventListener("scroll", function(){
+    let cards = document.querySelectorAll(".card");
 
-  });
+    cards.forEach(card => {
+        let position = card.getBoundingClientRect().top;
+        let screen = window.innerHeight;
+
+        if(position < screen - 100){
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+        }
+    });
 });
-

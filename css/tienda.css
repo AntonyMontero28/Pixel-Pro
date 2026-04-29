@@ -47,55 +47,47 @@ a {
    HEADER
 =========================== */
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 48px;
-  height: 72px;
-  background: var(--white);
-  border-bottom: 2px solid var(--black);
+    display: flex;
+    justify-content: space-between;
+    background-color: #00000000;
+    height: 30vh;
+    align-items: center;
+    padding: 0 40px;
 }
 
-.logo img {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-}
-
+/* NAVS */
 .nav {
-  display: flex;
-  align-items: center;
-  gap: 32px;
+    display: flex;
+    gap: 20px;
 }
 
+/* LOGO */
+.logo img {
+    width: 180px;
+}
+
+/* LINKS */
 .nav a {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--black);
-  position: relative;
-  padding-bottom: 3px;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding-bottom: 5px;
+    display: inline-block;
 }
 
 .nav a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--cyan);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--transition);
-}
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #FFD700;
 
-.nav a:hover::after {
-  transform: scaleX(1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
 /* ===========================
@@ -388,7 +380,7 @@ a {
 .beneficios {
     text-align: center;
     padding: 60px 20px;
-    background: #fff;
+    background:white;
 }
 
 .beneficios h2 {
@@ -408,7 +400,7 @@ a {
     width: 220px;
     padding: 20px;
     border-radius: 15px;
-    background: #f9f9f9;
+    background: #00000000;
     transition: transform 0.3s;
 }
 
@@ -460,97 +452,56 @@ a {
 /* ===========================
    FOOTER
 =========================== */
-.footer {
-  background: var(--black);
-  color: var(--white);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 64px 60px;
-  gap: 40px;
-  flex-wrap: wrap;
-}
+footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-.footer-brand {
-  max-width: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
 }
-
-.footer-brand img {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
+.cajon1{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
-
-.footer-brand p {
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
-  line-height: 1.7;
+#logo1{
+    width: 250px;
+    height: 250px;
 }
-
-.cmyk-dots {
-  display: flex;
-  gap: 8px;
+#n1{
+      font-family: "Funnel Sans", sans-serif;
+      color: #3AB2E6;
 }
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+#n2{
+    font-family: "Funnel Sans", sans-serif;
+    color: #E83A77;
 }
-.dot-c { background: var(--cyan); }
-.dot-m { background: var(--magenta); }
-.dot-y { background: var(--yellow); }
-.dot-k { background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.4); }
-
-.footer-col {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  min-width: 140px;
+#n3{
+    font-family: "Funnel Sans", sans-serif;
+      color: #FDD51D;
 }
-
-.footer-col h4 {
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin-bottom: 4px;
+#n4{
+    font-family: "Funnel Sans", sans-serif;
+      color: #171B26;
 }
-
-.cyan-title    { color: var(--cyan); }
-.magenta-title { color: var(--magenta); }
-.yellow-title  { color: var(--yellow); }
-.dark-title    { color: rgba(255,255,255,0.7); }
-
-.footer-col a {
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
-  transition: color var(--transition);
+.redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
-.footer-col a:hover {
-  color: var(--white);
+.icono {
+    width: 30px;
+    height: 30px;
 }
-
-.social-icons {
-  display: flex;
-  gap: 10px;
-  margin-top: 4px;
-}
-
-.social-icon {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  filter: brightness(0) invert(0.6);
-  transition: filter var(--transition), transform var(--transition);
-}
-.social-icon:hover {
-  filter: brightness(0) invert(1);
-  transform: translateY(-3px);
+a{
+    text-decoration: none;
+    color: black;
+    font-family: "Funnel Sans", sans-serif;
 }
 
 /* ===========================

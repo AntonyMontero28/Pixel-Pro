@@ -1,10 +1,11 @@
- *{
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
+/* COLORES CMYK */
 :root{
     --cian:#00AEEF;
     --magenta:#EC008C;
@@ -16,7 +17,7 @@ body{
   background:#fff;
 }
 
-/* ESPACIO */
+/* ESPACIO ENTRE SECCIONES */
 section{
     margin-top:70px;
 }
@@ -75,15 +76,17 @@ button:hover{
     padding:40px;
 }
 
+/* 🔥 AQUÍ ESTÁ EL ARREGLO IMPORTANTE */
 .cards{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 arriba */
+    gap: 30px;
+    max-width: 900px;
+    margin: 30px auto;
 }
 
+/* CAJONES */
 .card{
-    width:250px;
     background:white;
     padding:20px;
     border-radius:15px;
@@ -91,9 +94,10 @@ button:hover{
     transition:0.3s;
 }
 
-/* EFECTO */
+/* EFECTO CLICK */
 .card.activo{
     transform:scale(1.1);
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
 }
 
 /* SOBRE */
@@ -125,11 +129,63 @@ button:hover{
     padding:50px;
 }
 
-/* RESPONSIVE */
+footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.cajon1{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+#logo1{
+    width: 250px;
+    height: 250px;
+}
+#n1{
+      font-family: "Funnel Sans", sans-serif;
+      color: #3AB2E6;
+}
+#n2{
+    font-family: "Funnel Sans", sans-serif;
+    color: #E83A77;
+}
+#n3{
+    font-family: "Funnel Sans", sans-serif;
+      color: #FDD51D;
+}
+#n4{
+    font-family: "Funnel Sans", sans-serif;
+      color: #171B26;
+}
+.redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.icono {
+    width: 30px;
+    height: 30px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-family: "Funnel Sans", sans-serif;
+}
+
+
+/* 📱 RESPONSIVE */
 @media(max-width:768px){
     .cards{
-        flex-direction:column;
-        align-items:center;
+        grid-template-columns:1fr; /* 1 por fila en celular */
     }
 
     .grid{

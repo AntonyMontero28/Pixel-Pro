@@ -86,10 +86,8 @@ header{
     align-items: center;
 }
 
-nav ul{
-    list-style: none;
-    display: flex;
-    gap: 15px;
+.logo img{
+    width:150px;
 }
 
 nav ul li a{

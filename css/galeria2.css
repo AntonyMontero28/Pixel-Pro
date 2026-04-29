@@ -4,70 +4,38 @@
     border: 0px;
     box-sizing: border-box;
 }
-
 header{
     width: 100%;
-    height: auto;           
+    height: 270px;
     display: flex;
     justify-content: space-around;
-
+    align-items: center;
+    background-color: #FEFEFE;
 }
-
 #logo{
     width: 250px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
+    height: 250px;
 }
-
-#log{
-    height: 200px;
-    width: 200px;
+#proima{
+    width: 250px;
+    height: 250px;
 }
-/* HEADER */
-.header {
+nav{
+    width: 500px;
+    height: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 0 40px;
 }
-
-/* NAVS */
-.nav {
-    display: flex;
-    gap: 20px;
+nav a{
+    font-size: 17px;
+    color: #171B26;
+      font-family: 'Montserrat', sans-serif;
 }
-
-
-.logo img {
-    width: 180px;
-}
-
-
-.nav a {
-    position: relative;
-    text-decoration: none;
-    color: black;
+nav a:hover{
     font-size: 18px;
-    padding-bottom: 5px;
-    display: inline-block;
+    color: #3AB2E6;
 }
-
-
-.nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #FFD700;
-
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-}
-
 #cajon1{
 width: 100%;
 height: 400px;
@@ -91,12 +59,12 @@ background-color: #171B26;
 #t1{
     font-size: 50px;
     color: #FEFEFE;
-    font-family: "Funnel Sans", sans-serif;
+      font-family: 'Montserrat', sans-serif;
 }
 #p1{
     text-align: justify;
     font-size: 20px;
-    font-family: "Funnel Sans", sans-serif;
+     font-family: 'Montserrat', sans-serif;
     color:#FEFEFE ;
 }
 #boton{
@@ -110,7 +78,7 @@ background-color: #171B26;
     text-decoration: none;
     font-size: 16px;
     color: #171B26;
-    font-family: "Funnel Sans", sans-serif;
+     font-family: 'Montserrat', sans-serif;
 }
 #boton:hover {
     background-color:  #FDD51D;
@@ -136,7 +104,7 @@ background-color: #171B26;
 }
 
 .t1{
-    font-family: "Funnel Sans", sans-serif;
+      font-family: 'Montserrat', sans-serif;
     color: #3AB2E6;
     font-size: 50px;
     text-align: center;
@@ -145,8 +113,7 @@ background-color: #171B26;
     font-size: 20px;
     color: #171B26;
     text-align: justify;
-    font-family: "Funnel Sans", sans-serif;
-
+     font-family: 'Montserrat', sans-serif;
 }
 #img1{
      width: 500px;
@@ -165,7 +132,7 @@ background-color: #171B26;
     height: 380px;
 }
 .t2{
-    font-family: "Funnel Sans", sans-serif;
+   font-family: 'Montserrat', sans-serif;
     color: #FDD51D;
     font-size: 50px;
     text-align: center;
@@ -195,6 +162,17 @@ background-color: #171B26;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+.caj4-hover {
+    transform: translateY(-8px); 
+    background-color: #1c2230;  
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.caj4-hover .pat1 {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 .pat1{
     width: 150px;
@@ -216,14 +194,14 @@ background-color: #171B26;
     border-radius:100px;
 }
 .p3{
-    font-family: "Funnel Sans", sans-serif;
+     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     text-align: center;
 }
 #cajon5{
     width: 100%;
-    height: 1200px;
-    background-color: #aefef7;
+    height: 1100px;
+    background-color: #FEFEFE;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -232,27 +210,274 @@ background-color: #171B26;
 #caj5-1{
     width: 700px;
     height: 100px;
-    background-color: #FDD51D;
+    background-color: #171B26;
     display: flex;
+    border-radius: 50px;
     justify-content: space-around;
     align-items: center;
 }#t3{
-    font-family: "Funnel Sans", sans-serif;
-    color: #3AB2E6;
+  font-family: 'Montserrat', sans-serif;
+    color: white;
     font-size: 50px;
     text-align: center;
 }
 .caj5-2{
     width: 1200px;
-    height: 350px;
-    background-color: #FDD51D;
+    height: 300px;
+    background-color: #171b26a4;
     display: flex;
+    border-radius: 10px;
     justify-content: space-around;
     align-items: center;
+}
+.imgan2{
+      width: 250px;
+    height: 250px;
+     border-radius: 10px;
 }
 .caj2-5{
     width: 250px;
     height: 250px;
-    background-color: #3AB2E6;
-    font-family: "Funnel Sans", sans-serif;
+    border-radius: 10px;
+    background-color: #FEFEFE;
+  font-family: 'Montserrat', sans-serif;
+    transition: filter 0.3s ease, transform 0.4s ease;
+}
+.caj2-5-active {
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); 
+}
+
+.caj2-5-active img {
+    filter: brightness(1.1); 
+    transform: scale(1.1); 
+}
+footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.cajon1{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+#logo1{
+    width: 250px;
+    height: 250px;
+}
+#n1{
+     font-family: 'Montserrat', sans-serif;
+      color: #3AB2E6;
+}
+#n2{
+     font-family: 'Montserrat', sans-serif;
+    color: #E83A77;
+}
+#n3{
+     font-family: 'Montserrat', sans-serif;
+      color: #FDD51D;
+}
+#n4{
+      font-family: 'Montserrat', sans-serif;
+      color: #171B26;
+}
+.redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.icono {
+    width: 30px;
+    height: 30px;
+}
+a{
+    text-decoration: none;
+    color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+a:hover{
+    font-size: 15px;
+}
+
+
+/* --- OPTIMIZACIÓN TOTAL: RESPONSIVE COMPLETO Y FLUIDO --- */
+
+/* 1. Bloqueo de desbordamiento lateral (Evita el espacio blanco a la derecha) */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+@media (max-width: 1024px) {
+    /* 2. Header y Logo: Reorganización vertical */
+    header {
+        height: auto !important;
+        flex-direction: column !important;
+        padding: 20px 10px !important;
+        gap: 15px;
+    }
+
+    #logo, #proima {
+        width: 130px !important;
+        height: auto !important;
+        margin: 0 auto;
+    }
+
+    #menu-toggle {
+        display: block !important;
+        font-size: 32px;
+        cursor: pointer;
+        order: -1; /* Lo pone arriba del logo en móviles */
+    }
+
+    nav {
+        display: none; /* Se activa con la clase .active en JS */
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        text-align: center;
+        background: #FEFEFE;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    /* 3. Artículos y Secciones: Eliminación de alturas rígidas */
+    #cajon1, #cajon2, #cajon3, #cajon4, #cajon5 {
+        height: auto !important;
+        min-height: auto !important;
+        flex-direction: column !important;
+        padding: 40px 20px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #caja1, .caja1-1, #caja2, .caja2-1, .caja3 {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        text-align: center;
+    }
+
+    /* 4. Imágenes: Ajuste de escala para que no se vean gigantes */
+    #img1, #img2, #caja2 img {
+        width: 100% !important;
+        max-width: 400px !important;
+        height: auto !important;
+        margin: 20px auto !important;
+        border-radius: 8px;
+    }
+
+    /* 5. Textos: Jerarquía visual adaptada */
+    #t1, .t1, .t2, #t3 {
+        font-size: 26px !important;
+        line-height: 1.2;
+    }
+
+    #p1, .p2 {
+        font-size: 16px !important;
+        padding: 0 10px;
+    }
+
+    /* 6. CORRECCIÓN DE TESTIMONIOS (Cajon 4): Tamaño proporcional */
+    #cajon4 {
+        gap: 25px !important;
+    }
+
+    .caj4 {
+        width: 90% !important; /* Ahora el cajón no es gigante */
+        max-width: 320px !important;
+        height: auto !important;
+        padding: 20px !important;
+        margin: 0 auto !important;
+        background-color: rgba(23, 27, 38, 0.9) !important;
+    }
+
+    .pat1, .img4 {
+        width: 90px !important; /* Foto de perfil más pequeña y estética */
+        height: 90px !important;
+        margin-bottom: 10px;
+    }
+
+    .pat2 {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 80px;
+        padding: 15px !important;
+        border-radius: 12px !important;
+    }
+
+    .p3 {
+        font-size: 15px !important;
+        color: #171B26 !important;
+    }
+
+    /* 7. Galería de Diseños (Cajon 5): Rejilla de 2 columnas */
+    .caj5-2 {
+        width: 100% !important;
+        height: auto !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        background: transparent !important; /* Opcional: mejora estética */
+    }
+
+    .caj2-5 {
+        width: 145px !important; /* Dos cuadros por fila en la mayoría de móviles */
+        height: 145px !important;
+        margin: 0 !important;
+    }
+
+    .imgan2 {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    /* 8. Footer: Apilado vertical */
+    footer {
+        height: auto !important;
+        flex-direction: column !important;
+        padding: 40px 20px !important;
+        gap: 30px;
+    }
+
+    .cajon1 {
+        width: 100% !important;
+        height: auto !important;
+        text-align: center;
+        align-items: center;
+    }
+
+    #logo1 {
+        width: 150px !important;
+        height: auto !important;
+    }
+}
+
+/* Ajuste final para pantallas muy pequeñas (iPhone SE / móviles viejos) */
+@media (max-width: 380px) {
+    .caj2-5 {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    
+    #t1 { font-size: 22px !important; }
 }

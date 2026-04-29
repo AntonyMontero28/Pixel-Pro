@@ -57,3 +57,18 @@ botones.forEach(btn => {
     }, 150);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const toggle = document.querySelector(".menu-toggle");
+    const navs = document.querySelectorAll(".nav");
+
+    toggle.addEventListener("click", () => {
+
+        navs.forEach(nav => {
+            nav.classList.toggle("active");
+        });
+
+    });
+
+});

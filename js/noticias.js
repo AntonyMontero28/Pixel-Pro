@@ -1,16 +1,12 @@
-let productos = document.querySelectorAll(".hola");
+ let cards = document.querySelectorAll(".card");
 
-productos.forEach(function(cajon) {
-  cajon.addEventListener("mouseover", function() {
-    cajon.style.transform = "scale(1.1)";
-    cajon.style.transition = "0.5s"
-    cajon.classList.add('brillo');
-  });
+cards.forEach(card => {
+    card.addEventListener("click", function(){
 
-  cajon.addEventListener("mouseout", function() {
-    cajon.style.transform = "scale(1)";
-    cajon.classList.remove('brillo');
+        // Quita el efecto a todos
+        cards.forEach(c => c.classList.remove("activo"));
 
-  });
+        // Activa solo el que tocaste
+        card.classList.add("activo");
+    });
 });
-

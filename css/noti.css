@@ -1,452 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Handlee&family=Pacifico&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 *{
-    padding: 0px;
-    margin: 0px;
-    border: 0px;
-    box-sizing: border-box;
-}
-#proima{
-    width: 250px;
-    height: 250px;
-}
-#cajon1{
-width: 100%;
-height: 400px;
-display: flex;
-justify-content: space-around;
-align-items: center;
-background-color: #171B26;
-}
-#caja1{
-    width: 600px;
-    height: 450px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-}
-.caja1-1{
-    width: 560px;
-    height: 300px;
-}
-#t1{
-    font-size: 50px;
-    color: #FEFEFE;
-      font-family: 'Montserrat', sans-serif;
-}
-#p1{
-    text-align: justify;
-    font-size: 20px;
-     font-family: 'Montserrat', sans-serif;
-    color:#FEFEFE ;
-}
-#boton{
-    width: 200px;
-    height: 50px;
-    border-radius: 40px;
-    background-color: #3AB2E6;
-    transition: 0.3s;
-}
-#boton a{
-    text-decoration: none;
-    font-size: 16px;
-    color: #171B26;
-     font-family: 'Montserrat', sans-serif;
-}
-#boton:hover {
-    background-color:  #FDD51D;
-    transform: scale(1.05);
-}
-#caja2{
-    width: 450px;
-    height: 350px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-#cajon2{
-    width: 100%;
-    height: 450px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.caja2-1{
-    width: 560px;
-    height: 380px;
-}
-
-.t1{
-      font-family: 'Montserrat', sans-serif;
-    color: #3AB2E6;
-    font-size: 50px;
-    text-align: center;
-}
-.p2{
-    font-size: 20px;
-    color: #171B26;
-    text-align: justify;
-     font-family: 'Montserrat', sans-serif;
-}
-#img1{
-     width: 500px;
-    height: 380px;
-    border-radius: 5px;
-}
-#cajon3{
-    width: 100%;
-    height:  430px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.caja3{
-    width: 500px;
-    height: 380px;
-}
-.t2{
-   font-family: 'Montserrat', sans-serif;
-    color: #FDD51D;
-    font-size: 50px;
-    text-align: center;
-}
-#img2{
-    width: 380px;
-    height: 380px;
-    border-radius: 5px;
-}
-#cajon4{
-     width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.caj4{
-    width: 280px;
-    height: 335px;
-    border-radius: 7px;
-    background-color: #171b2695;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
-}
-.caj4-hover {
-    transform: translateY(-8px); 
-    background-color: #1c2230;  
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-}
-
-.caj4-hover .pat1 {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-.pat1{
-    width: 150px;
-    height: 150px;
-    border-radius:100px;
-}
-.pat2{
-    width: 240px;
-    height: 150px;
-    background-color: #FEFEFE;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.img4{
-    width: 150px;
-    height: 150px;
-    border-radius:100px;
-}
-.p3{
-     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    text-align: center;
-}
-#cajon5{
-    width: 100%;
-    height: 1100px;
-    background-color: #FEFEFE;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-}
-#caj5-1{
-    width: 700px;
-    height: 100px;
-    background-color: #171B26;
-    display: flex;
-    border-radius: 50px;
-    justify-content: space-around;
-    align-items: center;
-}#t3{
-  font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-size: 50px;
-    text-align: center;
-}
-.caj5-2{
-    width: 1200px;
-    height: 300px;
-    background-color: #171b26a4;
-    display: flex;
-    border-radius: 10px;
-    justify-content: space-around;
-    align-items: center;
-}
-.imgan2{
-      width: 250px;
-    height: 250px;
-     border-radius: 10px;
-}
-.caj2-5{
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    background-color: #FEFEFE;
-  font-family: 'Montserrat', sans-serif;
-    transition: filter 0.3s ease, transform 0.4s ease;
-}
-.caj2-5-active {
-    transform: translateY(-10px); 
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); 
-}
-
-.caj2-5-active img {
-    filter: brightness(1.1); 
-    transform: scale(1.1); 
-}
-footer{
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-.cajon1{
-    width: 250px;
-    height: 250px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-}
-#logo1{
-    width: 250px;
-    height: 250px;
-}
-#n1{
-     font-family: 'Montserrat', sans-serif;
-      color: #3AB2E6;
-}
-#n2{
-     font-family: 'Montserrat', sans-serif;
-    color: #E83A77;
-}
-#n3{
-     font-family: 'Montserrat', sans-serif;
-      color: #FDD51D;
-}
-#n4{
-      font-family: 'Montserrat', sans-serif;
-      color: #171B26;
-}
-.redes {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-.icono {
-    width: 30px;
-    height: 30px;
-}
-a{
-    text-decoration: none;
-    color: black;
-  font-family: 'Montserrat', sans-serif;
-}
-a:hover{
-    font-size: 15px;
-}
-
-
-/* --- OPTIMIZACIÓN TOTAL: RESPONSIVE COMPLETO Y FLUIDO --- */
-
-/* 1. Bloqueo de desbordamiento lateral (Evita el espacio blanco a la derecha) */
-html, body {
-    overflow-x: hidden;
-    width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+/* ----------- HERO ----------- */
+#vp{
+    position: relative;      
+    width: 100%;
+    min-height: 705px; 
+    background-image:url(../img/bg2.png);  
+    background-size: cover;
+    background-attachment: fixed;   
 }
 
-@media (max-width: 1024px) {
-    /* 2. Header y Logo: Reorganización vertical */
-    header {
-        height: auto !important;
-        flex-direction: column !important;
-        padding: 20px 10px !important;
-        gap: 15px;
+#vp video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     
+    transform: translate(-50%, -50%);
+    z-index: -1;            
+}
+
+#ban, header, #textoo {
+    position: relative;
+    z-index: 1;              
+    color: black;           
+}
+
+h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 25px;
+}
+
+/* ESPACIO */
+section{
+    margin-top:70px;
+}
+
+/* ----------- HEADER ----------- */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#logo{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+#log{
+    width: 150px;
+}
+
+/* NAV */
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width:150px;
+}
+
+nav ul li a{
+    font-size: 18px;
+    font-family: "Nunito", sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* TEXTO HERO */
+#textoo{
+    max-width: 1000px;
+    width: 100%;
+    padding: 50px;
+}
+
+#vpH{
+    font-size: 70px;
+    font-family:"Nunito", sans-serif;
+    font-weight: 900;
+}
+
+#slogan{
+    font-size: 25px;
+    font-family:"Nunito", sans-serif;
+}
+
+/* ----------- NOTICIAS ----------- */
+#noti{
+    width: 100%;
+    padding: 50px 0;
+}
+
+#notii{
+    font-size:40px;
+    text-align: center;
+    font-family: "Coiny", system-ui;
+}
+
+#traba{
+    font-size:20px;
+    font-family: "Handlee", cursive;
+    text-align: center;
+    padding: 20px;
+}
+
+#imagen{
+    background-image: url(../img/impre9.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height:400px;
+}
+
+/* NOTICIAS */
+#noticias{
+    text-align:center;
+    padding:40px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+.card{
+    width:250px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+/* EFECTO */
+.card.activo{
+    transform:scale(1.1);
+}
+
+/* IMAGEN FINAL */
+#imagenn{
+    background-image: url(../img/impre8.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height:400px;
+}
+
+/* ----------- FOOTER ----------- */
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.cajon1{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#logo1{
+    width: 150px;
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+}
+
+.icono {
+    width: 25px;
+}
+
+/* LINKS */
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* CONTACTO */
+#contacto{
+    text-align:center;
+    background:var(--negro);
+    color:white;
+    padding:50px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .cards{
+        flex-direction:column;
+        align-items:center;
     }
 
-    #logo, #proima {
-        width: 130px !important;
-        height: auto !important;
-        margin: 0 auto;
+    .hola{
+        width: 90%;
     }
 
-    #menu-toggle {
-        display: block !important;
-        font-size: 32px;
-        cursor: pointer;
-        order: -1; /* Lo pone arriba del logo en móviles */
-    }
-
-    nav {
-        display: none; /* Se activa con la clase .active en JS */
+    footer{
         flex-direction: column;
-        width: 100%;
-        gap: 10px;
-        text-align: center;
-        background: #FEFEFE;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    /* 3. Artículos y Secciones: Eliminación de alturas rígidas */
-    #cajon1, #cajon2, #cajon3, #cajon4, #cajon5 {
-        height: auto !important;
-        min-height: auto !important;
-        flex-direction: column !important;
-        padding: 40px 20px !important;
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
-    #caja1, .caja1-1, #caja2, .caja2-1, .caja3 {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        text-align: center;
-    }
-
-    /* 4. Imágenes: Ajuste de escala para que no se vean gigantes */
-    #img1, #img2, #caja2 img {
-        width: 100% !important;
-        max-width: 400px !important;
-        height: auto !important;
-        margin: 20px auto !important;
-        border-radius: 8px;
-    }
-
-    /* 5. Textos: Jerarquía visual adaptada */
-    #t1, .t1, .t2, #t3 {
-        font-size: 26px !important;
-        line-height: 1.2;
-    }
-
-    #p1, .p2 {
-        font-size: 16px !important;
-        padding: 0 10px;
-    }
-
-    /* 6. CORRECCIÓN DE TESTIMONIOS (Cajon 4): Tamaño proporcional */
-    #cajon4 {
-        gap: 25px !important;
-    }
-
-    .caj4 {
-        width: 90% !important; /* Ahora el cajón no es gigante */
-        max-width: 320px !important;
-        height: auto !important;
-        padding: 20px !important;
-        margin: 0 auto !important;
-        background-color: rgba(23, 27, 38, 0.9) !important;
-    }
-
-    .pat1, .img4 {
-        width: 90px !important; /* Foto de perfil más pequeña y estética */
-        height: 90px !important;
-        margin-bottom: 10px;
-    }
-
-    .pat2 {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 80px;
-        padding: 15px !important;
-        border-radius: 12px !important;
-    }
-
-    .p3 {
-        font-size: 15px !important;
-        color: #171B26 !important;
-    }
-
-    /* 7. Galería de Diseños (Cajon 5): Rejilla de 2 columnas */
-    .caj5-2 {
-        width: 100% !important;
-        height: auto !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 15px !important;
-        background: transparent !important; /* Opcional: mejora estética */
-    }
-
-    .caj2-5 {
-        width: 145px !important; /* Dos cuadros por fila en la mayoría de móviles */
-        height: 145px !important;
-        margin: 0 !important;
-    }
-
-    .imgan2 {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover;
-    }
-
-    /* 8. Footer: Apilado vertical */
-    footer {
-        height: auto !important;
-        flex-direction: column !important;
-        padding: 40px 20px !important;
-        gap: 30px;
-    }
-
-    .cajon1 {
-        width: 100% !important;
-        height: auto !important;
-        text-align: center;
         align-items: center;
     }
 
-    #logo1 {
-        width: 150px !important;
-        height: auto !important;
+    .cajon1{
+        width: 100%;
     }
 }
 
-/* Ajuste final para pantallas muy pequeñas (iPhone SE / móviles viejos) */
-@media (max-width: 380px) {
-    .caj2-5 {
-        width: 120px !important;
-        height: 120px !important;
+/* 📲 TABLET */
+@media (min-width: 769px) and (max-width: 1024px){
+
+    .hola{
+        width: 45%;
     }
-    
-    #t1 { font-size: 22px !important; }
+
+    .cajon1{
+        width: 45%;
+    }
+}
+
+/* 💻 PC */
+@media (min-width: 1025px){
+
+    .hola{
+        width: 30%;
+    }
 }
 :root {
     --primary-color: #171B26; 

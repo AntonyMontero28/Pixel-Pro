@@ -1,63 +1,25 @@
-const products = [
-    {name: "Flyers", price: 150},
-    {name: "Tarjetas", price: 200},
-    {name: "Banners", price: 500},
-    {name: "Stickers", price: 120},
-    {name: "Posters", price: 250},
-    {name: "Fotos", price: 180},
-];
-
-const grid = document.getElementById("productGrid");
-const cartItems = document.getElementById("cartItems");
-const totalEl = document.getElementById("total");
-const search = document.getElementById("search");
-
-let total = 0;
-
-// Mostrar productos
-function renderProducts(list) {
-    grid.innerHTML = "";
-
-    list.forEach(p => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-
-        card.innerHTML = `
-            <div class="img-box">Imagen</div>
-            <div class="price">RD$ ${p.price}</div>
-            <div class="name">${p.name}</div>
-            <div class="btns">
-                <button class="buy">Ordenar</button>
-                <button class="cartBtn">Agregar</button>
-            </div>
-        `;
-
-        card.querySelector(".cartBtn").addEventListener("click", () => {
-            addToCart(p);
-        });
-
-        grid.appendChild(card);
-    });
-}
-
-// Carrito
-function addToCart(product) {
-    const li = document.createElement("li");
-    li.textContent = `${product.name} - RD$ ${product.price}`;
-    cartItems.appendChild(li);
-
-    total += product.price;
-    totalEl.textContent = total;
-}
-
 // Buscador
-search.addEventListener("input", () => {
-    const value = search.value.toLowerCase();
-    const filtered = products.filter(p =>
-        p.name.toLowerCase().includes(value)
-    );
-    renderProducts(filtered);
-});
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = name.includes(query) ? 'flex' : 'none';
+      });
+    });
 
-// Inicial
-renderProducts(products);
+    // Menú hamburguesa
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+    });
+    // Cerrar menú al tocar un link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('open');
+      });
+    });

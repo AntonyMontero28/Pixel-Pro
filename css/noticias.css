@@ -40,26 +40,9 @@ h1 {
     font-size: 25px;
 }
 
-/* ----------- BANNER ----------- */
-#ban{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-#l{
-    display: flex;
-    align-items: center;
-}
-
-.icons{
-    display: flex; 
-}
-
-i {
-    font-size: 25px;
-    margin: 5px;
+/* ESPACIO */
+section{
+    margin-top:70px;
 }
 
 /* ----------- HEADER ----------- */
@@ -146,46 +129,31 @@ nav ul li:hover{
     height:400px;
 }
 
-/* TARJETAS */
-#notiyma{
-    width: 100%;
-    background:linear-gradient(90deg, cyan, magenta, yellow);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 30px;
+/* NOTICIAS */
+#noticias{
+    text-align:center;
+    padding:40px;
 }
 
-.hola{
-    width: 300px;
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
 }
 
-.bony{
-    font-size:20px;
-    text-align: center;
-    font-family: "Coiny",system-ui;
+.card{
+    width:250px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
 
-.bonyy{
-    font-size: 16px;
-    font-family: "Handlee", cursive;
-    text-align: center;
-    padding: 15px;
-}
-
-.botoneee{
-    width: 150px;
-    height: 45px;
-    font-size: 16px;
-    margin: 20px auto;
-    display: block;
-    background: #3aa6d4;
-    border-radius: 5%;
-    font-family: "Coiny",system-ui;
+/* EFECTO */
+.card.activo{
+    transform:scale(1.1);
 }
 
 /* IMAGEN FINAL */
@@ -231,40 +199,19 @@ a{
     color: black;
 }
 
-/* ----------- RESPONSIVE ----------- */
+/* CONTACTO */
+#contacto{
+    text-align:center;
+    background:var(--negro);
+    color:white;
+    padding:50px;
+}
 
-/* 📱 CELULAR */
-@media (max-width: 768px){
-
-    header{
-        flex-direction: column;
-    }
-
-    nav ul{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #textoo{
-        text-align: center;
-        padding: 20px;
-    }
-
-    #vpH{
-        font-size: 35px;
-    }
-
-    #slogan{
-        font-size: 18px;
-    }
-
-    #ban{
-        flex-direction: column;
-    }
-
-    #notiyma{
-        flex-direction: column;
-        align-items: center;
+/* RESPONSIVE */
+@media(max-width:768px){
+    .cards{
+        flex-direction:column;
+        align-items:center;
     }
 
     .hola{

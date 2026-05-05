@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Promociones - Pixel Pro</title>
-
     <link rel="stylesheet" href="css/promociones.css" />
     <link
       rel="stylesheet"
@@ -13,35 +12,28 @@
   </head>
   <body>
     <nav class="navbar">
-        <div class="container">
-            <img src="Img/pro.jpg" alt="Pixel Pro Logo" class="logo"> 
-                 <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="acercade.html">Nosotros</a></li>
-                <li><a href="tienda.html">Tienda</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="galeria2.html">Galeria</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="promociones.html">Promociones</a></li>
-                <li><a href="Login.html" class="btn-small">Registrarse</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+      <div class="container">
+        <img src="Img/logo.png" alt="Pixel Pro Logo" class="logo" />
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="acercade.html">Nosotros</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="galeria2.html">Galeria</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="promociones.html">Promociones</a></li>
+          <li><a href="Login.html" class="btn-small">Registrarse</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
+      </div>
     </nav>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+    <!-- Espaciado para compensar navbar fijo con logo grande -->
+    <div class="nav-spacer"></div>
 
     <!-- FONDO CMYK -->
     <div class="bg">
@@ -58,6 +50,7 @@
       <div class="alerta">⚡ 7 personas viendo estas ofertas ahora mismo</div>
       <br />
       <br />
+
       <!-- PROMOS -->
       <div class="promo-grid">
         <div class="card">
@@ -67,7 +60,6 @@
           <span class="price">RD$50</span>
           <button onclick="enviar('Copias PRO')">QUIERO ESTA OFERTA</button>
         </div>
-
         <div class="card magenta-card">
           <span class="badge">-20%</span>
           <h2>🖨️ Impresión Color</h2>
@@ -75,7 +67,6 @@
           <span class="price">Desde RD$15</span>
           <button onclick="enviar('Impresión Color')">APROVECHAR AHORA</button>
         </div>
-
         <div class="card yellow-card">
           <span class="badge">POPULAR</span>
           <h2>🎒 Combo Estudiante</h2>
@@ -93,18 +84,15 @@
 
       <!-- TESTIMONIOS -->
       <h2 class="sub2">Clientes felices 💬</h2>
-
       <div class="reviews">
         <div class="review">
           ⭐⭐⭐⭐⭐
           <p>"Me ahorré mucho dinero con las promos 🔥"</p>
         </div>
-
         <div class="review">
           ⭐⭐⭐⭐⭐
           <p>"Rápido y barato, recomendado"</p>
         </div>
-
         <div class="review">
           ⭐⭐⭐⭐⭐
           <p>"Los mejores precios de la zona 😎"</p>
@@ -118,10 +106,50 @@
           PEDIR POR WHATSAPP
         </button>
       </div>
-      <br />
-      <br />
+      <br /><br />
     </section>
 
+    <footer>
+      <div class="cajon1">
+        <img id="logo1" src="Img/pro.jpg" alt="" />
+      </div>
+      <div class="cajon1">
+        <h4 id="n1">INFORMACIÓN</h4>
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Más búsqueda</a>
+        <a href="#">Blog</a>
+        <a href="#">Testimonios</a>
+        <a href="#">Eventos</a>
+      </div>
+      <div class="cajon1">
+        <h4 id="n2">ENLACES ÚTILES</h4>
+        <a href="#">Servicios</a>
+        <a href="#">Soporte</a>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Política de privacidad</a>
+      </div>
+      <div class="cajon1">
+        <h4 id="n3">SERVICIOS</h4>
+        <a href="#">Lista de marcas</a>
+        <a href="#">Pedidos</a>
+        <a href="#">Cambios y devoluciones</a>
+        <a href="#">Lista de moda</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="cajon1">
+        <h4 id="n4">CONTÁCTANOS</h4>
+        <a href="#"> +91 9999 999 999</a>
+        <a href="#">youremaillid.com</a>
+        <div class="redes">
+          <img class="icono" src="IMG/ICON (4).png" alt="Facebook" />
+          <img class="icono" src="IMG/ICON (5).png" alt="Google" />
+          <img class="icono" src="IMG/ICON (6).png" alt="YouTube" />
+          <img class="icono" src="IMG/ICON (7).png" alt="Instagram" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/scrpt.js"></script>
     <script src="js/promociones.js"></script>
   </body>
 </html>

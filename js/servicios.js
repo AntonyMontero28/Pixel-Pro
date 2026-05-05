@@ -4,7 +4,7 @@
 const elementos = document.querySelectorAll(".section2, .section3");
 
 const mostrarElemento = (entries) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("visible");
     }
@@ -12,11 +12,10 @@ const mostrarElemento = (entries) => {
 };
 
 const observer = new IntersectionObserver(mostrarElemento, {
-  threshold: 0.2
+  threshold: 0.2,
 });
 
-elementos.forEach(el => observer.observe(el));
-
+elementos.forEach((el) => observer.observe(el));
 
 // =========================
 // EFECTO MAQUINA DE ESCRIBIR
@@ -43,13 +42,12 @@ window.addEventListener("load", () => {
   }
 });
 
-
 // =========================
 // EFECTO CLICK BOTONES
 // =========================
 const botones = document.querySelectorAll(".btn-servicio");
 
-botones.forEach(btn => {
+botones.forEach((btn) => {
   btn.addEventListener("click", () => {
     btn.style.transform = "scale(0.9)";
     setTimeout(() => {
@@ -58,17 +56,23 @@ botones.forEach(btn => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+const menu = document.getElementById("mobile-menu");
+const nav = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
 
-    const toggle = document.querySelector(".menu-toggle");
-    const navs = document.querySelectorAll(".nav");
+menu.addEventListener("click", () => {
+  // activar menú
+  nav.classList.toggle("nav-active");
 
-    toggle.addEventListener("click", () => {
+  // animación de links
+  links.forEach((link, index) => {
+    if (link.style.animation) {
+      link.style.animation = "";
+    } else {
+      link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+    }
+  });
 
-        navs.forEach(nav => {
-            nav.classList.toggle("active");
-        });
-
-    });
-
+  // animación hamburguesa
+  menu.classList.toggle("toggle");
 });

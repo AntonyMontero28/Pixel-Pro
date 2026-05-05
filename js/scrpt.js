@@ -1,14 +1,20 @@
-console.log("Proyecto cargado correctamente");
-
-// DUPLICAR RESEÑAS PARA LOOP INFINITO
-const track = document.querySelector(".reviews-track");
-
-track.innerHTML += track.innerHTML;
-
 const menu = document.getElementById("mobile-menu");
-const navLinks = document.querySelector(".nav-links");
+const nav = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
 
 menu.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    menu.classList.toggle("active"); // opcional para animar las barras
+  // activar menú
+  nav.classList.toggle("nav-active");
+
+  // animación de links
+  links.forEach((link, index) => {
+    if (link.style.animation) {
+      link.style.animation = "";
+    } else {
+      link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+    }
+  });
+
+  // animación hamburguesa
+  menu.classList.toggle("toggle");
 });

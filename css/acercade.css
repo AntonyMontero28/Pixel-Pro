@@ -421,6 +421,7 @@ a:hover {
   margin-bottom: 15px;
   background: linear-gradient(45deg, #00bfff, #ff1493, #ffd700);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -639,6 +640,7 @@ a:hover {
 
 .text-gradient {
   background: linear-gradient(90deg, #00bfff, #ff1493, #ffd700);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   position: relative;

@@ -1,77 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PixelPro Clientes</title>
-
+    <title>PixelPro - Acceso</title>
     <link rel="stylesheet" href="css/Login.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- FONDO CMYK -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- FONDO -->
     <div class="shape cyan"></div>
     <div class="shape magenta"></div>
     <div class="shape yellow"></div>
     <div class="shape blue"></div>
 
     <div class="container">
-      <div class="form-box" id="loginBox">
-        <h2>PixelPro</h2>
-        <p>Iniciar Sesión</p>
 
-        <form id="loginForm">
-          <input type="email" placeholder="Correo" required />
-          <input type="password" placeholder="Contraseña" required />
+        <!-- LOGIN -->
+        <div class="form-box" id="loginBox">
+            <h2>PixelPro</h2>
+            <p>Iniciar Sesión</p>
 
-          <button>Entrar</button>
-        </form>
+            <form action="php/login.php" method="POST">
+                <input type="email" name="correo" placeholder="Correo" required />
+                <input type="password" name="password" placeholder="Contraseña" required />
+                <button type="submit">Entrar</button>
+                <p class="msg" id="msgLogin"></p>
+            </form>
 
-        <p class="switch">
-          ¿No tienes cuenta? <span onclick="mostrarRegistro()">Regístrate</span>
-        </p>
-      </div>
+            <p class="switch">¿No tienes cuenta? <span onclick="mostrarRegistro()">Regístrate</span></p>
+        </div>
 
-      <div class="form-box hidden" id="registerBox">
-        <h2>Crear Cuenta</h2>
+        <!-- REGISTRO -->
+        <div class="form-box hidden" id="registerBox">
+            <h2>Crear Cuenta</h2>
 
-        <form id="registerForm">
-          <input type="text" placeholder="Nombre completo" required />
-          <input type="tel" placeholder="Teléfono" required />
-          <input type="email" placeholder="Correo" required />
-          <input type="password" placeholder="Contraseña" required />
+            <form action="php/registro.php" method="POST">
+                <input type="text"     name="nombre"   placeholder="Nombre completo" required />
+                <input type="tel"      name="telefono" placeholder="Teléfono" required />
+                <input type="email"    name="correo"   placeholder="Correo" required />
+                <input type="password" name="password" placeholder="Contraseña" required />
 
-          <div class="check">
-            <input type="checkbox" id="terms" required />
-            <label for="terms"
-              >Acepto
-              <span onclick="mostrarModal('privacidad')"
-                >Política de privacidad</span
-              >
-              y <span onclick="mostrarModal('terminos')">Términos</span></label
-            >
-          </div>
+                <div class="check">
+                    <input type="checkbox" id="terms" required />
+                    <label for="terms">Acepto
+                        <span onclick="mostrarModal('privacidad')">Política de privacidad</span>
+                        y <span onclick="mostrarModal('terminos')">Términos</span>
+                    </label>
+                </div>
 
-          <button>Registrarse</button>
-        </form>
+                <button type="submit">Registrarse</button>
+                <p class="msg" id="msgRegistro"></p>
+            </form>
 
-        <p class="switch">
-          ¿Ya tienes cuenta? <span onclick="mostrarLogin()">Inicia sesión</span>
-        </p>
-      </div>
+            <p class="switch">¿Ya tienes cuenta? <span onclick="mostrarLogin()">Inicia sesión</span></p>
+        </div>
+
     </div>
 
     <!-- MODAL -->
     <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="cerrarModal()">&times;</span>
-        <div id="contenidoModal"></div>
-      </div>
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <div id="contenidoModal"></div>
+        </div>
     </div>
 
+    <!-- MENSAJES DESDE PHP -->
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        if (params.get("error")) {
+            document.getElementById("msgLogin").textContent = "Correo o contraseña incorrectos";
+        }
+
+        if (params.get("registro")) {
+            document.getElementById("msgLogin").textContent = "Cuenta creada correctamente";
+        }
+    </script>
+
     <script src="js/Login.js"></script>
-  </body>
+</body>
 </html>
